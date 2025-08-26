@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Code2, Mail, Phone, MapPin, Linkedin, Twitter, Facebook } from 'lucide-react';
+import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const Footer = () => {
@@ -21,7 +21,11 @@ const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-1 animate-fadeInLeft">
             <div className="flex items-center space-x-2 mb-4 hover-scale transition-transform duration-300">
-              <Code2 className="h-8 w-8 text-blue-400 animate-float" />
+              <img 
+                src="/recurso-12ldpi-85x127.png" 
+                alt="Doce Leguas Logo" 
+                className="h-8 w-auto animate-float filter brightness-0 invert opacity-80"
+              />
               <span className="font-bold text-xl">Doce Leguas</span>
             </div>
             <p className="text-gray-400 mb-6">

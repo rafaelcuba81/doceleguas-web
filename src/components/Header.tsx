@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Code2 } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import LanguageSwitcher from './LanguageSwitcher';
 
@@ -26,7 +26,11 @@ const Header = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 hover-scale transition-transform duration-300">
-            <Code2 className="h-8 w-8 text-blue-700 animate-float" />
+            <img 
+              src="/recurso-12ldpi-85x127.png" 
+              alt="Doce Leguas Logo" 
+              className="h-8 w-auto animate-float"
+            />
             <span className="font-bold text-xl text-gray-900">Doce Leguas</span>
           </Link>
 
