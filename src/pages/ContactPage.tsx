@@ -51,7 +51,7 @@ const ContactPage = () => {
     {
       icon: <Phone className="h-6 w-6" />,
       title: t('contact.info.phone'),
-      content: '+34 XXX XXX XXX',
+      content: '+34 666 49 37 11',
       description: t('contact.info.phoneDesc')
     },
     {
