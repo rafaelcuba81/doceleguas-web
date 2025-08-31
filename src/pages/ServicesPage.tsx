@@ -140,7 +140,7 @@ const ServicesPage = () => {
                   </div>
                   
                   <Link
-                    to="https://www.orisha.com/"
+                    to="https://www.odoo.com"
                     className="inline-flex items-center bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-800 transition-colors duration-200"
                   >
                     {service.cta}
