@@ -58,7 +58,10 @@ const Header = () => {
             ))}
             <Link
               to="/contact"
-              className="bg-blue-700 text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-800 hover-lift hover-glow transition-all duration-300 transform"
+              className="text-white px-6 py-2 rounded-lg font-medium hover-lift hover-glow transition-all duration-300 transform"
+              style={{ backgroundColor: '#5c9c98' }}
+              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#4a8480'}
+              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#5c9c98'}
             >
               {t('nav.getStarted')}
             </Link>
@@ -97,7 +100,10 @@ const Header = () => {
               <Link
                 to="/contact"
                 onClick={() => setIsMenuOpen(false)}
-                className="bg-blue-700 text-white px-6 py-2 rounded-lg font-medium text-center hover:bg-blue-800 hover-lift transition-all duration-300 transform"
+                className="text-white px-6 py-2 rounded-lg font-medium text-center hover-lift transition-all duration-300 transform"
+                style={{ backgroundColor: '#5c9c98' }}
+                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#4a8480'}
+                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#5c9c98'}
               >
                 {t('nav.getStarted')}
               </Link>

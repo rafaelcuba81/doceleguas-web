@@ -252,7 +252,8 @@ const ProjectsPage = () => {
           </p>
           <Link
             to="/contact"
-            className="inline-flex items-center bg-white text-blue-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200"
+            className="inline-flex items-center bg-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200"
+            style={{ color: '#5c9c98' }}
           >
             Contact Us Today
             <ArrowRight className="h-5 w-5 ml-2" />

@@ -141,7 +141,10 @@ const SolutionsPage = () => {
                   
                   <Link
                     to="/contact"
-                    className="inline-flex items-center bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-800 transition-colors duration-200"
+                    className="inline-flex items-center text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-200"
+                    style={{ backgroundColor: '#5c9c98' }}
+                    onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#4a8480'}
+                    onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#5c9c98'}
                   >
                     Learn More
                     <ArrowRight className="h-5 w-5 ml-2" />
@@ -216,7 +219,8 @@ const SolutionsPage = () => {
           </p>
           <Link
             to="/contact"
-            className="inline-flex items-center bg-white text-blue-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200"
+            className="inline-flex items-center bg-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200"
+            style={{ color: '#5c9c98' }}
           >
             Get Started Today
             <ArrowRight className="h-5 w-5 ml-2" />

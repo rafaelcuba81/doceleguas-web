@@ -222,7 +222,10 @@ const ContactPage = () => {
 
                 <button
                   type="submit"
-                  className="w-full bg-blue-700 text-white py-4 px-6 rounded-lg font-semibold hover:bg-blue-800 hover-lift hover-glow transition-all duration-300 flex items-center justify-center space-x-2 transform"
+                  className="w-full text-white py-4 px-6 rounded-lg font-semibold hover-lift hover-glow transition-all duration-300 flex items-center justify-center space-x-2 transform"
+                  style={{ backgroundColor: '#5c9c98' }}
+                  onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#4a8480'}
+                  onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#5c9c98'}
                 >
                   <Send className="h-5 w-5" />
                   <span>{t('contact.form.send')}</span>

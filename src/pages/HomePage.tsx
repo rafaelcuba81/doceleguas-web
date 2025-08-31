@@ -130,13 +130,25 @@ const HomePage = () => {
               <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
                 <Link
                   to="/services"
-                  className="bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-800 hover-lift hover-glow transition-all duration-300 text-center transform"
+                  className="text-white px-8 py-3 rounded-lg font-semibold hover-lift hover-glow transition-all duration-300 text-center transform"
+                  style={{ backgroundColor: '#5c9c98' }}
+                  onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#4a8480'}
+                  onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#5c9c98'}
                 >
                   {t('home.hero.viewServices')}
                 </Link>
                 <Link
                   to="/contact"
-                  className="border-2 border-blue-700 text-blue-700 px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 hover:text-white hover-lift transition-all duration-300 text-center transform"
+                  className="border-2 px-8 py-3 rounded-lg font-semibold hover:text-white hover-lift transition-all duration-300 text-center transform"
+                  style={{ borderColor: '#5c9c98', color: '#5c9c98' }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.backgroundColor = '#5c9c98';
+                    e.currentTarget.style.color = 'white';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.backgroundColor = 'transparent';
+                    e.currentTarget.style.color = '#5c9c98';
+                  }}
                 >
                   {t('home.hero.startProject')}
                 </Link>
@@ -401,7 +413,8 @@ const HomePage = () => {
           <div className="text-center mt-12">
             <Link
               to="/solutions"
-              className="inline-flex items-center bg-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200"
+              className="inline-flex items-center bg-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200"
+              style={{ color: '#5c9c98' }}
             >
               {t('home.logistics.cta')}
               <ArrowRight className="h-5 w-5 ml-2" />
@@ -426,13 +439,16 @@ const HomePage = () => {
           <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4 animate-fadeInUp" style={{ animationDelay: '0.4s' }}>
             <Link
               to="/contact"
-              className="bg-white text-blue-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 hover-lift hover-glow transition-all duration-300 transform"
+              className="bg-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 hover-lift hover-glow transition-all duration-300 transform"
+              style={{ color: '#5c9c98' }}
             >
               {t('home.cta.schedule')}
             </Link>
             <Link
               to="/contact"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-700 hover-lift transition-all duration-300 transform"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover-lift transition-all duration-300 transform"
+              onMouseEnter={(e) => e.currentTarget.style.color = '#5c9c98'}
+              onMouseLeave={(e) => e.currentTarget.style.color = 'white'}
             >
               {t('home.cta.contact')}
             </Link>
