@@ -240,7 +240,6 @@ const ContactPage = () => {
                       key={index}
                       className="bg-gray-50 rounded-xl p-6 hover:bg-gray-100 hover-lift transition-all duration-300 animate-fadeInUp"
                       style={{ animationDelay: `${index * 0.1}s` }}
-                      style={{ animationDelay: `${index * 0.1}s` }}
                     >
                       <div className="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4 hover:bg-blue-200 transition-colors duration-300">
                         <div className="text-blue-700">{info.icon}</div>

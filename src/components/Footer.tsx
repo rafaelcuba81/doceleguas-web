@@ -85,10 +85,19 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3 hover:translate-x-1 transition-transform duration-300">
                 <Phone className="h-4 w-4 text-blue-400" />
-                <div className="text-gray-400 space-y-1">
-                  <div>+34 666 49 37 11</div>
-                  <div>+598 95 751 736</div>
-                  <div>+1 829 486-2763</div>
+                <div className="text-gray-400 space-y-2">
+                  <div className="flex items-center space-x-2">
+                    <Phone className="h-3 w-3 text-blue-400" />
+                    <span>+34 666 49 37 11</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <Phone className="h-3 w-3 text-blue-400" />
+                    <span>+598 95 751 736</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <Phone className="h-3 w-3 text-blue-400" />
+                    <span>+1 829 486-2763</span>
+                  </div>
                 </div>
               </div>
               <div className="flex items-center space-x-3 hover:translate-x-1 transition-transform duration-300">
