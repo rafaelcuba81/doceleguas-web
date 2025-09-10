@@ -65,13 +65,54 @@ const Footer = () => {
           <div className="animate-fadeInUp" style={{ animationDelay: '0.2s' }}>
             <h3 className="font-semibold mb-4">{t('footer.services')}</h3>
             <ul className="space-y-2">
-              <li><span className="text-gray-400 hover:text-white transition-colors duration-300 cursor-pointer">{t('home.services.openbravo')}</span></li>
-              <li><span className="text-gray-400 hover:text-white transition-colors duration-300 cursor-pointer">{t('home.services.odoo')}</span></li>
-              <li><span className="text-gray-400 hover:text-white transition-colors duration-300 cursor-pointer">{t('home.services.ai')}</span></li>
-              <li><span className="text-gray-400 hover:text-white transition-colors duration-300 cursor-pointer">{t('home.services.custom')}</span></li>
-              <li><span className="text-gray-400 hover:text-white transition-colors duration-300 cursor-pointer">{t('home.services.n8n')}</span></li>
-              <li><span className="text-gray-400 hover:text-white transition-colors duration-300 cursor-pointer">{t('home.services.automation')}</span></li>
-              <li><span className="text-gray-400 hover:text-white transition-colors duration-300 cursor-pointer">Technical Consulting</span></li>
+              <li>
+                <Link
+                  to="/services"
+                  className="text-gray-400 hover:text-white hover:translate-x-1 transition-all duration-300"
+                >
+                  Openbravo ERP
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/services"
+                  className="text-gray-400 hover:text-white hover:translate-x-1 transition-all duration-300"
+                >
+                  Odoo Solutions
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/services"
+                  className="text-gray-400 hover:text-white hover:translate-x-1 transition-all duration-300"
+                >
+                  AI Solutions
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/services"
+                  className="text-gray-400 hover:text-white hover:translate-x-1 transition-all duration-300"
+                >
+                  Custom Development
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/services"
+                  className="text-gray-400 hover:text-white hover:translate-x-1 transition-all duration-300"
+                >
+                  Process Automation
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/services"
+                  className="text-gray-400 hover:text-white hover:translate-x-1 transition-all duration-300"
+                >
+                  Technical Consulting
+                </Link>
+              </li>
             </ul>
           </div>
 
