@@ -339,6 +339,16 @@ const translations = {
     'projects.cta.title': 'Let\'s Talk About Your Challenge',
     'projects.cta.subtitle': 'We can help you achieve similar results. Every great project starts with a conversation.',
     'projects.cta.contact': 'Contact Us Today',
+    
+    // ChatBot
+    'chatbot.title': 'Doce Leguas Assistant',
+    'chatbot.subtitle': 'How can we help you?',
+    'chatbot.welcome': 'Hello! I\'m your virtual assistant. How can I help you today? You can ask me about our services, solutions, or any questions about Doce Leguas.',
+    'chatbot.placeholder': 'Type your message...',
+    'chatbot.open': 'Open chat',
+    'chatbot.close': 'Close chat',
+    'chatbot.defaultResponse': 'Thank you for your message. Our team will get back to you soon with more information.',
+    'chatbot.errorMessage': 'I\'m sorry, I\'m having trouble connecting right now. Please try again later or contact us directly.',
   },
   es: {
     // Header
@@ -668,6 +678,16 @@ const translations = {
     'projects.cta.title': 'Hablemos Sobre Tu Desafío',
     'projects.cta.subtitle': 'Podemos ayudarte a lograr resultados similares. Todo gran proyecto comienza con una conversación.',
     'projects.cta.contact': 'Contáctanos Hoy',
+    
+    // ChatBot
+    'chatbot.title': 'Asistente Doce Leguas',
+    'chatbot.subtitle': '¿Cómo podemos ayudarte?',
+    'chatbot.welcome': '¡Hola! Soy tu asistente virtual. ¿Cómo puedo ayudarte hoy? Puedes preguntarme sobre nuestros servicios, soluciones, o cualquier consulta sobre Doce Leguas.',
+    'chatbot.placeholder': 'Escribe tu mensaje...',
+    'chatbot.open': 'Abrir chat',
+    'chatbot.close': 'Cerrar chat',
+    'chatbot.defaultResponse': 'Gracias por tu mensaje. Nuestro equipo te responderá pronto con más información.',
+    'chatbot.errorMessage': 'Lo siento, tengo problemas de conexión en este momento. Por favor intenta más tarde o contáctanos directamente.',
   }
 };
 

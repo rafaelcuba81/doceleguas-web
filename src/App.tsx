@@ -10,6 +10,7 @@ import SolutionsPage from './pages/SolutionsPage';
 import ProjectsPage from './pages/ProjectsPage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
+import ChatBot from './components/ChatBot';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
           </main>
           <Footer />
           <ScrollToTop />
+          <ChatBot />
         </div>
       </Router>
     </LanguageProvider>
