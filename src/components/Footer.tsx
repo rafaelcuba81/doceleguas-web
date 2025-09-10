@@ -94,18 +94,9 @@ const Footer = () => {
               <div className="flex items-center space-x-3 hover:translate-x-1 transition-transform duration-300">
                 <MapPin className="h-4 w-4 text-blue-400" />
                 <div className="text-gray-400 space-y-1">
-                  <div className="flex items-center space-x-2">
-                    <MapPin className="h-3 w-3 text-blue-400" />
-                    <span>Spain</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <MapPin className="h-3 w-3 text-blue-400" />
-                    <span>Uruguay</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <MapPin className="h-3 w-3 text-blue-400" />
-                    <span>Dominican Republic</span>
-                  </div>
+                  <div>Spain</div>
+                  <div>Uruguay</div>
+                  <div>Dominican Republic</div>
                 </div>
               </div>
             </div>
