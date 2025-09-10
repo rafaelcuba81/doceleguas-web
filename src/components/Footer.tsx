@@ -42,22 +42,46 @@ const Footer = () => {
           <div className="animate-fadeInUp" style={{ animationDelay: '0.1s' }}>
             <h3 className="font-semibold mb-4">{t('footer.quickLinks')}</h3>
             <ul className="space-y-2">
-              {[
-                { name: t('nav.home'), path: '/' },
-                { name: t('nav.services'), path: '/services' },
-                { name: t('nav.solutions'), path: '/solutions' },
-                { name: t('nav.projects'), path: '/projects' },
-                { name: t('nav.about'), path: '/about' }
-              ].map((item) => (
-                <li key={item.name}>
-                  <Link
-                    to={item.path}
-                    className="text-gray-400 hover:text-white hover:translate-x-1 transition-all duration-300"
-                  >
-                    {item.name}
-                  </Link>
-                </li>
-              ))}
+              <li>
+                <Link
+                  to="/"
+                  className="text-gray-400 hover:text-white hover:translate-x-1 transition-all duration-300"
+                >
+                  {t('nav.home')}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/services"
+                  className="text-gray-400 hover:text-white hover:translate-x-1 transition-all duration-300"
+                >
+                  {t('nav.services')}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/solutions"
+                  className="text-gray-400 hover:text-white hover:translate-x-1 transition-all duration-300"
+                >
+                  {t('nav.solutions')}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/projects"
+                  className="text-gray-400 hover:text-white hover:translate-x-1 transition-all duration-300"
+                >
+                  {t('nav.projects')}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/about"
+                  className="text-gray-400 hover:text-white hover:translate-x-1 transition-all duration-300"
+                >
+                  {t('nav.about')}
+                </Link>
+              </li>
             </ul>
           </div>
 
