@@ -140,7 +140,7 @@ const ServicesPage = () => {
                   </div>
                   
                   <Link
-                    to="https://www.odoo.com"
+                    to="https://www.orisha.com/"
                     className="inline-flex items-center text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-200"
                     style={{ backgroundColor: '#5c9c98' }}
                     onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#4a8480'}
