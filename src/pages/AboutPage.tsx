@@ -120,6 +120,12 @@ const AboutPage = () => {
                     {t('about.vision.desc')}
                   </p>
                 </div>
+                <div className="border-l-4 p-6" style={{ backgroundColor: '#f0f9f8', borderColor: '#5c9c98' }}>
+                  <h3 className="font-semibold mb-2" style={{ color: '#2d5a57' }}>{t('about.vision.title')}</h3>
+                  <p style={{ color: '#2d5a57' }}>
+                    {t('about.vision.desc')}
+                  </p>
+                </div>
               </div>
             </div>
             <div className="relative">
@@ -129,6 +135,7 @@ const AboutPage = () => {
                 className="rounded-2xl shadow-2xl"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 to-transparent rounded-2xl"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-gray-900/20 to-transparent rounded-2xl"></div>
             </div>
           </div>
         </div>
@@ -221,7 +228,7 @@ const AboutPage = () => {
       </section>
 
       {/* Company Culture */}
-      <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-100">
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative">
