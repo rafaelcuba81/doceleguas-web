@@ -115,7 +115,7 @@ const AboutPage = () => {
                   consultancy, serving clients across various industries with customized solutions that make a real difference.
                 </p>
                 <div className="bg-blue-50 border-l-4 border-blue-700 p-6">
-                  <h3 className="font-semibold text-blue-900 mb-2">{t('about.vision.title')}</h3>
+                  <h3 className="font-semibold mb-2" style={{ color: '#2d5a57' }}>{t('about.vision.title')}</h3>
                   <p className="text-blue-800">
                     {t('about.vision.desc')}
                   </p>
