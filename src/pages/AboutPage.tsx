@@ -59,7 +59,7 @@ const AboutPage = () => {
     {
       name: 'Maarten Tromp',
       position: 'Supply Chain Consultant',
-      description: 'Certified Openbravo and Odoo expert with extensive experience in complex ERP implementations across various industries.',
+      description: 'Expert in supply chain optimization and logistics management with deep knowledge of warehouse operations, distribution networks, and inventory control systems.',
       image: 'https://images.pexels.com/photos/3756523/pexels-photo-3756523.jpeg?auto=compress&cs=tinysrgb&w=400',
       linkedin: '#'
     }
