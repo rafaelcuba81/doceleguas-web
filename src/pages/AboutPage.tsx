@@ -75,12 +75,21 @@ const AboutPage = () => {
   return (
     <div className="bg-white">
       {/* Header */}
-      <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
+      <section className="relative py-20 overflow-hidden">
+        {/* Abstract Background Image */}
+        <div className="absolute inset-0 w-full h-full">
+          <img
+            src="https://images.pexels.com/photos/3912979/pexels-photo-3912979.jpeg?auto=compress&cs=tinysrgb&w=1200"
+            alt="Abstract background"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-white bg-opacity-50"></div>
+        </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+          <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 relative z-10">
             {t('about.title')}
           </h1>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed relative z-10">
             {t('about.subtitle')}
           </p>
         </div>
