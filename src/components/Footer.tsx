@@ -20,13 +20,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Large Logo Column */}
           <div className="lg:col-span-1 animate-fadeInLeft flex flex-col items-center justify-center">
-            <div className="flex flex-col items-center space-y-4 hover-scale transition-transform duration-300">
+            <div className="flex flex-col items-center justify-center">
               <img 
                 src="/recurso-12ldpi-85x127.png" 
                 alt="Doce Leguas Logo" 
-                className="h-20 w-auto animate-float filter brightness-0 invert opacity-90"
+                className="h-32 w-auto filter brightness-0 invert opacity-90"
               />
-              <span className="font-bold text-2xl text-center">Doce Leguas</span>
             </div>
           </div>
 
