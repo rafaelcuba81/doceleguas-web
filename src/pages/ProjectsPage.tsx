@@ -127,9 +127,21 @@ const ProjectsPage = () => {
                 onClick={() => setActiveFilter(filter.id)}
                 className={`px-6 py-2 rounded-full font-medium transition-colors duration-200 ${
                   activeFilter === filter.id
-                    ? 'bg-blue-700 text-white'
-                    : 'bg-white text-gray-700 hover:bg-blue-50 hover:text-blue-700'
+                    ? 'text-white'
+                    : 'bg-white text-gray-700 hover:text-white'
                 }`}
+                style={activeFilter === filter.id ? { backgroundColor: '#5c9c98' } : {}}
+                onMouseEnter={(e) => {
+                  if (activeFilter !== filter.id) {
+                    e.currentTarget.style.backgroundColor = '#5c9c98';
+                  }
+                }}
+                onMouseLeave={(e) => {
+                  if (activeFilter !== filter.id) {
+                    e.currentTarget.style.backgroundColor = 'white';
+                    e.currentTarget.style.color = '#374151';
+                  }
+                }}
               >
                 {filter.name}
               </button>
@@ -155,9 +167,9 @@ const ProjectsPage = () => {
                   />
                   <div className="absolute top-4 left-4 flex items-center space-x-2">
                     <div className="bg-white/90 backdrop-blur-sm rounded-full p-2">
-                      <div className="text-blue-700">{project.icon}</div>
+                      <div style={{ color: '#5c9c98' }}>{project.icon}</div>
                     </div>
-                    <span className="bg-blue-700 text-white px-3 py-1 rounded-full text-sm font-medium">
+                    <span className="text-white px-3 py-1 rounded-full text-sm font-medium" style={{ backgroundColor: '#5c9c98' }}>
                       {project.sector}
                     </span>
                   </div>
@@ -181,7 +193,10 @@ const ProjectsPage = () => {
                   <div className="border-t border-gray-200 pt-4">
                     <Link
                       to={`/projects/${project.id}`}
-                      className="text-blue-700 font-medium flex items-center hover:text-blue-800 transition-colors duration-200"
+                      className="font-medium flex items-center transition-colors duration-200"
+                      style={{ color: '#5c9c98' }}
+                      onMouseEnter={(e) => e.currentTarget.style.color = '#4a8480'}
+                      onMouseLeave={(e) => e.currentTarget.style.color = '#5c9c98'}
                     >
                       View Case Study
                       <ArrowRight className="h-4 w-4 ml-2" />
@@ -221,20 +236,21 @@ const ProjectsPage = () => {
                   <h3 className="font-semibold text-gray-900 mb-2">Results Achieved:</h3>
                   <div className="grid grid-cols-2 gap-4">
                     <div className="bg-green-50 p-4 rounded-lg">
-                      <div className="text-2xl font-bold text-green-700">30%</div>
-                      <div className="text-sm text-green-600">Cost Reduction</div>
+                      <div className="text-2xl font-bold" style={{ color: '#5c9c98' }}>30%</div>
+                      <div className="text-sm" style={{ color: '#4a8480' }}>Cost Reduction</div>
                     </div>
-                    <div className="bg-blue-50 p-4 rounded-lg">
-                      <div className="text-2xl font-bold text-blue-700">25%</div>
-                      <div className="text-sm text-blue-600">Faster Delivery</div>
+                    <div className="p-4 rounded-lg" style={{ backgroundColor: '#f0f9f8' }}>
+                      <div className="text-2xl font-bold" style={{ color: '#5c9c98' }}>25%</div>
+                      <div className="text-sm" style={{ color: '#4a8480' }}>Faster Delivery</div>
                     </div>
                   </div>
                 </div>
                 <div className="bg-blue-50 border-l-4 border-blue-700 p-4">
-                  <p className="text-blue-800 italic">
+                <div className="border-l-4 p-4" style={{ backgroundColor: '#f0f9f8', borderColor: '#5c9c98' }}>
+                  <p className="italic" style={{ color: '#2d5a57' }}>
                     "{projects[0].testimonial}"
                   </p>
-                  <p className="text-blue-700 font-medium mt-2">- {projects[0].client}</p>
+                  <p className="font-medium mt-2" style={{ color: '#5c9c98' }}>- {projects[0].client}</p>
                 </div>
               </div>
             </div>
