@@ -37,28 +37,28 @@ const AboutPage = () => {
   const team = [
     {
       name: 'Nono Carballo',
-      position: 'Founder & CEO',
+      position: 'Senior ERP Arquitect',
       description: 'Visionary and strategist with over 15 years in the software industry. Expert in digital transformation and business optimization.',
       image: 'https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=400',
       linkedin: '#'
     },
     {
       name: 'Mark Molina',
-      position: 'Chief Technology Officer',
+      position: 'Lead AI Architect',
       description: 'Expert in software architectures and emerging technologies. Leads our technical vision and oversees all development projects.',
       image: 'https://images.pexels.com/photos/3756679/pexels-photo-3756679.jpeg?auto=compress&cs=tinysrgb&w=400',
       linkedin: '#'
     },
     {
       name: 'Rafael Queralta',
-      position: 'Lead AI Architect',
+      position: 'Senior Retail Arquitect',
       description: 'Specialist in artificial intelligence and machine learning with 10+ years developing intelligent solutions for enterprise clients.',
       image: 'https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=400',
       linkedin: '#'
     },
     {
       name: 'Maarten Tromp',
-      position: 'Senior ERP Consultant',
+      position: 'Supply Chain Consultant',
       description: 'Certified Openbravo and Odoo expert with extensive experience in complex ERP implementations across various industries.',
       image: 'https://images.pexels.com/photos/3756523/pexels-photo-3756523.jpeg?auto=compress&cs=tinysrgb&w=400',
       linkedin: '#'
