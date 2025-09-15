@@ -52,7 +52,7 @@ const AboutPage = () => {
     {
       name: 'Rafael Queralta',
       position: 'Lead Retail Arquitect',
-      description: 'Expert in retail solutions and digital transformation with extensive experience optimizing supply chains, inventory management, and customer experience across retail organizations.',
+      description: 'Expert in retail solutions and digital transformation with extensive experience optimizing inventory management, and customer experience across retail organizations.',
       image: 'https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=400',
       linkedin: '#'
     },
