@@ -114,7 +114,7 @@ const AboutPage = () => {
             </div>
             <div className="relative">
               <img
-                src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=800"
                 alt="Team collaboration"
                 className="rounded-2xl shadow-2xl"
               />
