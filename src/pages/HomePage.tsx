@@ -79,7 +79,7 @@ const HomePage = () => {
       title: 'Custom ERP Solution',
       description: 'Complete custom ERP development that increased operational efficiency by 45%.',
       category: 'Custom',
-      image: 'https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=400'
+      image: 'https://images.pexels.com/photos/590020/pexels-photo-590020.jpeg?auto=compress&cs=tinysrgb&w=400'
     }
   ];
 
