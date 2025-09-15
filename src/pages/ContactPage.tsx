@@ -202,7 +202,7 @@ const ContactPage = () => {
                     required
                     value={formData.subject}
                     onChange={handleChange}
-                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 hover:border-blue-300 transition-all duration-300"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 hover:border-blue-300 transition-all duration-300"
                   >
                     <option value="">Please select a subject</option>
                     {subjects.map((subject) => (
@@ -224,7 +224,7 @@ const ContactPage = () => {
                     rows={5}
                     value={formData.message}
                     onChange={handleChange}
-                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 hover:border-blue-300 transition-all duration-300 resize-vertical"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 hover:border-blue-300 transition-all duration-300 resize-vertical"
                     placeholder="Tell us about your project, challenges, or questions..."
                   />
                 </div>
@@ -274,7 +274,6 @@ const ContactPage = () => {
               </div>
 
               {/* Additional Info */}
-              <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 hover-lift transition-all duration-300 animate-fadeInUp" style={{ animationDelay: '0.6s' }}>
               <div className="rounded-xl p-6 hover-lift transition-all duration-300 animate-fadeInUp" style={{ backgroundColor: '#e8f4f3', borderColor: '#5c9c98', borderWidth: '1px', animationDelay: '0.6s' }}>
                 <h3 className="font-semibold mb-4" style={{ color: '#2d5a57' }}>Why Contact Us?</h3>
                 <ul className="space-y-3" style={{ color: '#2d5a57' }}>
