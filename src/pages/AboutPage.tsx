@@ -165,8 +165,8 @@ const AboutPage = () => {
                 key={index}
                 className="bg-white p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300"
               >
-                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <div className="text-blue-700">{value.icon}</div>
+                <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6" style={{ backgroundColor: '#e8f4f3' }}>
+                  <div style={{ color: '#5c9c98' }}>{value.icon}</div>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">{value.title}</h3>
                 <p className="text-gray-600 leading-relaxed">{value.description}</p>
@@ -202,9 +202,12 @@ const AboutPage = () => {
                   <div className="absolute bottom-4 right-4">
                     <a
                       href={member.linkedin}
-                      className="bg-white p-2 rounded-full shadow-lg hover:bg-blue-50 transition-colors duration-200"
+                      className="bg-white p-2 rounded-full shadow-lg transition-colors duration-200"
+                      style={{ hover: { backgroundColor: '#e8f4f3' } }}
+                      onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#e8f4f3'}
+                      onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'white'}
                     >
-                      <Linkedin className="h-5 w-5 text-blue-700" />
+                      <Linkedin className="h-5 w-5" style={{ color: '#5c9c98' }} />
                     </a>
                   </div>
                 </div>
@@ -251,7 +254,7 @@ const AboutPage = () => {
                   'Client Partnership'
                 ].map((item, index) => (
                   <div key={index} className="flex items-center space-x-3">
-                    <div className="w-3 h-3 bg-blue-700 rounded-full"></div>
+                    <div className="w-3 h-3 rounded-full" style={{ backgroundColor: '#5c9c98' }}></div>
                     <span className="font-medium text-gray-900">{item}</span>
                   </div>
                 ))}

@@ -122,8 +122,8 @@ const ServicesPage = () => {
               >
                 {/* Content */}
                 <div className={index % 2 === 1 ? 'lg:col-start-2' : ''}>
-                  <div className="bg-blue-100 w-20 h-20 rounded-xl flex items-center justify-center mb-8">
-                    <div className="text-blue-700">{service.icon}</div>
+                  <div className="w-20 h-20 rounded-xl flex items-center justify-center mb-8" style={{ backgroundColor: '#e8f4f3' }}>
+                    <div style={{ color: '#5c9c98' }}>{service.icon}</div>
                   </div>
                   <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
                     {service.title}
@@ -141,7 +141,7 @@ const ServicesPage = () => {
                     <ul className="space-y-3">
                       {service.keyPoints.map((point, pointIndex) => (
                         <li key={pointIndex} className="flex items-start space-x-3">
-                          <CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
+                          <CheckCircle className="h-5 w-5 flex-shrink-0 mt-0.5" style={{ color: '#5c9c98' }} />
                           <span className="text-gray-700">{point}</span>
                         </li>
                       ))}

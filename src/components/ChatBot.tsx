@@ -162,6 +162,8 @@ const ChatBot = () => {
                 <div className={`flex items-start space-x-2 max-w-xs ${message.sender === 'user' ? 'flex-row-reverse space-x-reverse' : ''}`}>
                   <div className={`w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 ${
                     message.sender === 'user' ? 'bg-gray-300' : 'bg-blue-100'
+                  <div className={`w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 ${
+                    message.sender === 'user' ? 'bg-gray-300' : ''
                   }`}>
                     {message.sender === 'user' ? (
                       <User className="h-3 w-3 text-gray-600" />
@@ -174,6 +176,7 @@ const ChatBot = () => {
                       ? 'bg-gray-100 text-gray-900'
                       : 'text-white'
                   }`}
+                  style={message.sender === 'bot' ? { backgroundColor: '#e8f4f3' } : {}}
                   style={message.sender === 'bot' ? { backgroundColor: '#5c9c98' } : {}}
                   >
                     <p className="text-sm">{message.text}</p>
@@ -189,8 +192,8 @@ const ChatBot = () => {
             {isLoading && (
               <div className="flex justify-start">
                 <div className="flex items-center space-x-2">
-                  <div className="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center">
-                    <Bot className="h-3 w-3 text-blue-600" />
+                  <div className="w-6 h-6 rounded-full flex items-center justify-center" style={{ backgroundColor: '#e8f4f3' }}>
+                    <Bot className="h-3 w-3" style={{ color: '#5c9c98' }} />
                   </div>
                   <div className="rounded-lg p-3" style={{ backgroundColor: '#5c9c98' }}>
                     <div className="flex space-x-1">

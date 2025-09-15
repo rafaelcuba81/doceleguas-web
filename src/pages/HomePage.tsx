@@ -183,10 +183,9 @@ const HomePage = () => {
                 key={index}
                 className="text-center p-8 rounded-xl bg-white border border-gray-100 shadow-lg hover:shadow-xl hover-lift transition-all duration-300 animate-fadeInUp group"
                 style={{ animationDelay: `${index * 0.1}s` }}
-                style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-blue-200 transition-colors duration-300">
-                  <div className="text-blue-700">{prop.icon}</div>
+                  <div style={{ color: '#5c9c98' }}>{prop.icon}</div>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">{prop.title}</h3>
                 <p className="text-gray-600 leading-relaxed">{prop.description}</p>
@@ -213,18 +212,20 @@ const HomePage = () => {
                 key={index}
                 className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl hover-lift transition-all duration-300 group cursor-pointer animate-fadeInUp"
                 style={{ animationDelay: `${index * 0.2}s` }}
-                style={{ animationDelay: `${index * 0.2}s` }}
               >
                 <div className="flex items-start space-x-4">
-                  <div className="bg-blue-100 p-3 rounded-lg group-hover:bg-blue-200 group-hover:scale-110 transition-all duration-300">
-                    <div className="text-blue-700">{service.icon}</div>
+                  <div className="p-3 rounded-lg group-hover:scale-110 transition-all duration-300" style={{ backgroundColor: '#e8f4f3' }} onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#d1ebe9'} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#e8f4f3'}>
+                    <div style={{ color: '#5c9c98' }}>{service.icon}</div>
                   </div>
                   <div className="flex-1">
                     <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
                     <p className="text-gray-600 mb-4 leading-relaxed">{service.description}</p>
                     <Link
                       to="/services"
-                      className="text-blue-700 font-medium flex items-center group-hover:text-blue-800 transition-all duration-200"
+                      className="font-medium flex items-center transition-all duration-200"
+                      style={{ color: '#5c9c98' }}
+                      onMouseEnter={(e) => e.currentTarget.style.color = '#4a8480'}
+                      onMouseLeave={(e) => e.currentTarget.style.color = '#5c9c98'}
                     >
                       {t('home.services.learnMore')}
                       <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-2 transition-transform duration-200" />
@@ -254,7 +255,6 @@ const HomePage = () => {
                 key={index}
                 className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl hover-lift transition-all duration-300 group animate-fadeInUp"
                 style={{ animationDelay: `${index * 0.15}s` }}
-                style={{ animationDelay: `${index * 0.15}s` }}
               >
                 <div className="relative h-48 overflow-hidden">
                   <img
@@ -263,7 +263,7 @@ const HomePage = () => {
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute top-4 left-4">
-                    <span className="bg-blue-700 text-white px-3 py-1 rounded-full text-sm font-medium animate-pulse">
+                    <span className="text-white px-3 py-1 rounded-full text-sm font-medium animate-pulse" style={{ backgroundColor: '#5c9c98' }}>
                       {project.category}
                     </span>
                   </div>
@@ -273,7 +273,10 @@ const HomePage = () => {
                   <p className="text-gray-600 mb-4 leading-relaxed">{project.description}</p>
                   <Link
                     to="/projects"
-                    className="text-blue-700 font-medium flex items-center hover:text-blue-800 transition-all duration-200"
+                    className="font-medium flex items-center transition-all duration-200"
+                    style={{ color: '#5c9c98' }}
+                    onMouseEnter={(e) => e.currentTarget.style.color = '#4a8480'}
+                    onMouseLeave={(e) => e.currentTarget.style.color = '#5c9c98'}
                   >
                     {t('home.projects.viewCase')}
                     <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
@@ -299,17 +302,16 @@ const HomePage = () => {
                 key={index}
                 className="bg-white p-8 rounded-xl shadow-lg hover-lift hover:shadow-xl transition-all duration-300 animate-fadeInUp"
                 style={{ animationDelay: `${index * 0.2}s` }}
-                style={{ animationDelay: `${index * 0.2}s` }}
               >
                 <div className="flex items-start space-x-4">
-                  <MessageSquare className="h-8 w-8 text-blue-700 flex-shrink-0 mt-1 animate-float" />
+                  <MessageSquare className="h-8 w-8 flex-shrink-0 mt-1 animate-float" style={{ color: '#5c9c98' }} />
                   <div>
                     <p className="text-gray-700 mb-6 text-lg italic leading-relaxed">
                       "{testimonial.quote}"
                     </p>
                     <div>
                       <div className="font-semibold text-gray-900">{testimonial.author}</div>
-                      <div className="text-blue-700">{testimonial.company}</div>
+                      <div style={{ color: '#5c9c98' }}>{testimonial.company}</div>
                     </div>
                   </div>
                 </div>
@@ -334,14 +336,14 @@ const HomePage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Logistics Solutions */}
             <div className="animate-fadeInLeft">
-              <div className="bg-gradient-to-br from-blue-600 to-blue-800 rounded-xl p-8 h-full">
+              <div className="rounded-xl p-8 h-full" style={{ background: 'linear-gradient(to bottom right, #5c9c98, #4a8480)' }}>
                 <div className="text-center">
                   <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6">
-                    <Database className="h-8 w-8 text-blue-600" />
+                    <Database className="h-8 w-8" style={{ color: '#5c9c98' }} />
                   </div>
                   <h3 className="text-2xl font-bold mb-4">{t('home.logistics.supply.title')}</h3>
-                  <p className="text-blue-100 mb-6">{t('home.logistics.supply.desc')}</p>
-                  <ul className="text-left text-blue-100 space-y-2">
+                  <p className="text-white mb-6">{t('home.logistics.supply.desc')}</p>
+                  <ul className="text-left text-white space-y-2">
                     <li className="flex items-center">
                       <div className="w-2 h-2 bg-white rounded-full mr-3"></div>
                       {t('home.logistics.supply.feature1')}
@@ -361,7 +363,7 @@ const HomePage = () => {
             
             {/* Retail Solutions */}
             <div className="animate-fadeInRight">
-              <div className="bg-gradient-to-br from-green-600 to-green-800 rounded-xl p-8 h-full">
+              <div className="rounded-xl p-8 h-full" style={{ background: 'linear-gradient(to bottom right, #16a34a, #15803d)' }}>
                 <div className="text-center">
                   <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6">
                     <Settings className="h-8 w-8 text-green-600" />
@@ -388,21 +390,21 @@ const HomePage = () => {
 
             {/* Industry Expertise */}
             <div className="animate-fadeInUp">
-              <div className="bg-gradient-to-br from-purple-600 to-purple-800 rounded-xl p-8 h-full">
+              <div className="rounded-xl p-8 h-full" style={{ background: 'linear-gradient(to bottom right, #7c3aed, #6d28d9)' }}>
                 <div className="text-center">
                   <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6">
-                    <TrendingUp className="h-8 w-8 text-purple-600" />
+                    <TrendingUp className="h-8 w-8" style={{ color: '#7c3aed' }} />
                   </div>
                   <h3 className="text-2xl font-bold mb-4">{t('home.logistics.expertise.title')}</h3>
                   <p className="text-purple-100 mb-6">{t('home.logistics.expertise.desc')}</p>
                   <div className="grid grid-cols-2 gap-4 text-center">
                     <div className="bg-white/10 rounded-lg p-3">
                       <div className="text-2xl font-bold text-white">25+</div>
-                      <div className="text-purple-100 text-sm">{t('home.logistics.expertise.stat1')}</div>
+                      <div className="text-white text-sm opacity-80">{t('home.logistics.expertise.stat1')}</div>
                     </div>
                     <div className="bg-white/10 rounded-lg p-3">
                       <div className="text-2xl font-bold text-white">99%</div>
-                      <div className="text-purple-100 text-sm">{t('home.logistics.expertise.stat2')}</div>
+                      <div className="text-white text-sm opacity-80">{t('home.logistics.expertise.stat2')}</div>
                     </div>
                   </div>
                 </div>

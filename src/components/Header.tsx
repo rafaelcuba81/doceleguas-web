@@ -43,16 +43,24 @@ const Header = () => {
                 to={item.href}
                 className={`font-medium transition-all duration-300 hover-lift relative ${
                   isActive(item.href)
-                    ? 'text-blue-700'
-                    : 'text-gray-700 hover:text-blue-700 hover:scale-105'
+                    ? ''
+                    : 'text-gray-700 hover:scale-105'
                 }`}
+                style={isActive(item.href) ? { color: '#5c9c98' } : {}}
+                onMouseEnter={(e) => {
+                  if (!isActive(item.href)) {
+                    e.currentTarget.style.color = '#5c9c98';
+                  }
+                }}
+                onMouseLeave={(e) => {
+                  if (!isActive(item.href)) {
+                    e.currentTarget.style.color = '#374151';
+                  }
+                }}
               >
                 {item.name}
                 {isActive(item.href) && (
-                  <div className="absolute -bottom-1 left-0 right-0 h-0.5 bg-blue-700 animate-fadeInUp"></div>
-                )}
-                {isActive(item.href) && (
-                  <div className="absolute -bottom-1 left-0 right-0 h-0.5 bg-blue-700 animate-fadeInUp"></div>
+                  <div className="absolute -bottom-1 left-0 right-0 h-0.5 animate-fadeInUp" style={{ backgroundColor: '#5c9c98' }}></div>
                 )}
               </Link>
             ))}

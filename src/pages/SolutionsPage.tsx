@@ -109,14 +109,14 @@ const SolutionsPage = () => {
               >
                 {/* Content */}
                 <div className={index % 2 === 1 ? 'lg:col-start-2' : ''}>
-                  <div className="bg-blue-100 w-20 h-20 rounded-xl flex items-center justify-center mb-8">
-                    <div className="text-blue-700">{solution.icon}</div>
+                  <div className="w-20 h-20 rounded-xl flex items-center justify-center mb-8" style={{ backgroundColor: '#e8f4f3' }}>
+                    <div style={{ color: '#5c9c98' }}>{solution.icon}</div>
                   </div>
                   
                   <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
                     {solution.title}
                   </h2>
-                  <h3 className="text-xl text-blue-700 font-semibold mb-6">
+                  <h3 className="text-xl font-semibold mb-6" style={{ color: '#5c9c98' }}>
                     {solution.subtitle}
                   </h3>
                   <p className="text-lg text-gray-600 mb-8 leading-relaxed">
@@ -129,7 +129,7 @@ const SolutionsPage = () => {
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                       {solution.features.map((feature, featureIndex) => (
                         <div key={featureIndex} className="flex items-center space-x-3">
-                          <div className="w-2 h-2 bg-blue-700 rounded-full"></div>
+                          <div className="w-2 h-2 rounded-full" style={{ backgroundColor: '#5c9c98' }}></div>
                           <span className="text-gray-700">{feature}</span>
                         </div>
                       ))}

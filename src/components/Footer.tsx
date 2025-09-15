@@ -32,9 +32,9 @@ const Footer = () => {
               {t('footer.description')}
             </p>
             <div className="flex space-x-4">
-              <Linkedin className="h-5 w-5 text-gray-400 hover:text-blue-400 cursor-pointer hover-scale transition-all duration-300" />
-              <Twitter className="h-5 w-5 text-gray-400 hover:text-blue-400 cursor-pointer hover-scale transition-all duration-300" />
-              <Facebook className="h-5 w-5 text-gray-400 hover:text-blue-400 cursor-pointer hover-scale transition-all duration-300" />
+              <Linkedin className="h-5 w-5 text-gray-400 cursor-pointer hover-scale transition-all duration-300" onMouseEnter={(e) => e.currentTarget.style.color = '#5c9c98'} onMouseLeave={(e) => e.currentTarget.style.color = '#9ca3af'} />
+              <Twitter className="h-5 w-5 text-gray-400 cursor-pointer hover-scale transition-all duration-300" onMouseEnter={(e) => e.currentTarget.style.color = '#5c9c98'} onMouseLeave={(e) => e.currentTarget.style.color = '#9ca3af'} />
+              <Facebook className="h-5 w-5 text-gray-400 cursor-pointer hover-scale transition-all duration-300" onMouseEnter={(e) => e.currentTarget.style.color = '#5c9c98'} onMouseLeave={(e) => e.currentTarget.style.color = '#9ca3af'} />
             </div>
           </div>
 
@@ -145,11 +145,11 @@ const Footer = () => {
             <h3 className="font-semibold mb-4">{t('footer.contactInfo')}</h3>
             <div className="space-y-3">
               <div className="flex items-center space-x-3 hover:translate-x-1 transition-transform duration-300">
-                <Mail className="h-4 w-4 text-blue-400" />
+                <Mail className="h-4 w-4" style={{ color: '#5c9c98' }} />
                 <span className="text-gray-400">info@doceleguas.com</span>
               </div>
               <div className="flex items-center space-x-3 hover:translate-x-1 transition-transform duration-300">
-                <Phone className="h-4 w-4 text-blue-400" />
+                <Phone className="h-4 w-4" style={{ color: '#5c9c98' }} />
                 <div className="text-gray-400">
                   <div>+34 666 49 37 11</div>
                   <div>+598 95 751 736</div>
@@ -157,7 +157,7 @@ const Footer = () => {
                 </div>
               </div>
               <div className="flex items-center space-x-3 hover:translate-x-1 transition-transform duration-300">
-                <MapPin className="h-4 w-4 text-blue-400" />
+                <MapPin className="h-4 w-4" style={{ color: '#5c9c98' }} />
                 <div className="text-gray-400 space-y-1">
                   <div>Spain</div>
                   <div>Uruguay</div>

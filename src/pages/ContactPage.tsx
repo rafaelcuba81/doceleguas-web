@@ -253,8 +253,8 @@ const ContactPage = () => {
                       className="bg-gray-50 rounded-xl p-6 hover:bg-gray-100 hover-lift transition-all duration-300 animate-fadeInUp"
                       style={{ animationDelay: `${index * 0.1}s` }}
                     >
-                      <div className="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4 hover:bg-blue-200 transition-colors duration-300">
-                        <div className="text-blue-700">{info.icon}</div>
+                      <div className="w-12 h-12 rounded-lg flex items-center justify-center mb-4 transition-colors duration-300" style={{ backgroundColor: '#e8f4f3' }} onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#d1ebe9'} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#e8f4f3'}>
+                        <div style={{ color: '#5c9c98' }}>{info.icon}</div>
                       </div>
                       <h3 className="font-semibold text-gray-900 mb-2">{info.title}</h3>
                       <p className="text-lg text-gray-900 font-medium mb-1">{info.content}</p>
@@ -275,22 +275,23 @@ const ContactPage = () => {
 
               {/* Additional Info */}
               <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 hover-lift transition-all duration-300 animate-fadeInUp" style={{ animationDelay: '0.6s' }}>
-                <h3 className="font-semibold text-blue-900 mb-4">Why Contact Us?</h3>
-                <ul className="space-y-3 text-blue-800">
+              <div className="rounded-xl p-6 hover-lift transition-all duration-300 animate-fadeInUp" style={{ backgroundColor: '#e8f4f3', borderColor: '#5c9c98', borderWidth: '1px', animationDelay: '0.6s' }}>
+                <h3 className="font-semibold mb-4" style={{ color: '#2d5a57' }}>Why Contact Us?</h3>
+                <ul className="space-y-3" style={{ color: '#2d5a57' }}>
                   <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 animate-pulse"></div>
+                    <div className="w-2 h-2 rounded-full mt-2 animate-pulse" style={{ backgroundColor: '#5c9c98' }}></div>
                     <span>Free initial consultation and project assessment</span>
                   </li>
                   <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 animate-pulse" style={{ animationDelay: '0.5s' }}></div>
+                    <div className="w-2 h-2 rounded-full mt-2 animate-pulse" style={{ backgroundColor: '#5c9c98', animationDelay: '0.5s' }}></div>
                     <span>Detailed proposal within 48 hours</span>
                   </li>
                   <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 animate-pulse" style={{ animationDelay: '1s' }}></div>
+                    <div className="w-2 h-2 rounded-full mt-2 animate-pulse" style={{ backgroundColor: '#5c9c98', animationDelay: '1s' }}></div>
                     <span>Transparent pricing and timeline</span>
                   </li>
                   <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 animate-pulse" style={{ animationDelay: '1.5s' }}></div>
+                    <div className="w-2 h-2 rounded-full mt-2 animate-pulse" style={{ backgroundColor: '#5c9c98', animationDelay: '1.5s' }}></div>
                     <span>Expert guidance from day one</span>
                   </li>
                 </ul>
