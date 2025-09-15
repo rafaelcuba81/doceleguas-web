@@ -27,7 +27,7 @@ const Footer = () => {
               <img 
                 src="/recurso-12ldpi-85x127.png" 
                 alt="Doce Leguas Logo" 
-                className="h-6 w-auto animate-float filter brightness-0 invert opacity-80"
+                className="h-6 w-auto animate-float"
               />
               <span className="font-bold text-lg">Doce Leguas</span>
             </div>
