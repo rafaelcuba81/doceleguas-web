@@ -13,9 +13,20 @@ const LanguageSwitcher = () => {
           onClick={() => setLanguage('en')}
           className={`px-3 py-1 text-sm font-medium rounded-md transition-all duration-200 ${
             language === 'en'
-              ? 'bg-white text-blue-700 shadow-sm'
-              : 'text-gray-600 hover:text-blue-700'
+              ? 'bg-white shadow-sm'
+              : 'text-gray-600'
           }`}
+          style={language === 'en' ? { color: '#5c9c98' } : {}}
+          onMouseEnter={(e) => {
+            if (language !== 'en') {
+              e.currentTarget.style.color = '#5c9c98';
+            }
+          }}
+          onMouseLeave={(e) => {
+            if (language !== 'en') {
+              e.currentTarget.style.color = '#4b5563';
+            }
+          }}
         >
           EN
         </button>
@@ -23,9 +34,20 @@ const LanguageSwitcher = () => {
           onClick={() => setLanguage('es')}
           className={`px-3 py-1 text-sm font-medium rounded-md transition-all duration-200 ${
             language === 'es'
-              ? 'bg-white text-blue-700 shadow-sm'
-              : 'text-gray-600 hover:text-blue-700'
+              ? 'bg-white shadow-sm'
+              : 'text-gray-600'
           }`}
+          style={language === 'es' ? { color: '#5c9c98' } : {}}
+          onMouseEnter={(e) => {
+            if (language !== 'es') {
+              e.currentTarget.style.color = '#5c9c98';
+            }
+          }}
+          onMouseLeave={(e) => {
+            if (language !== 'es') {
+              e.currentTarget.style.color = '#4b5563';
+            }
+          }}
         >
           ES
         </button>
