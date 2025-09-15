@@ -96,7 +96,7 @@ const AboutPage = () => {
               </h2>
               <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
                 <p>
-                  Since 2018, Doce Leguas has been committed to excellence in software development. Our mission is to 
+                  Since 2015, Doce Leguas has been committed to excellence in software development. Our mission is to 
                   empower companies through cutting-edge technology, transforming innovative ideas into digital solutions 
                   that drive growth and efficiency.
                 </p>
