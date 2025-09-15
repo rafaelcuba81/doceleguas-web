@@ -44,7 +44,7 @@ const ProjectsPage = () => {
       description: 'Built from scratch a comprehensive ERP system tailored specifically for a growing services company, integrating project management, billing, and resource planning.',
       category: 'custom',
       sector: 'Professional Services',
-      image: 'https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=600',
+      image: 'https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=600',
       icon: <Code className="h-6 w-6" />,
       results: ['45% productivity increase', '99.9% uptime', '100% custom fit'],
       testimonial: 'Finally, a system that works exactly how we do business. The custom ERP has streamlined all our processes.',
