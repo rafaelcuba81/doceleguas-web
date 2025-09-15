@@ -245,13 +245,13 @@ const ProjectsPage = () => {
                     </div>
                   </div>
                 </div>
-                <div className="bg-blue-50 border-l-4 border-blue-700 p-4">
                 <div className="border-l-4 p-4" style={{ backgroundColor: '#f0f9f8', borderColor: '#5c9c98' }}>
                   <p className="italic" style={{ color: '#2d5a57' }}>
                     "{projects[0].testimonial}"
                   </p>
                   <p className="font-medium mt-2" style={{ color: '#5c9c98' }}>- {projects[0].client}</p>
                 </div>
+              </div>
             </div>
             <div className="relative">
               <img
