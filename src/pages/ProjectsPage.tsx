@@ -251,12 +251,12 @@ const ProjectsPage = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-blue-700">
+      <section className="py-20" style={{ backgroundColor: '#5c9c98' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
             Let's Talk About Your Challenge
           </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-white opacity-80 mb-8 max-w-3xl mx-auto">
             We can help you achieve similar results. Every great project starts with a conversation.
           </p>
           <Link

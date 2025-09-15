@@ -424,7 +424,7 @@ const HomePage = () => {
       </section>
 
       {/* Final CTA */}
-      <section className="py-20 bg-gradient-to-r from-blue-700 via-blue-800 to-blue-900 relative overflow-hidden">
+      <section className="py-20 relative overflow-hidden" style={{ backgroundColor: '#5c9c98' }}>
         {/* Animated background pattern */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-white to-transparent transform -skew-x-12 animate-shimmer"></div>
@@ -433,7 +433,7 @@ const HomePage = () => {
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6 animate-fadeInUp">
             {t('home.cta.title')}
           </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto leading-relaxed animate-fadeInUp" style={{ animationDelay: '0.2s' }}>
+          <p className="text-xl text-white opacity-80 mb-8 max-w-3xl mx-auto leading-relaxed animate-fadeInUp" style={{ animationDelay: '0.2s' }}>
             {t('home.cta.subtitle')}
           </p>
           <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4 animate-fadeInUp" style={{ animationDelay: '0.4s' }}>
