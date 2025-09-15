@@ -16,7 +16,7 @@ const Footer = () => {
               <img 
                 src="/recurso-12ldpi-85x127.png" 
                 alt="Doce Leguas Logo" 
-                className="h-32 w-auto filter brightness-0 invert opacity-90"
+                className="h-32 w-auto"
               />
             </div>
           </div>
