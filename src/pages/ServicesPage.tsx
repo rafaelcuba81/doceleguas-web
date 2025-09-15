@@ -88,12 +88,21 @@ const ServicesPage = () => {
   return (
     <div className="bg-white">
       {/* Header */}
-      <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="relative py-20 overflow-hidden">
+        {/* Abstract Background Image */}
+        <div className="absolute inset-0 w-full h-full">
+          <img
+            src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=1200"
+            alt="Software development and services"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-white bg-opacity-85"></div>
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
             Our Services: Your Path to Digital Excellence
           </h1>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed relative z-10">
             At Doce Leguas, we combine deep technical expertise with strategic business vision to offer you 
             software solutions that truly work. Explore our range of services designed to drive your growth.
           </p>
