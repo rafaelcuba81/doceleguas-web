@@ -37,7 +37,7 @@ const AboutPage = () => {
   const team = [
     {
       name: 'Nono Carballo',
-      position: 'Senior ERP Arquitect',
+      position: 'Lead ERP Arquitect',
       description: 'Certified Openbravo and Odoo expert with extensive experience in complex ERP implementations across various industries.',
       image: 'https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=400',
       linkedin: '#'
@@ -51,7 +51,7 @@ const AboutPage = () => {
     },
     {
       name: 'Rafael Queralta',
-      position: 'Senior Retail Arquitect',
+      position: 'Lead Retail Arquitect',
       description: 'Expert in retail solutions and digital transformation with extensive experience optimizing supply chains, inventory management, and customer experience across retail organizations.',
       image: 'https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=400',
       linkedin: '#'
