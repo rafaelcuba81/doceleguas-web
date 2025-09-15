@@ -114,12 +114,6 @@ const AboutPage = () => {
                   We started as a small team of passionate developers and have grown into a comprehensive software 
                   consultancy, serving clients across various industries with customized solutions that make a real difference.
                 </p>
-                <div className="bg-blue-50 border-l-4 border-blue-700 p-6">
-                  <h3 className="font-semibold mb-2" style={{ color: '#2d5a57' }}>{t('about.vision.title')}</h3>
-                  <p className="text-blue-800">
-                    {t('about.vision.desc')}
-                  </p>
-                </div>
                 <div className="border-l-4 p-6" style={{ backgroundColor: '#f0f9f8', borderColor: '#5c9c98' }}>
                   <h3 className="font-semibold mb-2" style={{ color: '#2d5a57' }}>{t('about.vision.title')}</h3>
                   <p style={{ color: '#2d5a57' }}>
