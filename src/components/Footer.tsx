@@ -17,16 +17,28 @@ const Footer = () => {
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-white to-transparent transform -skew-x-12 animate-shimmer"></div>
       </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+          {/* Large Logo Column */}
+          <div className="lg:col-span-1 animate-fadeInLeft flex flex-col items-center justify-center">
+            <div className="flex flex-col items-center space-y-4 hover-scale transition-transform duration-300">
+              <img 
+                src="/recurso-12ldpi-85x127.png" 
+                alt="Doce Leguas Logo" 
+                className="h-20 w-auto animate-float filter brightness-0 invert opacity-90"
+              />
+              <span className="font-bold text-2xl text-center">Doce Leguas</span>
+            </div>
+          </div>
+
           {/* Company Info */}
-          <div className="lg:col-span-1 animate-fadeInLeft">
+          <div className="lg:col-span-1 animate-fadeInLeft" style={{ animationDelay: '0.1s' }}>
             <div className="flex items-center space-x-2 mb-4 hover-scale transition-transform duration-300">
               <img 
                 src="/recurso-12ldpi-85x127.png" 
                 alt="Doce Leguas Logo" 
-                className="h-8 w-auto animate-float filter brightness-0 invert opacity-80"
+                className="h-6 w-auto animate-float filter brightness-0 invert opacity-80"
               />
-              <span className="font-bold text-xl">Doce Leguas</span>
+              <span className="font-bold text-lg">Doce Leguas</span>
             </div>
             <p className="text-gray-400 mb-6">
               {t('footer.description')}
@@ -39,7 +51,7 @@ const Footer = () => {
           </div>
 
           {/* Quick Links */}
-          <div className="animate-fadeInUp" style={{ animationDelay: '0.1s' }}>
+          <div className="animate-fadeInUp" style={{ animationDelay: '0.2s' }}>
             <h3 className="font-semibold mb-4">{t('footer.quickLinks')}</h3>
             <ul className="space-y-2">
               <li>
@@ -86,7 +98,7 @@ const Footer = () => {
           </div>
 
           {/* Services */}
-          <div className="animate-fadeInUp" style={{ animationDelay: '0.2s' }}>
+          <div className="animate-fadeInUp" style={{ animationDelay: '0.3s' }}>
             <h3 className="font-semibold mb-4">{t('footer.services')}</h3>
             <ul className="space-y-2">
               <li>
@@ -141,7 +153,7 @@ const Footer = () => {
           </div>
 
           {/* Contact Info */}
-          <div className="animate-fadeInRight" style={{ animationDelay: '0.3s' }}>
+          <div className="animate-fadeInRight" style={{ animationDelay: '0.4s' }}>
             <h3 className="font-semibold mb-4">{t('footer.contactInfo')}</h3>
             <div className="space-y-3">
               <div className="flex items-center space-x-3 hover:translate-x-1 transition-transform duration-300">
@@ -169,7 +181,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center animate-fadeInUp" style={{ animationDelay: '0.4s' }}>
+        <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center animate-fadeInUp" style={{ animationDelay: '0.5s' }}>
           <p className="text-gray-400 text-sm">
             © {new Date().getFullYear()} Doce Leguas. {t('footer.rights')}
           </p>
