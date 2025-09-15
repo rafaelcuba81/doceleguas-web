@@ -51,13 +51,25 @@ const ContactPage = () => {
     {
       icon: <Phone className="h-6 w-6" />,
       title: t('contact.info.phone'),
-      content: '+34 666 49 37 11',
+      content: (
+        <div>
+          <div>+34 666 49 37 11</div>
+          <div>+598 95 751 736</div>
+          <div>+1 829 486-2763</div>
+        </div>
+      ),
       description: t('contact.info.phoneDesc')
     },
     {
       icon: <MapPin className="h-6 w-6" />,
       title: t('contact.info.office'),
-      content: 'Spain',
+      content: (
+        <div className="space-y-1">
+          <div>Spain</div>
+          <div>Uruguay</div>
+          <div>Dominican Republic</div>
+        </div>
+      ),
       description: t('contact.info.officeDesc')
     },
     {
