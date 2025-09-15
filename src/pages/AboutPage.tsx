@@ -38,7 +38,7 @@ const AboutPage = () => {
     {
       name: 'Nono Carballo',
       position: 'Senior ERP Arquitect',
-      description: 'Visionary and strategist with over 15 years in the software industry. Expert in digital transformation and business optimization.',
+      description: 'Certified Openbravo and Odoo expert with extensive experience in complex ERP implementations across various industries.',
       image: 'https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=400',
       linkedin: '#'
     },
