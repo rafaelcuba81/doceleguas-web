@@ -199,7 +199,7 @@ const AboutPage = () => {
                   </div>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{member.name}</h3>
-                <div className="text-blue-700 font-medium mb-4">{member.position}</div>
+                <div className="font-medium mb-4" style={{ color: '#5c9c98' }}>{member.position}</div>
                 <p className="text-gray-600 text-sm leading-relaxed">{member.description}</p>
               </div>
             ))}
