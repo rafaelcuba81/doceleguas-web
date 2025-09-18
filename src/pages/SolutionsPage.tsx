@@ -7,22 +7,22 @@ const SolutionsPage = () => {
     {
       id: 'retail',
       icon: <ShoppingCart className="h-12 w-12" />,
-      title: 'Retail Solution',
-      subtitle: 'Optimize Your Supply Chain and Customer Experience',
-      description: 'Comprehensive solution that integrates inventory management, point-of-sale systems, customer relationship management, and business intelligence to transform your retail operations.',
+      title: 'Warehouse Management System',
+      subtitle: 'Optimize Your Warehouse Operations and Inventory Control',
+      description: 'Comprehensive warehouse management solution that integrates inventory tracking, order fulfillment, warehouse operations, and logistics coordination to transform your distribution operations.',
       features: [
-        'Real-time inventory management',
-        'Integrated POS system',
-        'Customer loyalty programs',
-        'Sales analytics and reporting',
-        'Multi-channel integration',
-        'Supply chain optimization'
+        'Real-time inventory tracking',
+        'Automated order fulfillment',
+        'Warehouse layout optimization',
+        'Pick, pack, and ship management',
+        'Barcode and RFID integration',
+        'Logistics coordination'
       ],
       benefits: [
-        'Reduce inventory costs by up to 25%',
-        'Improve customer satisfaction',
-        'Increase sales efficiency',
-        'Better demand forecasting'
+        'Reduce inventory costs by up to 30%',
+        'Improve order accuracy to 99.9%',
+        'Increase warehouse efficiency by 40%',
+        'Better space utilization'
       ],
       image: 'https://images.pexels.com/photos/264636/pexels-photo-264636.jpeg?auto=compress&cs=tinysrgb&w=600'
     },
