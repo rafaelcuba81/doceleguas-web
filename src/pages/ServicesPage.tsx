@@ -46,7 +46,10 @@ const ServicesPage = () => {
         'Natural Language Processing (NLP)',
         'Computer Vision',
         'Robotic Process Automation (RPA)',
-        'Chatbots and Virtual Assistants'
+        'Chatbots and Virtual Assistants',
+        'Virtual Agents and AI Assistants',
+        'Process Automation',
+        'Fully Automated Workflows powered by AI'
       ],
       cta: 'Discover Our AI Projects',
       image: 'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=600'
