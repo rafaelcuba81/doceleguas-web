@@ -18,75 +18,75 @@ const ProjectsPage = () => {
   const projects = [
     {
       id: 1,
-      title: 'Halsted Logistics Optimization',
-      description: 'Complete Openbravo ERP implementation with custom modules for inventory management, resulting in 30% reduction in operational costs and 25% improvement in delivery times.',
+      titleKey: 'projects.halsted.title',
+      descKey: 'projects.halsted.desc',
       category: 'openbravo',
-      sector: 'Retail & Logistics',
+      sectorKey: 'projects.halsted.sector',
       image: 'https://images.pexels.com/photos/906494/pexels-photo-906494.jpeg?auto=compress&cs=tinysrgb&w=600',
       icon: <Database className="h-6 w-6" />,
-      results: ['30% cost reduction', '25% faster delivery', '95% inventory accuracy'],
-      testimonial: 'Thanks to Doce Leguas, our operations have drastically improved. Their professionalism and knowledge are exceptional.',
-      client: 'Brian, Operations Manager at Halsted'
+      resultKeys: ['projects.halsted.result1', 'projects.halsted.result2', 'projects.halsted.result3'],
+      testimonialKey: 'projects.halsted.testimonial',
+      clientKey: 'projects.halsted.client'
     },
     {
       id: 2,
-      title: 'AI-Powered Predictive Analytics',
-      description: 'Development of machine learning models for demand forecasting and predictive maintenance, enabling data-driven decision making and 40% improvement in operational efficiency.',
+      titleKey: 'projects.ai.title',
+      descKey: 'projects.ai.desc',
       category: 'ai',
-      sector: 'Manufacturing',
+      sectorKey: 'projects.ai.sector',
       image: 'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=600',
       icon: <Brain className="h-6 w-6" />,
-      results: ['40% efficiency gain', '60% better forecasting', '$2M cost savings'],
-      testimonial: 'The AI solution they implemented exceeded all our expectations. The predictive capabilities have transformed our planning process.',
-      client: 'Maria Rodriguez, CTO at TechCorp Solutions'
+      resultKeys: ['projects.ai.result1', 'projects.ai.result2', 'projects.ai.result3'],
+      testimonialKey: 'projects.ai.testimonial',
+      clientKey: 'projects.ai.client'
     },
     {
       id: 3,
-      title: 'Custom ERP Development',
-      description: 'Built from scratch a comprehensive ERP system tailored specifically for a growing services company, integrating project management, billing, and resource planning.',
+      titleKey: 'projects.custom.title',
+      descKey: 'projects.custom.desc',
       category: 'custom',
-      sector: 'Professional Services',
+      sectorKey: 'projects.custom.sector',
       image: 'https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=600',
       icon: <Code className="h-6 w-6" />,
-      results: ['45% productivity increase', '99.9% uptime', '100% custom fit'],
-      testimonial: 'Finally, a system that works exactly how we do business. The custom ERP has streamlined all our processes.',
-      client: 'James Wilson, CEO at ProServ Consulting'
+      resultKeys: ['projects.custom.result1', 'projects.custom.result2', 'projects.custom.result3'],
+      testimonialKey: 'projects.custom.testimonial',
+      clientKey: 'projects.custom.client'
     },
     {
       id: 4,
-      title: 'Odoo Multi-Company Implementation',
-      description: 'Comprehensive Odoo deployment across multiple subsidiaries with custom modules for consolidated reporting, inter-company transactions, and unified workflow management.',
+      titleKey: 'projects.odoo.title',
+      descKey: 'projects.odoo.desc',
       category: 'odoo',
-      sector: 'Finance & Holding',
+      sectorKey: 'projects.odoo.sector',
       image: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=600',
       icon: <Settings className="h-6 w-6" />,
-      results: ['5 companies unified', '50% faster reporting', '80% process automation'],
-      testimonial: 'The Odoo implementation has given us complete visibility across all our companies. Outstanding work.',
-      client: 'Sarah Chen, CFO at GlobalTech Holdings'
+      resultKeys: ['projects.odoo.result1', 'projects.odoo.result2', 'projects.odoo.result3'],
+      testimonialKey: 'projects.odoo.testimonial',
+      clientKey: 'projects.odoo.client'
     },
     {
       id: 5,
-      title: 'Smart Warehouse Management',
-      description: 'AI-enhanced warehouse management system with computer vision for inventory tracking, automated reordering, and predictive maintenance of equipment.',
+      titleKey: 'projects.warehouse.title',
+      descKey: 'projects.warehouse.desc',
       category: 'ai',
-      sector: 'Logistics & Distribution',
+      sectorKey: 'projects.warehouse.sector',
       image: 'https://images.pexels.com/photos/4481532/pexels-photo-4481532.jpeg?auto=compress&cs=tinysrgb&w=600',
       icon: <Brain className="h-6 w-6" />,
-      results: ['35% faster processing', '99% inventory accuracy', '20% cost reduction'],
-      testimonial: 'The computer vision system has revolutionized our warehouse operations. Incredible accuracy and efficiency.',
-      client: 'Mike Torres, Warehouse Director at LogiFlow'
+      resultKeys: ['projects.warehouse.result1', 'projects.warehouse.result2', 'projects.warehouse.result3'],
+      testimonialKey: 'projects.warehouse.testimonial',
+      clientKey: 'projects.warehouse.client'
     },
     {
       id: 6,
-      title: 'Cloud Migration & Modernization',
-      description: 'Complete legacy system modernization with cloud migration, API development, and mobile application creation for a traditional manufacturing company.',
+      titleKey: 'projects.cloud.title',
+      descKey: 'projects.cloud.desc',
       category: 'custom',
-      sector: 'Manufacturing',
+      sectorKey: 'projects.cloud.sector',
       image: 'https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=600',
       icon: <Code className="h-6 w-6" />,
-      results: ['70% performance boost', '24/7 availability', 'Modern mobile access'],
-      testimonial: 'They brought our 20-year-old system into the modern age. The transformation is remarkable.',
-      client: 'Robert Kim, IT Director at SteelWorks Inc'
+      resultKeys: ['projects.cloud.result1', 'projects.cloud.result2', 'projects.cloud.result3'],
+      testimonialKey: 'projects.cloud.testimonial',
+      clientKey: 'projects.cloud.client'
     }
   ];
 
@@ -171,21 +171,21 @@ const ProjectsPage = () => {
                       <div style={{ color: '#5c9c98' }}>{project.icon}</div>
                     </div>
                     <span className="text-white px-3 py-1 rounded-full text-sm font-medium" style={{ backgroundColor: '#5c9c98' }}>
-                      {project.sector}
+                      {t(project.sectorKey)}
                     </span>
                   </div>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{project.title}</h3>
-                  <p className="text-gray-600 mb-4 text-sm leading-relaxed">{project.description}</p>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{t(project.titleKey)}</h3>
+                  <p className="text-gray-600 mb-4 text-sm leading-relaxed">{t(project.descKey)}</p>
                   
                   <div className="mb-4">
                     <h4 className="font-medium text-gray-900 mb-2">{t('projects.keyResults')}</h4>
                     <ul className="space-y-1">
-                      {project.results.map((result, index) => (
+                      {project.resultKeys.map((resultKey, index) => (
                         <li key={index} className="text-sm text-green-700 flex items-center">
                           <div className="w-1.5 h-1.5 bg-green-600 rounded-full mr-2"></div>
-                          {result}
+                          {t(resultKey)}
                         </li>
                       ))}
                     </ul>
@@ -246,16 +246,16 @@ const ProjectsPage = () => {
                 </div>
                 <div className="border-l-4 p-4" style={{ backgroundColor: '#f0f9f8', borderColor: '#5c9c98' }}>
                   <p className="italic" style={{ color: '#2d5a57' }}>
-                    "{projects[0].testimonial}"
+                    "{t(projects[0].testimonialKey)}"
                   </p>
-                  <p className="font-medium mt-2" style={{ color: '#5c9c98' }}>- {projects[0].client}</p>
+                  <p className="font-medium mt-2" style={{ color: '#5c9c98' }}>- {t(projects[0].clientKey)}</p>
                 </div>
               </div>
             </div>
             <div className="relative">
               <img
                 src={projects[0].image}
-                alt="Halsted Success Story"
+                alt={t(projects[0].titleKey)}
                 className="rounded-2xl shadow-2xl"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 to-transparent rounded-2xl"></div>

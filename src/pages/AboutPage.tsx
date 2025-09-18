@@ -105,15 +105,8 @@ const AboutPage = () => {
                 {t('about.story.title')}
               </h2>
               <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
-                <p>
-                  Since 2015, Doce Leguas has been committed to excellence in software development. Our mission is to 
-                  empower companies through cutting-edge technology, transforming innovative ideas into digital solutions 
-                  that drive growth and efficiency.
-                </p>
-                <p>
-                  We started as a small team of passionate developers and have grown into a comprehensive software 
-                  consultancy, serving clients across various industries with customized solutions that make a real difference.
-                </p>
+                <p>{t('about.story.content1')}</p>
+                <p>{t('about.story.content2')}</p>
                 <div className="border-l-4 p-6" style={{ backgroundColor: '#f0f9f8', borderColor: '#5c9c98' }}>
                   <h3 className="font-semibold mb-2" style={{ color: '#2d5a57' }}>{t('about.vision.title')}</h3>
                   <p style={{ color: '#2d5a57' }}>
@@ -142,7 +135,7 @@ const AboutPage = () => {
             {stats.map((stat, index) => (
               <div key={index} className="space-y-2">
                 <div className="text-4xl lg:text-5xl font-bold">{stat.number}</div>
-                <div className="text-white opacity-80">{stat.label}</div>
+                <div className="text-white opacity-80">{t(stat.labelKey)}</div>
               </div>
             ))}
           </div>
@@ -170,7 +163,7 @@ const AboutPage = () => {
                   <div style={{ color: '#5c9c98' }}>{value.icon}</div>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">{value.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{value.description}</p>
+                <p className="text-gray-600 leading-relaxed">{t(value.descKey)}</p>
               </div>
             ))}
           </div>
@@ -213,8 +206,8 @@ const AboutPage = () => {
                   </div>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{member.name}</h3>
-                <div className="font-medium mb-4" style={{ color: '#5c9c98' }}>{member.position}</div>
-                <p className="text-gray-600 text-sm leading-relaxed">{member.description}</p>
+                <div className="font-medium mb-4" style={{ color: '#5c9c98' }}>{t(member.positionKey)}</div>
+                <p className="text-gray-600 text-sm leading-relaxed">{t(member.descKey)}</p>
               </div>
             ))}
           </div>
@@ -237,22 +230,15 @@ const AboutPage = () => {
                 {t('about.culture.title')}
               </h2>
               <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
-                <p>
-                  At Doce Leguas, we foster a culture of continuous learning, innovation, and collaboration. 
-                  Our team is passionate about technology and committed to staying at the forefront of industry trends.
-                </p>
-                <p>
-                  We believe in work-life balance, professional development, and creating an environment where 
-                  creativity and technical excellence thrive. This culture directly translates into better solutions 
-                  for our clients.
-                </p>
+                <p>{t('about.culture.content1')}</p>
+                <p>{t('about.culture.content2')}</p>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8">
                 {[
-                  'Continuous Learning',
-                  'Innovation Focus',
-                  'Team Collaboration',
-                  'Client Partnership'
+                  t('about.culture.item1'),
+                  t('about.culture.item2'),
+                  t('about.culture.item3'),
+                  t('about.culture.item4')
                 ].map((item, index) => (
                   <div key={index} className="flex items-center space-x-3">
                     <div className="w-3 h-3 rounded-full" style={{ backgroundColor: '#5c9c98' }}></div>
