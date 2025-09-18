@@ -158,7 +158,6 @@ const translations = {
 
     // Services Page - Complete content
     'services.openbravo.title': 'Transform Your Management with Openbravo: Efficiency and Total Control',
-    'services.openbravo.description': 'As Openbravo experts, we offer everything from initial implementation to advanced customization and continuous support. We maximize your ERP\'s potential to optimize your operations, from finances and sales to logistics and production.',
     'services.openbravo.benefits': 'Reduced operational costs, improved decision-making, guaranteed scalability, seamless integration.',
     'services.openbravo.point1': 'Implementation and Migration',
     'services.openbravo.point2': 'Customization and Module Development',
