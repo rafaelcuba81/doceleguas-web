@@ -308,7 +308,7 @@ const translations = {
     'projects.featured.fasterDelivery': 'Faster Delivery',
     'projects.cta.title': 'Let\'s Talk About Your Challenge',
     'projects.cta.subtitle': 'We can help you achieve similar results. Every great project starts with a conversation.',
-    'projects.cta.button': 'Contact Us Today'
+    'projects.cta.button': 'Contact Us Today',
   },
   es: {
     // Navigation
@@ -609,7 +609,7 @@ const translations = {
     'projects.featured.fasterDelivery': 'Entrega Más Rápida',
     'projects.cta.title': 'Hablemos Sobre Tu Desafío',
     'projects.cta.subtitle': 'Podemos ayudarte a lograr resultados similares. Cada gran proyecto comienza con una conversación.',
-    'projects.cta.button': 'Contáctanos Hoy'
+    'projects.cta.button': 'Contáctanos Hoy',
   }
 };
 
