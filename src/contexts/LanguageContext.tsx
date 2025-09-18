@@ -142,7 +142,7 @@ const translations = {
     'chatbot.open': 'Open chat',
     'chatbot.close': 'Close chat',
     'chatbot.defaultResponse': 'Thank you for your message. Our team will get back to you soon.',
-    'chatbot.errorMessage': 'Sorry, I\'m having trouble connecting right now. Please try again later or contact us directly.'
+    'chatbot.errorMessage': 'Sorry, I\'m having trouble connecting right now. Please try again later or contact us directly.',
 
     // Services Page
     'services.title': 'Our Services: Your Path to Digital Excellence',
@@ -289,7 +289,7 @@ const translations = {
     'chatbot.open': 'Abrir chat',
     'chatbot.close': 'Cerrar chat',
     'chatbot.defaultResponse': 'Gracias por tu mensaje. Nuestro equipo te responderá pronto.',
-    'chatbot.errorMessage': 'Lo siento, tengo problemas de conexión ahora. Por favor intenta más tarde o contáctanos directamente.'
+    'chatbot.errorMessage': 'Lo siento, tengo problemas de conexión ahora. Por favor intenta más tarde o contáctanos directamente.',
 
     // Services Page
     'services.title': 'Nuestros Servicios: Tu Camino hacia la Excelencia Digital',
