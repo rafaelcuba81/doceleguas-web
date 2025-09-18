@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ShoppingCart, Factory, Briefcase, ArrowRight } from 'lucide-react';
+import { Package, Truck, Briefcase, ArrowRight } from 'lucide-react';
 
 const SolutionsPage = () => {
   const solutions = [
     {
       id: 'retail',
-      icon: <ShoppingCart className="h-12 w-12" />,
+      icon: <Package className="h-12 w-12" />,
       title: 'Warehouse Management System',
       subtitle: 'Optimize Your Warehouse Operations and Inventory Control',
       description: 'A Warehouse Management System (WMS) is a comprehensive software solution designed to optimize and automate warehouse operations from receiving to shipping. It provides real-time visibility into inventory levels, locations, and movements while streamlining picking, packing, and shipping processes. Our WMS integrates seamlessly with your existing ERP systems and uses advanced algorithms to optimize warehouse layout, reduce travel time, and maximize storage efficiency.',
@@ -36,7 +36,7 @@ const SolutionsPage = () => {
     },
     {
       id: 'manufacturing',
-      icon: <Factory className="h-12 w-12" />,
+      icon: <Truck className="h-12 w-12" />,
       title: 'Delivery Management System',
       subtitle: 'Optimize Your Last-Mile Delivery Operations',
       description: 'A comprehensive Delivery Management System (DMS) designed to streamline and optimize your entire delivery process from dispatch to customer doorstep. Our solution provides real-time tracking, route optimization, driver management, and customer communication tools to ensure efficient, cost-effective, and reliable delivery operations.',
