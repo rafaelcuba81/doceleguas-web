@@ -10,83 +10,83 @@ const ServicesPage = () => {
     {
       id: 'openbravo',
       icon: <Database className="h-12 w-12" />,
-      title: t('services.openbravo.title'),
-      description: t('services.openbravo.description'),
-      benefits: t('services.openbravo.benefits'),
+      title: 'Transform Your Management with Openbravo: Efficiency and Total Control',
+      description: 'As Openbravo experts, we offer everything from initial implementation to advanced customization and continuous support. We maximize your ERP\'s potential to optimize your operations, from finances and sales to logistics and production.',
+      benefits: 'Reduced operational costs, improved decision-making, guaranteed scalability, seamless integration.',
       keyPoints: [
-        t('services.openbravo.point1'),
-        t('services.openbravo.point2'),
-        t('services.openbravo.point3'),
-        t('services.openbravo.point4')
+        'Implementation and Migration',
+        'Customization and Module Development',
+        'Support and Maintenance',
+        'User Training'
       ],
-      cta: t('services.openbravo.cta'),
+      cta: 'Learn More about Openbravo',
       image: 'https://images.pexels.com/photos/590020/pexels-photo-590020.jpeg?auto=compress&cs=tinysrgb&w=600'
     },
     {
       id: 'odoo',
       icon: <Settings className="h-12 w-12" />,
-      title: t('services.odoo.title'),
-      description: t('services.odoo.description'),
-      benefits: t('services.odoo.benefits'),
+      title: 'Odoo: Centralize and Automate Your Business with Our Expertise',
+      description: 'Odoo is the ultimate suite of business applications. We help you exploit its full potential, adapting modules like CRM, accounting, project management, e-commerce, and more to your specific workflows.',
+      benefits: 'Increased productivity, 360° business view, reduced manual errors, scalability, and flexibility.',
       keyPoints: [
-        t('services.odoo.point1'),
-        t('services.odoo.point2'),
-        t('services.odoo.point3'),
-        t('services.odoo.point4'),
-        t('services.odoo.point5')
+        'Consultancy and Requirements Analysis',
+        'Implementation and Configuration',
+        'Custom Module Development',
+        'Integration with Other Systems',
+        'Post-Implementation Support'
       ],
-      cta: t('services.odoo.cta'),
+      cta: 'Explore Our Odoo Solutions',
       image: 'https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=600'
     },
     {
       id: 'ai',
       icon: <Brain className="h-12 w-12" />,
-      title: t('services.ai.title'),
-      description: t('services.ai.description'),
-      benefits: t('services.ai.benefits'),
+      title: 'Artificial Intelligence: From Data to Strategic Decisions',
+      description: 'Unlock the power of your data with our AI solutions. From process automation (RPA) and predictive analysis to intelligent chatbots and computer vision, we create systems that learn, optimize, and generate value.',
+      benefits: 'Operational optimization, improved customer experience, new revenue sources, competitive advantage.',
       keyPoints: [
-        t('services.ai.point1'),
-        t('services.ai.point2'),
-        t('services.ai.point3'),
-        t('services.ai.point4'),
-        t('services.ai.point5'),
-        t('services.ai.point6'),
-        t('services.ai.point7'),
-        t('services.ai.point8')
+        'Machine Learning and Deep Learning',
+        'Natural Language Processing (NLP)',
+        'Computer Vision',
+        'Robotic Process Automation (RPA)',
+        'Chatbots and Virtual Assistants',
+        'Virtual Agents and AI Assistants',
+        'Process Automation',
+        'Fully Automated Workflows powered by AI'
       ],
-      cta: t('services.ai.cta'),
+      cta: 'Discover Our AI Projects',
       image: 'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=600'
     },
     {
       id: 'custom',
       icon: <Code className="h-12 w-12" />,
-      title: t('services.custom.title'),
-      description: t('services.custom.description'),
-      benefits: t('services.custom.benefits'),
+      title: 'Custom Software: The Perfect Solution for Unique Challenges',
+      description: 'When standard solutions are not enough, we create applications that fit your processes and goals like a glove. From web and mobile applications to complex management systems, we design and develop robust, scalable, and user-centered software.',
+      benefits: 'Unmatched efficiency, competitive advantage, total control over your technology, guaranteed security.',
       keyPoints: [
-        t('services.custom.point1'),
-        t('services.custom.point2'),
-        t('services.custom.point3'),
-        t('services.custom.point4'),
-        t('services.custom.point5')
+        'Custom Analysis and Design',
+        'Front-end and Back-end Development',
+        'Mobile Applications (iOS/Android)',
+        'Enterprise Management Systems (CRM, ERP, etc.)',
+        'Legacy System Modernization'
       ],
-      cta: t('services.custom.cta'),
+      cta: 'Tell Us Your Idea',
       image: 'https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=600'
     },
     {
       id: 'consulting',
       icon: <MessageSquare className="h-12 w-12" />,
-      title: t('services.consulting.title'),
-      description: t('services.consulting.description'),
-      benefits: t('services.consulting.benefits'),
+      title: 'Technological Consultancy: Strategy and Vision for Your Digital Future',
+      description: 'Our team of expert consultants will guide you in defining your technological roadmap. From infrastructure evaluation to selecting the most suitable solutions and project management, we offer a clear and strategic vision.',
+      benefits: 'Risk reduction, investment optimization, planned innovation, technological alignment with business goals.',
       keyPoints: [
-        t('services.consulting.point1'),
-        t('services.consulting.point2'),
-        t('services.consulting.point3'),
-        t('services.consulting.point4'),
-        t('services.consulting.point5')
+        'Technological Audit',
+        'Strategic IT Planning',
+        'Technology and Vendor Selection',
+        'Software Project Management',
+        'Security and Cybersecurity'
       ],
-      cta: t('services.consulting.cta'),
+      cta: 'Consult Our Experts',
       image: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=600'
     }
   ];
@@ -137,12 +137,12 @@ const ServicesPage = () => {
                     {service.description}
                   </p>
                   <div className="bg-green-50 border border-green-200 rounded-lg p-6 mb-8">
-                    <h4 className="font-semibold text-green-800 mb-2">{t('services.keyBenefits')}</h4>
+                    <h4 className="font-semibold text-green-800 mb-2">Key Benefits:</h4>
                     <p className="text-green-700">{service.benefits}</p>
                   </div>
                   
                   <div className="mb-8">
-                    <h4 className="font-semibold text-gray-900 mb-4">{t('services.whatWeOffer')}</h4>
+                    <h4 className="font-semibold text-gray-900 mb-4">What We Offer:</h4>
                     <ul className="space-y-3">
                       {service.keyPoints.map((point, pointIndex) => (
                         <li key={pointIndex} className="flex items-start space-x-3">
@@ -186,17 +186,17 @@ const ServicesPage = () => {
       <section className="py-20" style={{ backgroundColor: '#5c9c98' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-            {t('services.finalCta.title')}
+            No matter how complex your challenge is, we have the expertise to turn it into success.
           </h2>
           <p className="text-xl text-white opacity-80 mb-8 max-w-3xl mx-auto">
-            {t('services.finalCta.subtitle')}
+            Let's talk about your next project and discover how we can help you achieve your goals.
           </p>
           <Link
             to="/contact"
             className="inline-flex items-center bg-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200"
             style={{ color: '#5c9c98' }}
           >
-            {t('services.finalCta.button')}
+            Contact Us
             <ArrowRight className="h-5 w-5 ml-2" />
           </Link>
         </div>
