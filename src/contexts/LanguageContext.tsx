@@ -154,7 +154,7 @@ const translations = {
 
     // Projects Page
     'projects.title': 'Our Projects: Stories of Success and Transformation',
-    'projects.subtitle': 'Each project is an opportunity to demonstrate our commitment to excellence. Here we present some of our most relevant works, showing how we have helped companies achieve their digital goals.'
+    'projects.subtitle': 'Each project is an opportunity to demonstrate our commitment to excellence. Here we present some of our most relevant works, showing how we have helped companies achieve their digital goals.',
 
     // Services Page - Complete content
     'services.openbravo.title': 'Transform Your Management with Openbravo: Efficiency and Total Control',
@@ -454,7 +454,7 @@ const translations = {
 
     // Projects Page
     'projects.title': 'Nuestros Proyectos: Historias de Éxito y Transformación',
-    'projects.subtitle': 'Cada proyecto es una oportunidad para demostrar nuestro compromiso con la excelencia. Aquí presentamos algunos de nuestros trabajos más relevantes, mostrando cómo hemos ayudado a empresas a lograr sus objetivos digitales.'
+    'projects.subtitle': 'Cada proyecto es una oportunidad para demostrar nuestro compromiso con la excelencia. Aquí presentamos algunos de nuestros trabajos más relevantes, mostrando cómo hemos ayudado a empresas a lograr sus objetivos digitales.',
 
     // Services Page - Complete content in Spanish
     'services.openbravo.title': 'Transforma tu Gestión con Openbravo: Eficiencia y Control Total',
