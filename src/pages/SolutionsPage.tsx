@@ -9,20 +9,28 @@ const SolutionsPage = () => {
       icon: <ShoppingCart className="h-12 w-12" />,
       title: 'Warehouse Management System',
       subtitle: 'Optimize Your Warehouse Operations and Inventory Control',
-      description: 'Comprehensive warehouse management solution that integrates inventory tracking, order fulfillment, warehouse operations, and logistics coordination to transform your distribution operations.',
+      description: 'A Warehouse Management System (WMS) is a comprehensive software solution designed to optimize and automate warehouse operations from receiving to shipping. It provides real-time visibility into inventory levels, locations, and movements while streamlining picking, packing, and shipping processes. Our WMS integrates seamlessly with your existing ERP systems and uses advanced algorithms to optimize warehouse layout, reduce travel time, and maximize storage efficiency.',
       features: [
-        'Real-time inventory tracking',
-        'Automated order fulfillment',
-        'Warehouse layout optimization',
-        'Pick, pack, and ship management',
-        'Barcode and RFID integration',
-        'Logistics coordination'
+        'Real-time inventory tracking and location management',
+        'Automated picking route optimization',
+        'Receiving and put-away management',
+        'Order fulfillment and wave planning',
+        'Barcode, RFID, and mobile device integration',
+        'Warehouse layout optimization and slotting',
+        'Labor management and productivity tracking',
+        'Shipping and dock management',
+        'Cycle counting and inventory accuracy',
+        'Integration with ERP, TMS, and e-commerce platforms'
       ],
       benefits: [
-        'Reduce inventory costs by up to 30%',
-        'Improve order accuracy to 99.9%',
-        'Increase warehouse efficiency by 40%',
-        'Better space utilization'
+        'Increase picking productivity by 25-40%',
+        'Improve inventory accuracy to 99.5%+',
+        'Reduce order fulfillment time by 30-50%',
+        'Optimize warehouse space utilization by 20-30%',
+        'Decrease labor costs through automation',
+        'Enhance customer satisfaction with faster deliveries',
+        'Reduce inventory carrying costs',
+        'Minimize picking errors and returns'
       ],
       image: 'https://images.pexels.com/photos/264636/pexels-photo-264636.jpeg?auto=compress&cs=tinysrgb&w=600'
     },
