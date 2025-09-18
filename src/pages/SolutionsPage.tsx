@@ -37,22 +37,30 @@ const SolutionsPage = () => {
     {
       id: 'manufacturing',
       icon: <Factory className="h-12 w-12" />,
-      title: 'Manufacturing Solution',
-      subtitle: 'Total Control of Production and Resource Management',
-      description: 'End-to-end manufacturing solution that optimizes production planning, resource allocation, quality control, and maintenance scheduling for maximum operational efficiency.',
+      title: 'Delivery Management System',
+      subtitle: 'Optimize Your Last-Mile Delivery Operations',
+      description: 'A comprehensive Delivery Management System (DMS) designed to streamline and optimize your entire delivery process from dispatch to customer doorstep. Our solution provides real-time tracking, route optimization, driver management, and customer communication tools to ensure efficient, cost-effective, and reliable delivery operations.',
       features: [
-        'Production planning and scheduling',
-        'Material resource planning (MRP)',
-        'Quality management system',
-        'Maintenance management',
-        'Shop floor control',
-        'Cost tracking and analysis'
+        'Real-time delivery tracking and monitoring',
+        'Intelligent route optimization and planning',
+        'Driver mobile app with GPS navigation',
+        'Automated customer notifications and updates',
+        'Proof of delivery with digital signatures',
+        'Fleet management and vehicle tracking',
+        'Delivery scheduling and time slot management',
+        'Performance analytics and reporting',
+        'Integration with e-commerce and ERP systems',
+        'Customer portal for delivery preferences'
       ],
       benefits: [
-        'Increase production efficiency by 30%',
-        'Reduce waste and operational costs',
-        'Improve product quality',
-        'Optimize resource utilization'
+        'Reduce delivery costs by 20-35%',
+        'Improve delivery success rate to 95%+',
+        'Decrease delivery time by 25-40%',
+        'Enhance customer satisfaction scores',
+        'Optimize fleet utilization and fuel efficiency',
+        'Reduce failed delivery attempts',
+        'Increase driver productivity',
+        'Provide complete delivery visibility'
       ],
       image: 'https://images.pexels.com/photos/236705/pexels-photo-236705.jpeg?auto=compress&cs=tinysrgb&w=600'
     },
