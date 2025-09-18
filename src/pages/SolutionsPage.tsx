@@ -62,7 +62,7 @@ const SolutionsPage = () => {
         'Increase driver productivity',
         'Provide complete delivery visibility'
       ],
-      image: 'https://images.pexels.com/photos/906494/pexels-photo-906494.jpeg?auto=compress&cs=tinysrgb&w=600'
+      image: 'https://images.pexels.com/photos/1267338/pexels-photo-1267338.jpeg?auto=compress&cs=tinysrgb&w=600'
     },
     {
       id: 'services',
