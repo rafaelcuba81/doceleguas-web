@@ -1,8 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Database, Settings, Brain, Code, MessageSquare, ArrowRight, CheckCircle } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const ServicesPage = () => {
+  const { t } = useLanguage();
+
   const services = [
     {
       id: 'openbravo',
@@ -103,11 +106,10 @@ const ServicesPage = () => {
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-            Our Services: Your Path to Digital Excellence
+            {t('services.title')}
           </h1>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed relative z-10">
-            At Doce Leguas, we combine deep technical expertise with strategic business vision to offer you 
-            software solutions that truly work. Explore our range of services designed to drive your growth.
+            {t('services.subtitle')}
           </p>
         </div>
       </section>

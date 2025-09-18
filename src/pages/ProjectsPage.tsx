@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Filter, ArrowRight, Database, Brain, Code, Settings } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const ProjectsPage = () => {
+  const { t } = useLanguage();
   const [activeFilter, setActiveFilter] = useState('all');
 
   const filters = [
@@ -107,11 +109,10 @@ const ProjectsPage = () => {
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-            Our Projects: Stories of Success and Transformation
+            {t('projects.title')}
           </h1>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed relative z-10">
-            Each project is an opportunity to demonstrate our commitment to excellence. Here we present some of our most 
-            relevant works, showing how we have helped companies achieve their digital goals.
+            {t('projects.subtitle')}
           </p>
         </div>
       </section>

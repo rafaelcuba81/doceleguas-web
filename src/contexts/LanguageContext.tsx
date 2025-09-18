@@ -143,6 +143,18 @@ const translations = {
     'chatbot.close': 'Close chat',
     'chatbot.defaultResponse': 'Thank you for your message. Our team will get back to you soon.',
     'chatbot.errorMessage': 'Sorry, I\'m having trouble connecting right now. Please try again later or contact us directly.'
+
+    // Services Page
+    'services.title': 'Our Services: Your Path to Digital Excellence',
+    'services.subtitle': 'At Doce Leguas, we combine deep technical expertise with strategic business vision to offer you software solutions that truly work. Explore our range of services designed to drive your growth.',
+
+    // Solutions Page
+    'solutions.title': 'Comprehensive Solutions for Your Sector',
+    'solutions.subtitle': 'We have developed packaged solutions that address the most common challenges in various industries, combining our experience in Openbravo, Odoo, AI, and custom development to offer you unprecedented value.',
+
+    // Projects Page
+    'projects.title': 'Our Projects: Stories of Success and Transformation',
+    'projects.subtitle': 'Each project is an opportunity to demonstrate our commitment to excellence. Here we present some of our most relevant works, showing how we have helped companies achieve their digital goals.'
   },
   es: {
     // Navigation
@@ -278,6 +290,18 @@ const translations = {
     'chatbot.close': 'Cerrar chat',
     'chatbot.defaultResponse': 'Gracias por tu mensaje. Nuestro equipo te responderá pronto.',
     'chatbot.errorMessage': 'Lo siento, tengo problemas de conexión ahora. Por favor intenta más tarde o contáctanos directamente.'
+
+    // Services Page
+    'services.title': 'Nuestros Servicios: Tu Camino hacia la Excelencia Digital',
+    'services.subtitle': 'En Doce Leguas, combinamos profunda experiencia técnica con visión estratégica empresarial para ofrecerte soluciones de software que realmente funcionan. Explora nuestra gama de servicios diseñados para impulsar tu crecimiento.',
+
+    // Solutions Page
+    'solutions.title': 'Soluciones Integrales para Tu Sector',
+    'solutions.subtitle': 'Hemos desarrollado soluciones empaquetadas que abordan los desafíos más comunes en diversas industrias, combinando nuestra experiencia en Openbravo, Odoo, IA y desarrollo personalizado para ofrecerte un valor sin precedentes.',
+
+    // Projects Page
+    'projects.title': 'Nuestros Proyectos: Historias de Éxito y Transformación',
+    'projects.subtitle': 'Cada proyecto es una oportunidad para demostrar nuestro compromiso con la excelencia. Aquí presentamos algunos de nuestros trabajos más relevantes, mostrando cómo hemos ayudado a empresas a lograr sus objetivos digitales.'
   }
 };
 

@@ -1,8 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Package, Truck, Briefcase, ArrowRight } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const SolutionsPage = () => {
+  const { t } = useLanguage();
+
   const solutions = [
     {
       id: 'retail',
@@ -103,11 +106,10 @@ const SolutionsPage = () => {
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-            Comprehensive Solutions for Your Sector
+            {t('solutions.title')}
           </h1>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed relative z-10">
-            We have developed packaged solutions that address the most common challenges in various industries, 
-            combining our experience in Openbravo, Odoo, AI, and custom development to offer you unprecedented value.
+            {t('solutions.subtitle')}
           </p>
         </div>
       </section>
