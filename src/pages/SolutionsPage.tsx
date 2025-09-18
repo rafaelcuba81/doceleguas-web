@@ -10,82 +10,82 @@ const SolutionsPage = () => {
     {
       id: 'retail',
       icon: <Package className="h-12 w-12" />,
-      title: 'Warehouse Management System',
-      subtitle: 'Optimize Your Warehouse Operations and Inventory Control',
-      description: 'A Warehouse Management System (WMS) is a comprehensive software solution designed to optimize and automate warehouse operations from receiving to shipping. It provides real-time visibility into inventory levels, locations, and movements while streamlining picking, packing, and shipping processes. Our WMS integrates seamlessly with your existing ERP systems and uses advanced algorithms to optimize warehouse layout, reduce travel time, and maximize storage efficiency.',
+      title: t('solutions.warehouse.title'),
+      subtitle: t('solutions.warehouse.subtitle'),
+      description: t('solutions.warehouse.description'),
       features: [
-        'Real-time inventory tracking and location management',
-        'Automated picking route optimization',
-        'Receiving and put-away management',
-        'Order fulfillment and wave planning',
-        'Barcode, RFID, and mobile device integration',
-        'Warehouse layout optimization and slotting',
-        'Labor management and productivity tracking',
-        'Shipping and dock management',
-        'Cycle counting and inventory accuracy',
-        'Integration with ERP, TMS, and e-commerce platforms'
+        t('solutions.warehouse.feature1'),
+        t('solutions.warehouse.feature2'),
+        t('solutions.warehouse.feature3'),
+        t('solutions.warehouse.feature4'),
+        t('solutions.warehouse.feature5'),
+        t('solutions.warehouse.feature6'),
+        t('solutions.warehouse.feature7'),
+        t('solutions.warehouse.feature8'),
+        t('solutions.warehouse.feature9'),
+        t('solutions.warehouse.feature10')
       ],
       benefits: [
-        'Increase picking productivity by 25-40%',
-        'Improve inventory accuracy to 99.5%+',
-        'Reduce order fulfillment time by 30-50%',
-        'Optimize warehouse space utilization by 20-30%',
-        'Decrease labor costs through automation',
-        'Enhance customer satisfaction with faster deliveries',
-        'Reduce inventory carrying costs',
-        'Minimize picking errors and returns'
+        t('solutions.warehouse.benefit1'),
+        t('solutions.warehouse.benefit2'),
+        t('solutions.warehouse.benefit3'),
+        t('solutions.warehouse.benefit4'),
+        t('solutions.warehouse.benefit5'),
+        t('solutions.warehouse.benefit6'),
+        t('solutions.warehouse.benefit7'),
+        t('solutions.warehouse.benefit8')
       ],
       image: 'https://images.pexels.com/photos/4481532/pexels-photo-4481532.jpeg?auto=compress&cs=tinysrgb&w=600'
     },
     {
       id: 'manufacturing',
       icon: <Truck className="h-12 w-12" />,
-      title: 'Delivery Management System',
-      subtitle: 'Optimize Your Last-Mile Delivery Operations',
-      description: 'A comprehensive Delivery Management System (DMS) designed to streamline and optimize your entire delivery process from dispatch to customer doorstep. Our solution provides real-time tracking, route optimization, driver management, and customer communication tools to ensure efficient, cost-effective, and reliable delivery operations.',
+      title: t('solutions.delivery.title'),
+      subtitle: t('solutions.delivery.subtitle'),
+      description: t('solutions.delivery.description'),
       features: [
-        'Real-time delivery tracking and monitoring',
-        'Intelligent route optimization and planning',
-        'Driver mobile app with GPS navigation',
-        'Automated customer notifications and updates',
-        'Proof of delivery with digital signatures',
-        'Fleet management and vehicle tracking',
-        'Delivery scheduling and time slot management',
-        'Performance analytics and reporting',
-        'Integration with e-commerce and ERP systems',
-        'Customer portal for delivery preferences'
+        t('solutions.delivery.feature1'),
+        t('solutions.delivery.feature2'),
+        t('solutions.delivery.feature3'),
+        t('solutions.delivery.feature4'),
+        t('solutions.delivery.feature5'),
+        t('solutions.delivery.feature6'),
+        t('solutions.delivery.feature7'),
+        t('solutions.delivery.feature8'),
+        t('solutions.delivery.feature9'),
+        t('solutions.delivery.feature10')
       ],
       benefits: [
-        'Reduce delivery costs by 20-35%',
-        'Improve delivery success rate to 95%+',
-        'Decrease delivery time by 25-40%',
-        'Enhance customer satisfaction scores',
-        'Optimize fleet utilization and fuel efficiency',
-        'Reduce failed delivery attempts',
-        'Increase driver productivity',
-        'Provide complete delivery visibility'
+        t('solutions.delivery.benefit1'),
+        t('solutions.delivery.benefit2'),
+        t('solutions.delivery.benefit3'),
+        t('solutions.delivery.benefit4'),
+        t('solutions.delivery.benefit5'),
+        t('solutions.delivery.benefit6'),
+        t('solutions.delivery.benefit7'),
+        t('solutions.delivery.benefit8')
       ],
       image: 'https://images.pexels.com/photos/1267338/pexels-photo-1267338.jpeg?auto=compress&cs=tinysrgb&w=600'
     },
     {
       id: 'services',
       icon: <Briefcase className="h-12 w-12" />,
-      title: 'Services Solution',
-      subtitle: 'Automate Your Processes and Improve Your Team\'s Productivity',
-      description: 'Tailored solution for service-based businesses that streamlines project management, resource allocation, client management, and billing processes.',
+      title: t('solutions.services.title'),
+      subtitle: t('solutions.services.subtitle'),
+      description: t('solutions.services.description'),
       features: [
-        'Project and task management',
-        'Time tracking and billing',
-        'Client relationship management',
-        'Resource scheduling',
-        'Document management',
-        'Financial reporting'
+        t('solutions.services.feature1'),
+        t('solutions.services.feature2'),
+        t('solutions.services.feature3'),
+        t('solutions.services.feature4'),
+        t('solutions.services.feature5'),
+        t('solutions.services.feature6')
       ],
       benefits: [
-        'Increase team productivity by 40%',
-        'Improve client satisfaction',
-        'Streamline billing processes',
-        'Better project visibility'
+        t('solutions.services.benefit1'),
+        t('solutions.services.benefit2'),
+        t('solutions.services.benefit3'),
+        t('solutions.services.benefit4')
       ],
       image: 'https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=600'
     }
@@ -143,7 +143,7 @@ const SolutionsPage = () => {
 
                   {/* Features */}
                   <div className="mb-8">
-                    <h4 className="font-semibold text-gray-900 mb-4">Key Features:</h4>
+                    <h4 className="font-semibold text-gray-900 mb-4">{t('solutions.keyFeatures')}</h4>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                       {solution.features.map((feature, featureIndex) => (
                         <div key={featureIndex} className="flex items-center space-x-3">
@@ -156,7 +156,7 @@ const SolutionsPage = () => {
 
                   {/* Benefits */}
                   <div className="bg-green-50 border border-green-200 rounded-lg p-6 mb-8">
-                    <h4 className="font-semibold text-green-800 mb-4">Expected Benefits:</h4>
+                    <h4 className="font-semibold text-green-800 mb-4">{t('solutions.expectedBenefits')}</h4>
                     <ul className="space-y-2">
                       {solution.benefits.map((benefit, benefitIndex) => (
                         <li key={benefitIndex} className="text-green-700">
@@ -173,7 +173,7 @@ const SolutionsPage = () => {
                     onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#4a8480'}
                     onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#5c9c98'}
                   >
-                    Learn More
+                    {t('solutions.learnMore')}
                     <ArrowRight className="h-5 w-5 ml-2" />
                   </Link>
                 </div>
@@ -200,27 +200,27 @@ const SolutionsPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-              Why Choose Our Industry Solutions?
+              {t('solutions.whyChoose.title')}
             </h2>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
-                title: 'Industry Expertise',
-                description: 'Deep understanding of sector-specific challenges and requirements.'
+                title: t('solutions.whyChoose.expertise.title'),
+                description: t('solutions.whyChoose.expertise.desc')
               },
               {
-                title: 'Proven Results',
-                description: 'Track record of successful implementations across various industries.'
+                title: t('solutions.whyChoose.results.title'),
+                description: t('solutions.whyChoose.results.desc')
               },
               {
-                title: 'Scalable Solutions',
-                description: 'Solutions that grow with your business and adapt to changing needs.'
+                title: t('solutions.whyChoose.scalable.title'),
+                description: t('solutions.whyChoose.scalable.desc')
               },
               {
-                title: 'Comprehensive Support',
-                description: 'Full lifecycle support from implementation to ongoing maintenance.'
+                title: t('solutions.whyChoose.support.title'),
+                description: t('solutions.whyChoose.support.desc')
               }
             ].map((item, index) => (
               <div
@@ -239,17 +239,17 @@ const SolutionsPage = () => {
       <section className="py-20" style={{ backgroundColor: '#5c9c98' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Business?
+            {t('solutions.cta.title')}
           </h2>
           <p className="text-xl text-white opacity-80 mb-8 max-w-3xl mx-auto">
-            Discover how our industry-specific solutions can drive efficiency, reduce costs, and accelerate your growth.
+            {t('solutions.cta.subtitle')}
           </p>
           <Link
             to="/contact"
             className="inline-flex items-center bg-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200"
             style={{ color: '#5c9c98' }}
           >
-            Get Started Today
+            {t('solutions.cta.button')}
             <ArrowRight className="h-5 w-5 ml-2" />
           </Link>
         </div>

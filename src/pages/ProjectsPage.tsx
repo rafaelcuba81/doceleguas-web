@@ -8,11 +8,11 @@ const ProjectsPage = () => {
   const [activeFilter, setActiveFilter] = useState('all');
 
   const filters = [
-    { id: 'all', name: 'All Projects' },
-    { id: 'openbravo', name: 'Openbravo' },
-    { id: 'odoo', name: 'Odoo' },
-    { id: 'ai', name: 'AI Solutions' },
-    { id: 'custom', name: 'Custom Development' }
+    { id: 'all', name: t('projects.filters.all') },
+    { id: 'openbravo', name: t('projects.filters.openbravo') },
+    { id: 'odoo', name: t('projects.filters.odoo') },
+    { id: 'ai', name: t('projects.filters.ai') },
+    { id: 'custom', name: t('projects.filters.custom') }
   ];
 
   const projects = [
@@ -180,7 +180,7 @@ const ProjectsPage = () => {
                   <p className="text-gray-600 mb-4 text-sm leading-relaxed">{project.description}</p>
                   
                   <div className="mb-4">
-                    <h4 className="font-medium text-gray-900 mb-2">Key Results:</h4>
+                    <h4 className="font-medium text-gray-900 mb-2">{t('projects.keyResults')}</h4>
                     <ul className="space-y-1">
                       {project.results.map((result, index) => (
                         <li key={index} className="text-sm text-green-700 flex items-center">
@@ -199,7 +199,7 @@ const ProjectsPage = () => {
                       onMouseEnter={(e) => e.currentTarget.style.color = '#4a8480'}
                       onMouseLeave={(e) => e.currentTarget.style.color = '#5c9c98'}
                     >
-                      View Case Study
+                      {t('projects.viewCase')}
                       <ArrowRight className="h-4 w-4 ml-2" />
                     </Link>
                   </div>
@@ -216,33 +216,31 @@ const ProjectsPage = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-                Featured Success Story: Halsted Logistics Transformation
+                {t('projects.featured.title')}
               </h2>
               <div className="space-y-6">
                 <div>
-                  <h3 className="font-semibold text-gray-900 mb-2">The Challenge:</h3>
+                  <h3 className="font-semibold text-gray-900 mb-2">{t('projects.featured.challenge')}</h3>
                   <p className="text-gray-600">
-                    Halsted was struggling with manual inventory processes, leading to stockouts, overstock situations, 
-                    and delayed deliveries that were affecting customer satisfaction.
+                    {t('projects.featured.challengeDesc')}
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900 mb-2">Our Solution:</h3>
+                  <h3 className="font-semibold text-gray-900 mb-2">{t('projects.featured.solution')}</h3>
                   <p className="text-gray-600">
-                    We implemented a comprehensive Openbravo ERP system with custom modules for real-time inventory 
-                    tracking, automated reordering, and integrated logistics management.
+                    {t('projects.featured.solutionDesc')}
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900 mb-2">Results Achieved:</h3>
+                  <h3 className="font-semibold text-gray-900 mb-2">{t('projects.featured.results')}</h3>
                   <div className="grid grid-cols-2 gap-4">
                     <div className="bg-green-50 p-4 rounded-lg">
                       <div className="text-2xl font-bold" style={{ color: '#5c9c98' }}>30%</div>
-                      <div className="text-sm" style={{ color: '#4a8480' }}>Cost Reduction</div>
+                      <div className="text-sm" style={{ color: '#4a8480' }}>{t('projects.featured.costReduction')}</div>
                     </div>
                     <div className="p-4 rounded-lg" style={{ backgroundColor: '#f0f9f8' }}>
                       <div className="text-2xl font-bold" style={{ color: '#5c9c98' }}>25%</div>
-                      <div className="text-sm" style={{ color: '#4a8480' }}>Faster Delivery</div>
+                      <div className="text-sm" style={{ color: '#4a8480' }}>{t('projects.featured.fasterDelivery')}</div>
                     </div>
                   </div>
                 </div>
@@ -270,17 +268,17 @@ const ProjectsPage = () => {
       <section className="py-20" style={{ backgroundColor: '#5c9c98' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-            Let's Talk About Your Challenge
+            {t('projects.cta.title')}
           </h2>
           <p className="text-xl text-white opacity-80 mb-8 max-w-3xl mx-auto">
-            We can help you achieve similar results. Every great project starts with a conversation.
+            {t('projects.cta.subtitle')}
           </p>
           <Link
             to="/contact"
             className="inline-flex items-center bg-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200"
             style={{ color: '#5c9c98' }}
           >
-            Contact Us Today
+            {t('projects.cta.button')}
             <ArrowRight className="h-5 w-5 ml-2" />
           </Link>
         </div>
