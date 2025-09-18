@@ -32,7 +32,7 @@ const SolutionsPage = () => {
         'Reduce inventory carrying costs',
         'Minimize picking errors and returns'
       ],
-      image: 'https://images.pexels.com/photos/264636/pexels-photo-264636.jpeg?auto=compress&cs=tinysrgb&w=600'
+      image: 'https://images.pexels.com/photos/4481532/pexels-photo-4481532.jpeg?auto=compress&cs=tinysrgb&w=600'
     },
     {
       id: 'manufacturing',
@@ -62,7 +62,7 @@ const SolutionsPage = () => {
         'Increase driver productivity',
         'Provide complete delivery visibility'
       ],
-      image: 'https://images.pexels.com/photos/236705/pexels-photo-236705.jpeg?auto=compress&cs=tinysrgb&w=600'
+      image: 'https://images.pexels.com/photos/906494/pexels-photo-906494.jpeg?auto=compress&cs=tinysrgb&w=600'
     },
     {
       id: 'services',
