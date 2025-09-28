@@ -37,29 +37,29 @@ const AboutPage = () => {
   const team = [
     {
       name: 'Nono Carballo',
-      position: 'Lead ERP Arquitect',
-      description: 'Certified Openbravo and Odoo expert with extensive experience in complex ERP implementations across various industries.',
+      positionKey: 'about.team.nono.position',
+      descriptionKey: 'about.team.nono.description',
       image: 'https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=400',
       linkedin: '#'
     },
     {
       name: 'Mark Molina',
-      position: 'Lead AI Architect',
-      description: 'Specialist in artificial intelligence and machine learning with 10+ years developing intelligent solutions for enterprise clients.',
+      positionKey: 'about.team.mark.position',
+      descriptionKey: 'about.team.mark.description',
       image: 'https://images.pexels.com/photos/3756679/pexels-photo-3756679.jpeg?auto=compress&cs=tinysrgb&w=400',
       linkedin: '#'
     },
     {
       name: 'Rafael Queralta',
-      position: 'Lead Retail Arquitect',
-      description: 'Expert in retail solutions and digital transformation with extensive experience optimizing inventory management, and customer experience across retail organizations.',
+      positionKey: 'about.team.rafael.position',
+      descriptionKey: 'about.team.rafael.description',
       image: '/rqp_profile.jpeg',
       linkedin: '#'
     },
     {
       name: 'Maarten Tromp',
-      position: 'Supply Chain Consultant',
-      description: 'Expert in supply chain optimization and logistics management with deep knowledge of warehouse operations, distribution networks, and inventory control systems.',
+      positionKey: 'about.team.maarten.position',
+      descriptionKey: 'about.team.maarten.description',
       image: 'https://images.pexels.com/photos/3756523/pexels-photo-3756523.jpeg?auto=compress&cs=tinysrgb&w=400',
       linkedin: '#'
     }
@@ -207,7 +207,7 @@ const AboutPage = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{member.name}</h3>
                 <div className="font-medium mb-4" style={{ color: '#5c9c98' }}>{t(member.positionKey)}</div>
-                <p className="text-gray-600 text-sm leading-relaxed">{t(member.descKey)}</p>
+                <p className="text-gray-600 text-sm leading-relaxed">{t(member.descriptionKey)}</p>
               </div>
             ))}
           </div>

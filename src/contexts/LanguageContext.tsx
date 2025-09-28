@@ -101,6 +101,16 @@ const translations = {
     'about.cta.subtitle': 'Let\'s discuss how our team can help you achieve your business goals.',
     'about.cta.contact': 'Contact Our Team',
 
+    // Team member details
+    'about.team.nono.position': 'Lead ERP Architect',
+    'about.team.nono.description': 'Certified Openbravo and Odoo expert with extensive experience in complex ERP implementations across various industries.',
+    'about.team.mark.position': 'Lead AI Architect', 
+    'about.team.mark.description': 'Specialist in artificial intelligence and machine learning with 10+ years developing intelligent solutions for enterprise clients.',
+    'about.team.rafael.position': 'Lead Retail Architect',
+    'about.team.rafael.description': 'Expert in retail solutions and digital transformation with extensive experience optimizing inventory management, and customer experience across retail organizations.',
+    'about.team.maarten.position': 'Supply Chain Consultant',
+    'about.team.maarten.description': 'Expert in supply chain optimization and logistics management with deep knowledge of warehouse operations, distribution networks, and inventory control systems.',
+
     // Contact Page
     'contact.title': 'Contact Us: Let\'s Start Your Digital Transformation',
     'contact.subtitle': 'We\'re here to help you achieve your business goals. Get in touch with our team of experts.',
@@ -482,6 +492,16 @@ const translations = {
     'about.cta.title': '¿Listo para Trabajar Juntos?',
     'about.cta.subtitle': 'Hablemos sobre cómo nuestro equipo puede ayudarte a lograr tus objetivos empresariales.',
     'about.cta.contact': 'Contactar Nuestro Equipo',
+
+    // Detalles de miembros del equipo
+    'about.team.nono.position': 'Arquitecto ERP Principal',
+    'about.team.nono.description': 'Experto certificado en Openbravo y Odoo con amplia experiencia en implementaciones complejas de ERP en diversas industrias.',
+    'about.team.mark.position': 'Arquitecto de IA Principal',
+    'about.team.mark.description': 'Especialista en inteligencia artificial y aprendizaje automático con más de 10 años desarrollando soluciones inteligentes para clientes empresariales.',
+    'about.team.rafael.position': 'Arquitecto Retail Principal', 
+    'about.team.rafael.description': 'Experto en soluciones retail y transformación digital con amplia experiencia optimizando gestión de inventarios y experiencia del cliente en organizaciones retail.',
+    'about.team.maarten.position': 'Consultor de Cadena de Suministro',
+    'about.team.maarten.description': 'Experto en optimización de cadena de suministro y gestión logística con profundo conocimiento de operaciones de almacén, redes de distribución y sistemas de control de inventario.',
 
     // Contact Page
     'contact.title': 'Contáctanos: Comencemos Tu Transformación Digital',
