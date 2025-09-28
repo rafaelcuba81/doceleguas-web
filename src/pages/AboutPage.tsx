@@ -60,7 +60,7 @@ const AboutPage = () => {
       name: 'Maarten Tromp',
       positionKey: 'about.team.maarten.position',
       descriptionKey: 'about.team.maarten.description',
-      image: 'https://images.pexels.com/photos/3756523/pexels-photo-3756523.jpeg?auto=compress&cs=tinysrgb&w=400',
+      image: '/mtp.jpeg',
       linkedin: '#'
     }
   ];
