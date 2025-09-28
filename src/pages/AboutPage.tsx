@@ -53,7 +53,7 @@ const AboutPage = () => {
       name: 'Rafael Queralta',
       positionKey: 'about.team.rafael.position',
       descriptionKey: 'about.team.rafael.description',
-      image: '/rqp1.jpeg',
+      image: '/rqp2 copy.jpeg',
       linkedin: '#'
     },
     {
