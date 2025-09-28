@@ -39,7 +39,7 @@ const AboutPage = () => {
       name: 'Nono Carballo',
       positionKey: 'about.team.nono.position',
       descriptionKey: 'about.team.nono.description',
-      image: 'https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=400',
+      image: '/nfc.jpeg',
       linkedin: '#'
     },
     {
