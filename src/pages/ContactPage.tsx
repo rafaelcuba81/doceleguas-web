@@ -153,7 +153,7 @@ const ContactPage = () => {
                       value={formData.fullName}
                       onChange={handleChange}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 hover:border-blue-300 transition-all duration-300"
-                      placeholder={t('contact.form.fullNamePlaceholder')}
+                      placeholder={t('contact.placeholders.fullName')}
                     />
                   </div>
                   <div>
@@ -168,7 +168,7 @@ const ContactPage = () => {
                       value={formData.email}
                       onChange={handleChange}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 hover:border-blue-300 transition-all duration-300"
-                      placeholder={t('contact.form.emailPlaceholder')}
+                      placeholder={t('contact.placeholders.email')}
                     />
                   </div>
                 </div>
@@ -185,7 +185,7 @@ const ContactPage = () => {
                       value={formData.phone}
                       onChange={handleChange}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 hover:border-blue-300 transition-all duration-300"
-                      placeholder={t('contact.form.phonePlaceholder')}
+                      placeholder={t('contact.placeholders.phone')}
                     />
                   </div>
                   <div>
@@ -199,7 +199,7 @@ const ContactPage = () => {
                       value={formData.company}
                       onChange={handleChange}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 hover:border-blue-300 transition-all duration-300"
-                      placeholder={t('contact.form.companyPlaceholder')}
+                      placeholder={t('contact.placeholders.company')}
                     />
                   </div>
                 </div>
@@ -237,7 +237,7 @@ const ContactPage = () => {
                     value={formData.message}
                     onChange={handleChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 hover:border-blue-300 transition-all duration-300 resize-vertical"
-                    placeholder={t('contact.form.messagePlaceholder')}
+                    placeholder={t('contact.placeholders.message')}
                   />
                 </div>
 
