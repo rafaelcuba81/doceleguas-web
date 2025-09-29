@@ -81,14 +81,14 @@ const ContactPage = () => {
   ];
 
   const subjects = [
-    'General Inquiry',
-    'Openbravo Consultation',
-    'Odoo Implementation',
-    'AI Solutions',
-    'Custom Development',
-    'Technical Support',
-    'Partnership Opportunity',
-    'Other'
+    'generalinquiry',
+    'openbravoconsultation',
+    'odooimplementation',
+    'aisolutions',
+    'customdevelopment',
+    'technicalsupport',
+    'partnershipopportunity',
+    'other'
   ];
 
   if (isSubmitted) {
@@ -153,7 +153,7 @@ const ContactPage = () => {
                       value={formData.fullName}
                       onChange={handleChange}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 hover:border-blue-300 transition-all duration-300"
-                      placeholder="Your full name"
+                      placeholder={t('contact.form.fullNamePlaceholder')}
                     />
                   </div>
                   <div>
@@ -168,7 +168,7 @@ const ContactPage = () => {
                       value={formData.email}
                       onChange={handleChange}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 hover:border-blue-300 transition-all duration-300"
-                      placeholder="your.email@company.com"
+                      placeholder={t('contact.form.emailPlaceholder')}
                     />
                   </div>
                 </div>
@@ -185,7 +185,7 @@ const ContactPage = () => {
                       value={formData.phone}
                       onChange={handleChange}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 hover:border-blue-300 transition-all duration-300"
-                      placeholder="+34 XXX XXX XXX"
+                      placeholder={t('contact.form.phonePlaceholder')}
                     />
                   </div>
                   <div>
@@ -199,7 +199,7 @@ const ContactPage = () => {
                       value={formData.company}
                       onChange={handleChange}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 hover:border-blue-300 transition-all duration-300"
-                      placeholder="Your company name"
+                      placeholder={t('contact.form.companyPlaceholder')}
                     />
                   </div>
                 </div>
@@ -216,10 +216,10 @@ const ContactPage = () => {
                     onChange={handleChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 hover:border-blue-300 transition-all duration-300"
                   >
-                    <option value="">Please select a subject</option>
+                    <option value="">{t('contact.form.selectSubject')}</option>
                     {subjects.map((subject) => (
                       <option key={subject} value={subject}>
-                        {subject}
+                        {t(`contact.form.subjects.${subject.toLowerCase().replace(/\s+/g, '')}`)}
                       </option>
                     ))}
                   </select>
@@ -237,7 +237,7 @@ const ContactPage = () => {
                     value={formData.message}
                     onChange={handleChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 hover:border-blue-300 transition-all duration-300 resize-vertical"
-                    placeholder="Tell us about your project, challenges, or questions..."
+                    placeholder={t('contact.form.messagePlaceholder')}
                   />
                 </div>
 
@@ -278,23 +278,23 @@ const ContactPage = () => {
 
               {/* Additional Info */}
               <div className="rounded-xl p-6 hover-lift transition-all duration-300 animate-fadeInUp" style={{ backgroundColor: '#e8f4f3', borderColor: '#5c9c98', borderWidth: '1px', animationDelay: '0.6s' }}>
-                <h3 className="font-semibold mb-4" style={{ color: '#2d5a57' }}>Why Contact Us?</h3>
+                <h3 className="font-semibold mb-4" style={{ color: '#2d5a57' }}>{t('contact.whyContact.title')}</h3>
                 <ul className="space-y-3" style={{ color: '#2d5a57' }}>
                   <li className="flex items-start space-x-3">
                     <div className="w-2 h-2 rounded-full mt-2 animate-pulse" style={{ backgroundColor: '#5c9c98' }}></div>
-                    <span>Free initial consultation and project assessment</span>
+                    <span>{t('contact.whyContact.item1')}</span>
                   </li>
                   <li className="flex items-start space-x-3">
                     <div className="w-2 h-2 rounded-full mt-2 animate-pulse" style={{ backgroundColor: '#5c9c98', animationDelay: '0.5s' }}></div>
-                    <span>Detailed proposal within 48 hours</span>
+                    <span>{t('contact.whyContact.item2')}</span>
                   </li>
                   <li className="flex items-start space-x-3">
                     <div className="w-2 h-2 rounded-full mt-2 animate-pulse" style={{ backgroundColor: '#5c9c98', animationDelay: '1s' }}></div>
-                    <span>Transparent pricing and timeline</span>
+                    <span>{t('contact.whyContact.item3')}</span>
                   </li>
                   <li className="flex items-start space-x-3">
                     <div className="w-2 h-2 rounded-full mt-2 animate-pulse" style={{ backgroundColor: '#5c9c98', animationDelay: '1.5s' }}></div>
-                    <span>Expert guidance from day one</span>
+                    <span>{t('contact.whyContact.item4')}</span>
                   </li>
                 </ul>
               </div>
