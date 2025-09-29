@@ -276,15 +276,6 @@ const ContactPage = () => {
                 </div>
               </div>
 
-              {/* Map Placeholder */}
-              <div className="bg-gray-200 rounded-xl h-64 flex items-center justify-center hover-lift transition-all duration-300 animate-fadeInUp" style={{ animationDelay: '0.4s' }}>
-                <div className="text-center text-gray-500">
-                  <MapPin className="h-12 w-12 mx-auto mb-4 animate-float" />
-                  <p className="font-medium">Interactive Map</p>
-                  <p className="text-sm">Location details available upon request</p>
-                </div>
-              </div>
-
               {/* Additional Info */}
               <div className="rounded-xl p-6 hover-lift transition-all duration-300 animate-fadeInUp" style={{ backgroundColor: '#e8f4f3', borderColor: '#5c9c98', borderWidth: '1px', animationDelay: '0.6s' }}>
                 <h3 className="font-semibold mb-4" style={{ color: '#2d5a57' }}>Why Contact Us?</h3>
