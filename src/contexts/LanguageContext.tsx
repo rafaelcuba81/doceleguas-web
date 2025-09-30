@@ -410,7 +410,7 @@ const translations = {
       item1: 'Free initial consultation and project assessment',
       item2: 'Customized solutions tailored to your business needs',
       item3: 'Expert team with proven track record in enterprise solutions',
-      item4: 'Ongoing support and maintenance for all our implementations'
+      item4: 'Ongoing support and maintenance for all our implementations',
     'projects.cloud.client': 'Robert Kim, IT Director at SteelWorks Inc',
   },
   es: {
