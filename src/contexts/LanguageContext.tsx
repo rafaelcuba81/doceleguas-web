@@ -359,11 +359,26 @@ const translations = {
       values: {
         title: 'Nuestros Valores',
         subtitle: 'Los principios que guían cada proyecto y decisión que tomamos',
-        excellence: 'Excelencia',
-        innovation: 'Innovación',
-        integrity: 'Integridad',
-        customer: 'Enfoque al Cliente',
-        collaboration: 'Colaboración'
+        excellence: {
+          title: 'Excelencia',
+          desc: 'Nos esforzamos por la perfección en cada línea de código y cada estrategia, entregando soluciones que superan las expectativas.'
+        },
+        innovation: {
+          title: 'Innovación',
+          desc: 'Siempre explorando nuevas tecnologías y metodologías para ofrecer soluciones de vanguardia que impulsen la ventaja competitiva.'
+        },
+        integrity: {
+          title: 'Integridad',
+          desc: 'Actuamos con honestidad y transparencia en todas nuestras interacciones, construyendo confianza a través de un comportamiento ético consistente.'
+        },
+        customer: {
+          title: 'Enfoque al Cliente',
+          desc: 'Tu éxito es nuestra prioridad y fuerza motriz, asegurando que cada solución se alinee con tus objetivos empresariales.'
+        },
+        collaboration: {
+          title: 'Colaboración',
+          desc: 'Creemos en el poder del trabajo en equipo y la sinergia con nuestros clientes, trabajando juntos para lograr resultados excepcionales.'
+        }
       },
       team: {
         title: 'Nuestro Equipo',
@@ -836,11 +851,26 @@ const translations = {
       values: {
         title: 'Our Values',
         subtitle: 'The principles that guide every project and decision we make',
-        excellence: 'Excellence',
-        innovation: 'Innovation',
-        integrity: 'Integrity',
-        customer: 'Customer Focus',
-        collaboration: 'Collaboration'
+        excellence: {
+          title: 'Excellence',
+          desc: 'We strive for perfection in every line of code and every strategy, delivering solutions that exceed expectations.'
+        },
+        innovation: {
+          title: 'Innovation',
+          desc: 'Always exploring new technologies and methodologies to offer cutting-edge solutions that drive competitive advantage.'
+        },
+        integrity: {
+          title: 'Integrity',
+          desc: 'We act with honesty and transparency in all our interactions, building trust through consistent ethical behavior.'
+        },
+        customer: {
+          title: 'Customer Focus',
+          desc: 'Your success is our priority and driving force, ensuring every solution aligns with your business goals.'
+        },
+        collaboration: {
+          title: 'Collaboration',
+          desc: 'We believe in the power of teamwork and synergy with our clients, working together to achieve exceptional results.'
+        }
       },
       team: {
         title: 'Our Team',

@@ -9,28 +9,28 @@ const AboutPage = () => {
   const values = [
     {
       icon: <Award className="h-8 w-8" />,
-      title: t('about.values.excellence'),
-      description: 'We strive for perfection in every line of code and every strategy, delivering solutions that exceed expectations.'
+      titleKey: 'about.values.excellence.title',
+      descKey: 'about.values.excellence.desc'
     },
     {
       icon: <Lightbulb className="h-8 w-8" />,
-      title: t('about.values.innovation'),
-      description: 'Always exploring new technologies and methodologies to offer cutting-edge solutions that drive competitive advantage.'
+      titleKey: 'about.values.innovation.title',
+      descKey: 'about.values.innovation.desc'
     },
     {
       icon: <Heart className="h-8 w-8" />,
-      title: t('about.values.integrity'),
-      description: 'We act with honesty and transparency in all our interactions, building trust through consistent ethical behavior.'
+      titleKey: 'about.values.integrity.title',
+      descKey: 'about.values.integrity.desc'
     },
     {
       icon: <Target className="h-8 w-8" />,
-      title: t('about.values.customer'),
-      description: 'Your success is our priority and driving force, ensuring every solution aligns with your business goals.'
+      titleKey: 'about.values.customer.title',
+      descKey: 'about.values.customer.desc'
     },
     {
       icon: <Handshake className="h-8 w-8" />,
-      title: t('about.values.collaboration'),
-      description: 'We believe in the power of teamwork and synergy with our clients, working together to achieve exceptional results.'
+      titleKey: 'about.values.collaboration.title',
+      descKey: 'about.values.collaboration.desc'
     }
   ];
 
@@ -162,7 +162,7 @@ const AboutPage = () => {
                 <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6" style={{ backgroundColor: '#e8f4f3' }}>
                   <div style={{ color: '#5c9c98' }}>{value.icon}</div>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">{value.title}</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">{t(value.titleKey)}</h3>
                 <p className="text-gray-600 leading-relaxed">{t(value.descKey)}</p>
               </div>
             ))}
