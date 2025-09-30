@@ -404,6 +404,13 @@ const translations = {
     'projects.cloud.result2': '24/7 availability',
     'projects.cloud.result3': 'Modern mobile access',
     'projects.cloud.testimonial': 'They brought our 20-year-old system into the modern age. The transformation is remarkable.',
+    },
+    whyContact: {
+      title: 'Why Contact Us?',
+      item1: 'Free initial consultation and project assessment',
+      item2: 'Customized solutions tailored to your business needs',
+      item3: 'Expert team with proven track record in enterprise solutions',
+      item4: 'Ongoing support and maintenance for all our implementations'
     'projects.cloud.client': 'Robert Kim, IT Director at SteelWorks Inc',
   },
   es: {
@@ -802,6 +809,13 @@ const translations = {
     'projects.cloud.result2': 'Disponibilidad 24/7',
     'projects.cloud.result3': 'Acceso móvil moderno',
     'projects.cloud.testimonial': 'Trajeron nuestro sistema de 20 años a la era moderna. La transformación es notable.',
+    },
+    whyContact: {
+      title: '¿Por qué contactarnos?',
+      item1: 'Consulta inicial gratuita y evaluación del proyecto',
+      item2: 'Soluciones personalizadas adaptadas a las necesidades de tu negocio',
+      item3: 'Equipo experto con historial comprobado en soluciones empresariales',
+      item4: 'Soporte continuo y mantenimiento para todas nuestras implementaciones'
     'projects.cloud.client': 'Robert Kim, Director de TI en SteelWorks Inc',
   }
 };
