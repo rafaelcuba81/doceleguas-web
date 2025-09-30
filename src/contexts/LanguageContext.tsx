@@ -814,17 +814,17 @@ const translations = {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-  const [language, setLanguage] = useState<Language>('en');
+  const [language, setLanguage] = useState<Language>('es');
 
   const t = (key: string): string => {
     const keys = key.split('.');
-    let value: any = translations[language];
+    let value: any = translations[language] || translations['en'];
     
     for (const k of keys) {
       value = value?.[k];
     }
     
-    return value || key;
+    return typeof value === 'string' ? value : key;
   };
 
   return (
