@@ -1,7 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { LanguageProvider } from './contexts/LanguageContext';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import ChatBot from './components/ChatBot';
 import ScrollToTop from './components/ScrollToTop';
 import HomePage from './pages/HomePage';
 import ServicesPage from './pages/ServicesPage';
@@ -9,14 +11,13 @@ import SolutionsPage from './pages/SolutionsPage';
 import ProjectsPage from './pages/ProjectsPage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
-import ChatBot from './components/ChatBot';
-import { LanguageProvider } from './contexts/LanguageContext';
 
 function App() {
   return (
     <LanguageProvider>
       <Router>
-        <div className="min-h-screen bg-white">
+        <ScrollToTop />
+        <div className="min-h-screen bg-gray-50">
           <Header />
           <main>
             <Routes>
@@ -29,7 +30,6 @@ function App() {
             </Routes>
           </main>
           <Footer />
-          <ScrollToTop />
           <ChatBot />
         </div>
       </Router>
