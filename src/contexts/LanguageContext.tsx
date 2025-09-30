@@ -953,7 +953,7 @@ const translations = {
 };
 
 export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-  const [language, setLanguage] = useState('es');
+  const [language, setLanguage] = useState('en');
 
   const t = (key: string): string => {
     const keys = key.split('.');
