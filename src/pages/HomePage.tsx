@@ -9,32 +9,32 @@ const HomePage = () => {
   const services = [
     {
       icon: <Database className="h-8 w-8" />,
-      title: t('home.services.openbravo'),
+      title: t('home.services.openbravo.title'),
       description: t('home.services.openbravo.desc')
     },
     {
       icon: <Settings className="h-8 w-8" />,
-      title: t('home.services.odoo'),
+      title: t('home.services.odoo.title'),
       description: t('home.services.odoo.desc')
     },
     {
       icon: <Brain className="h-8 w-8" />,
-      title: t('home.services.ai'),
+      title: t('home.services.ai.title'),
       description: t('home.services.ai.desc')
     },
     {
       icon: <Code className="h-8 w-8" />,
-      title: t('home.services.custom'),
+      title: t('home.services.custom.title'),
       description: t('home.services.custom.desc')
     },
     {
       icon: <Zap className="h-8 w-8" />,
-      title: t('home.services.n8n'),
+      title: t('home.services.n8n.title'),
       description: t('home.services.n8n.desc')
     },
     {
       icon: <Wrench className="h-8 w-8" />,
-      title: t('home.services.automation'),
+      title: t('home.services.automation.title'),
       description: t('home.services.automation.desc')
     }
   ];

@@ -32,20 +32,50 @@ const translations = {
       valueProps: {
         title: '¿Por qué elegir Doce Leguas?',
         subtitle: 'Combinamos experiencia técnica con visión estratégica para entregar soluciones que realmente transforman tu negocio',
-        innovation: 'Innovación',
-        custom: 'Personalización',
-        results: 'Resultados',
-        team: 'Equipo Experto'
+        innovation: {
+          title: 'Innovación',
+          desc: 'Utilizamos tecnologías de vanguardia para crear soluciones que te den ventaja competitiva'
+        },
+        custom: {
+          title: 'Personalización',
+          desc: 'Cada solución se adapta específicamente a las necesidades y procesos de tu negocio'
+        },
+        results: {
+          title: 'Resultados',
+          desc: 'Nos enfocamos en entregar resultados medibles que impulsen el crecimiento de tu empresa'
+        },
+        team: {
+          title: 'Equipo Experto',
+          desc: 'Nuestros profesionales experimentados están comprometidos con el éxito de tu proyecto'
+        }
       },
       services: {
         title: 'Nuestros Servicios',
         subtitle: 'Soluciones integrales para cada necesidad de tu negocio',
-        openbravo: 'Openbravo ERP',
-        odoo: 'Odoo Solutions',
-        ai: 'Soluciones de IA',
-        custom: 'Desarrollo Personalizado',
-        n8n: 'Automatización n8n',
-        automation: 'Automatización de Procesos',
+        openbravo: {
+          title: 'Openbravo ERP',
+          desc: 'Implementación y personalización completa de ERP para optimización empresarial'
+        },
+        odoo: {
+          title: 'Odoo Solutions',
+          desc: 'Gestión empresarial integral con la suite más completa'
+        },
+        ai: {
+          title: 'Soluciones de IA',
+          desc: 'Automatización inteligente y análisis predictivo para mejores decisiones'
+        },
+        custom: {
+          title: 'Desarrollo Personalizado',
+          desc: 'Soluciones de software a medida diseñadas para tus procesos únicos'
+        },
+        n8n: {
+          title: 'Automatización n8n',
+          desc: 'Automatización de flujos de trabajo para optimizar tus procesos empresariales'
+        },
+        automation: {
+          title: 'Automatización de Procesos',
+          desc: 'Automatización inteligente para reducir trabajo manual y errores'
+        },
         learnMore: 'Saber más'
       },
       projects: {
