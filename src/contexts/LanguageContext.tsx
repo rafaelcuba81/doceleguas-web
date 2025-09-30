@@ -384,10 +384,6 @@ const translations = {
     'contact.info.hoursDesc': '9:00 AM - 6:00 PM (GMT)',
 
     'contact.whyContact.title': 'Why Contact Us?',
-    'contact.whyContact.item1': 'Free initial consultation and project assessment',
-    'contact.whyContact.item2': 'Customized solutions tailored to your specific needs',
-    'contact.whyContact.item3': 'Expert team with proven track record in enterprise solutions',
-    'contact.whyContact.item4': 'Ongoing support and maintenance for all our implementations',
 
     // Footer
     'footer.description': 'Transforming businesses through innovative technology solutions and expert consulting services.',
@@ -784,10 +780,6 @@ const translations = {
     'contact.info.hoursDesc': '9:00 AM - 6:00 PM (GMT)',
 
     'contact.whyContact.title': '¿Por qué contactarnos?',
-    'contact.whyContact.item1': 'Consulta inicial gratuita y evaluación del proyecto',
-    'contact.whyContact.item2': 'Soluciones personalizadas adaptadas a tus necesidades específicas',
-    'contact.whyContact.item3': 'Equipo experto con historial comprobado en soluciones empresariales',
-    'contact.whyContact.item4': 'Soporte continuo y mantenimiento para todas nuestras implementaciones',
 
     // Footer
     'footer.description': 'Transformando empresas a través de soluciones tecnológicas innovadoras y servicios de consultoría experta.',
