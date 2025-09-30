@@ -815,7 +815,7 @@ const translations = {
       item1: 'Consulta inicial gratuita y evaluación del proyecto',
       item2: 'Soluciones personalizadas adaptadas a las necesidades de tu negocio',
       item3: 'Equipo experto con historial comprobado en soluciones empresariales',
-      item4: 'Soporte continuo y mantenimiento para todas nuestras implementaciones'
+      item4: 'Soporte continuo y mantenimiento para todas nuestras implementaciones',
     'projects.cloud.client': 'Robert Kim, Director de TI en SteelWorks Inc',
   }
 };
