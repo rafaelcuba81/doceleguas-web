@@ -6,779 +6,954 @@ interface LanguageContextType {
   t: (key: string) => string;
 }
 
+const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
+
 const translations = {
-  en: {
+  es: {
     // Navigation
-    'nav.home': 'Home',
-    'nav.services': 'Services',
-    'nav.solutions': 'Solutions',
-    'nav.projects': 'Projects',
-    'nav.about': 'About',
-    'nav.contact': 'Contact',
-    'nav.getStarted': 'Get Started',
-
+    nav: {
+      home: 'Inicio',
+      services: 'Servicios',
+      solutions: 'Soluciones',
+      projects: 'Proyectos',
+      about: 'Nosotros',
+      contact: 'Contacto',
+      getStarted: 'Comenzar'
+    },
+    
     // Home Page
-    'home.hero.title': 'Transform Your Business with Innovative Technology Solutions',
-    'home.hero.subtitle': 'We specialize in Openbravo ERP, Odoo, AI solutions, and custom development to drive your business forward.',
-    'home.hero.viewServices': 'View Our Services',
-    'home.hero.startProject': 'Start Your Project',
-
-    'home.valueProps.title': 'Why Choose Doce Leguas?',
-    'home.valueProps.subtitle': 'We combine technical expertise with business understanding to deliver solutions that truly make a difference.',
-    'home.valueProps.innovation': 'Innovation',
-    'home.valueProps.innovation.desc': 'Cutting-edge technology solutions',
-    'home.valueProps.custom': 'Customization',
-    'home.valueProps.custom.desc': 'Tailored to your specific needs',
-    'home.valueProps.results': 'Results',
-    'home.valueProps.results.desc': 'Proven track record of success',
-    'home.valueProps.team': 'Expert Team',
-    'home.valueProps.team.desc': 'Experienced professionals',
-
-    'home.services.title': 'Our Core Services',
-    'home.services.subtitle': 'Comprehensive technology solutions to transform your business operations.',
-    'home.services.openbravo': 'Openbravo ERP',
-    'home.services.openbravo.desc': 'Complete ERP implementation and customization',
-    'home.services.odoo': 'Odoo Solutions',
-    'home.services.odoo.desc': 'Full-stack Odoo development and integration',
-    'home.services.ai': 'AI Solutions',
-    'home.services.ai.desc': 'Artificial intelligence and machine learning',
-    'home.services.custom': 'Custom Development',
-    'home.services.custom.desc': 'Bespoke software solutions',
-    'home.services.n8n': 'N8N Automation',
-    'home.services.n8n.desc': 'Workflow automation and integration',
-    'home.services.automation': 'Process Automation',
-    'home.services.automation.desc': 'Streamline your business processes',
-    'home.services.learnMore': 'Learn More',
-
-    'home.projects.title': 'Success Stories',
-    'home.projects.subtitle': 'Real results from real clients who trusted us with their digital transformation.',
-    'home.projects.viewCase': 'View Case Study',
-
-    'home.testimonials.title': 'What Our Clients Say',
-
-    'home.logistics.title': 'Specialized Solutions for Logistics & Retail',
-    'home.logistics.subtitle': 'Industry-specific expertise that drives operational excellence and competitive advantage.',
-    'home.logistics.supply.title': 'Supply Chain Management',
-    'home.logistics.supply.desc': 'Optimize your entire supply chain with intelligent automation and real-time visibility.',
-    'home.logistics.supply.feature1': 'Inventory optimization',
-    'home.logistics.supply.feature2': 'Demand forecasting',
-    'home.logistics.supply.feature3': 'Supplier management',
-    'home.logistics.retail.title': 'Retail Operations',
-    'home.logistics.retail.desc': 'Streamline retail operations from point-of-sale to back-office management.',
-    'home.logistics.retail.feature1': 'POS integration',
-    'home.logistics.retail.feature2': 'Multi-channel management',
-    'home.logistics.retail.feature3': 'Customer analytics',
-    'home.logistics.expertise.title': 'Industry Expertise',
-    'home.logistics.expertise.desc': 'Deep understanding of logistics and retail challenges with proven solutions.',
-    'home.logistics.expertise.stat1': 'Projects',
-    'home.logistics.expertise.stat2': 'Success Rate',
-    'home.logistics.cta': 'Explore Our Solutions',
-
-    'home.cta.title': 'Ready to Transform Your Business?',
-    'home.cta.subtitle': 'Let\'s discuss how our expertise can help you achieve your goals and drive growth.',
-    'home.cta.schedule': 'Schedule Consultation',
-    'home.cta.contact': 'Contact Us Today',
-
-    // Contact Page
-    'contact.title': 'Get in Touch',
-    'contact.subtitle': 'Ready to start your next project? We\'d love to hear from you.',
-    'contact.form.title': 'Send us a message',
-    'contact.form.fullName': 'Full Name',
-    'contact.form.email': 'Email Address',
-    'contact.form.phone': 'Phone Number',
-    'contact.form.company': 'Company',
-    'contact.form.subject': 'Subject',
-    'contact.form.message': 'Message',
-    'contact.form.send': 'Send Message',
-    'contact.form.success': 'Message Sent Successfully!',
-    'contact.form.successDesc': 'Thank you for your message. We\'ll get back to you within 24 hours.',
-    'contact.form.selectSubject': 'Select a subject',
-    'contact.form.placeholders.fullName': 'Enter your full name',
-    'contact.form.placeholders.email': 'Enter your email address',
-    'contact.form.placeholders.phone': 'Enter your phone number',
-    'contact.form.placeholders.company': 'Enter your company name',
-    'contact.form.placeholders.message': 'Tell us about your project or inquiry...',
-
-    'contact.form.subjects.generalinquiry': 'General Inquiry',
-    'contact.form.subjects.openbravoconsultation': 'Openbravo Consultation',
-    'contact.form.subjects.odooimplementation': 'Odoo Implementation',
-    'contact.form.subjects.aisolutions': 'AI Solutions',
-    'contact.form.subjects.customdevelopment': 'Custom Development',
-    'contact.form.subjects.technicalsupport': 'Technical Support',
-    'contact.form.subjects.partnershipopportunity': 'Partnership Opportunity',
-    'contact.form.subjects.other': 'Other',
-
-    'contact.info.title': 'Contact Information',
-    'contact.info.email': 'Email',
-    'contact.info.emailDesc': 'Send us an email anytime',
-    'contact.info.phone': 'Phone',
-    'contact.info.phoneDesc': 'Call us during business hours',
-    'contact.info.office': 'Offices',
-    'contact.info.officeDesc': 'Our global presence',
-    'contact.info.hours': 'Business Hours',
-    'contact.info.hoursDesc': '9:00 AM - 6:00 PM (GMT)',
-
-    'contact.whyContact.title': 'Why Contact Us?',
-
-    // Footer
-    'footer.description': 'Transforming businesses through innovative technology solutions and expert consulting services.',
-    'footer.quickLinks': 'Quick Links',
-    'footer.services': 'Services',
-    'footer.contactInfo': 'Contact Info',
-    'footer.rights': 'All rights reserved.',
-    'footer.privacy': 'Privacy Policy',
-    'footer.legal': 'Legal Notice',
-    'footer.sitemap': 'Sitemap',
-
-    // ChatBot
-    'chatbot.title': 'Doce Leguas Assistant',
-    'chatbot.subtitle': 'How can we help you?',
-    'chatbot.welcome': 'Hello! I\'m here to help you with any questions about our services. How can I assist you today?',
-    'chatbot.placeholder': 'Type your message...',
-    'chatbot.open': 'Open chat',
-    'chatbot.close': 'Close chat',
-    'chatbot.defaultResponse': 'Thank you for your message. Our team will get back to you soon.',
-    'chatbot.errorMessage': 'Sorry, I\'m having trouble connecting right now. Please try again later or contact us directly.',
+    home: {
+      hero: {
+        title: 'Transformamos tu negocio con soluciones tecnológicas innovadoras',
+        subtitle: 'Especializados en Openbravo, Odoo, IA y desarrollo personalizado para impulsar el crecimiento de tu empresa',
+        viewServices: 'Ver Servicios',
+        startProject: 'Iniciar Proyecto'
+      },
+      valueProps: {
+        title: '¿Por qué elegir Doce Leguas?',
+        subtitle: 'Combinamos experiencia técnica con visión estratégica para entregar soluciones que realmente transforman tu negocio',
+        innovation: 'Innovación',
+        custom: 'Personalización',
+        results: 'Resultados',
+        team: 'Equipo Experto'
+      },
+      services: {
+        title: 'Nuestros Servicios',
+        subtitle: 'Soluciones integrales para cada necesidad de tu negocio',
+        openbravo: 'Openbravo ERP',
+        odoo: 'Odoo Solutions',
+        ai: 'Soluciones de IA',
+        custom: 'Desarrollo Personalizado',
+        n8n: 'Automatización n8n',
+        automation: 'Automatización de Procesos',
+        learnMore: 'Saber más'
+      },
+      projects: {
+        title: 'Casos de Éxito',
+        subtitle: 'Descubre cómo hemos transformado negocios con nuestras soluciones',
+        viewCase: 'Ver caso de estudio'
+      },
+      testimonials: {
+        title: 'Lo que dicen nuestros clientes'
+      },
+      logistics: {
+        title: 'Soluciones Especializadas para Logística y Retail',
+        subtitle: 'Optimizamos tu cadena de suministro y operaciones comerciales con tecnología de vanguardia',
+        supply: {
+          title: 'Gestión de Cadena de Suministro',
+          desc: 'Optimiza tu inventario y logística con soluciones inteligentes',
+          feature1: 'Control de inventario en tiempo real',
+          feature2: 'Optimización de rutas de entrega',
+          feature3: 'Predicción de demanda con IA'
+        },
+        retail: {
+          title: 'Soluciones para Retail',
+          desc: 'Mejora la experiencia del cliente y aumenta las ventas',
+          feature1: 'Punto de venta integrado',
+          feature2: 'Gestión de múltiples tiendas',
+          feature3: 'Análisis de comportamiento del cliente'
+        },
+        expertise: {
+          title: 'Experiencia Comprobada',
+          desc: 'Años de experiencia en el sector logístico y retail',
+          stat1: 'Proyectos',
+          stat2: 'Satisfacción'
+        },
+        cta: 'Explorar Soluciones'
+      },
+      cta: {
+        title: '¿Listo para transformar tu negocio?',
+        subtitle: 'Contáctanos hoy y descubre cómo podemos ayudarte a alcanzar tus objetivos empresariales',
+        schedule: 'Agendar Consulta',
+        contact: 'Contactar Ahora'
+      }
+    },
 
     // Services Page
-    'services.title': 'Our Services',
-    'services.subtitle': 'Comprehensive technology solutions designed to transform your business operations and drive growth.',
-    'services.keyBenefits': 'Key Benefits',
-    'services.whatWeOffer': 'What We Offer',
-    'services.finalCta.title': 'Ready to Get Started?',
-    'services.finalCta.subtitle': 'Let\'s discuss how our services can help transform your business.',
-    'services.finalCta.button': 'Contact Us Today',
-
-    'services.openbravo.title': 'Openbravo ERP Solutions',
-    'services.openbravo.description': 'Complete Openbravo ERP implementation, customization, and support services to streamline your business operations.',
-    'services.openbravo.benefits': 'Reduce operational costs by up to 30% while improving efficiency and data accuracy across all business processes.',
-    'services.openbravo.point1': 'Full ERP implementation and migration',
-    'services.openbravo.point2': 'Custom module development',
-    'services.openbravo.point3': 'Integration with third-party systems',
-    'services.openbravo.point4': 'Ongoing support and maintenance',
-    'services.openbravo.cta': 'Get Openbravo Consultation',
-
-    'services.odoo.title': 'Odoo Development & Integration',
-    'services.odoo.description': 'End-to-end Odoo solutions including implementation, customization, and seamless integration with your existing systems.',
-    'services.odoo.benefits': 'Streamline operations with an all-in-one business management solution that grows with your company.',
-    'services.odoo.point1': 'Complete Odoo implementation',
-    'services.odoo.point2': 'Custom app development',
-    'services.odoo.point3': 'Third-party integrations',
-    'services.odoo.point4': 'Data migration services',
-    'services.odoo.point5': 'Training and support',
-    'services.odoo.cta': 'Start Your Odoo Project',
-
-    'services.ai.title': 'AI & Machine Learning Solutions',
-    'services.ai.description': 'Harness the power of artificial intelligence to automate processes, gain insights, and make data-driven decisions.',
-    'services.ai.benefits': 'Increase productivity by 40% and reduce manual errors while gaining valuable business insights from your data.',
-    'services.ai.point1': 'Predictive analytics and forecasting',
-    'services.ai.point2': 'Natural language processing',
-    'services.ai.point3': 'Computer vision solutions',
-    'services.ai.point4': 'Chatbots and virtual assistants',
-    'services.ai.point5': 'Process automation with AI',
-    'services.ai.point6': 'Data analysis and insights',
-    'services.ai.point7': 'Machine learning model development',
-    'services.ai.point8': 'AI strategy consulting',
-    'services.ai.cta': 'Explore AI Solutions',
-
-    'services.custom.title': 'Custom Software Development',
-    'services.custom.description': 'Bespoke software solutions tailored to your unique business requirements and challenges.',
-    'services.custom.benefits': 'Get exactly what you need with custom-built solutions that perfectly fit your business processes and goals.',
-    'services.custom.point1': 'Web application development',
-    'services.custom.point2': 'Mobile app development',
-    'services.custom.point3': 'API development and integration',
-    'services.custom.point4': 'Database design and optimization',
-    'services.custom.point5': 'Cloud solutions and deployment',
-    'services.custom.cta': 'Discuss Your Project',
-
-    'services.consulting.title': 'Technical Consulting',
-    'services.consulting.description': 'Expert guidance and strategic advice to help you make the right technology decisions for your business.',
-    'services.consulting.benefits': 'Make informed decisions with expert guidance that saves time, reduces risks, and maximizes your technology investments.',
-    'services.consulting.point1': 'Technology strategy and planning',
-    'services.consulting.point2': 'System architecture design',
-    'services.consulting.point3': 'Performance optimization',
-    'services.consulting.point4': 'Security assessments',
-    'services.consulting.point5': 'Digital transformation roadmaps',
-    'services.consulting.cta': 'Get Expert Advice',
-
-    // About Page
-    'about.title': 'About Doce Leguas',
-    'about.subtitle': 'We are a team of passionate technology experts dedicated to transforming businesses through innovative solutions.',
-    'about.story.title': 'Our Story',
-    'about.story.content1': 'Founded with a vision to bridge the gap between complex technology and business success, Doce Leguas has been at the forefront of digital transformation.',
-    'about.story.content2': 'Our journey began with a simple belief: that the right technology, implemented correctly, can transform any business.',
-    'about.vision.title': 'Our Vision',
-    'about.vision.desc': 'To be the leading technology partner for businesses seeking innovative solutions that drive growth and operational excellence.',
-    'about.values.title': 'Our Values',
-    'about.values.subtitle': 'The principles that guide everything we do.',
-    'about.values.excellence': 'Excellence',
-    'about.values.innovation': 'Innovation',
-    'about.values.integrity': 'Integrity',
-    'about.values.customer': 'Customer Focus',
-    'about.values.collaboration': 'Collaboration',
-    'about.team.title': 'Meet Our Team',
-    'about.team.subtitle': 'The experts behind your success.',
-    'about.team.nono.position': 'CEO & Founder',
-    'about.team.nono.description': 'Visionary leader with 15+ years in enterprise solutions.',
-    'about.team.mark.position': 'CTO',
-    'about.team.mark.description': 'Technical architect specializing in ERP and AI solutions.',
-    'about.team.rafael.position': 'Lead Developer',
-    'about.team.rafael.description': 'Full-stack developer with expertise in modern technologies.',
-    'about.team.maarten.position': 'Solutions Architect',
-    'about.team.maarten.description': 'Expert in system integration and business process optimization.',
-    'about.culture.title': 'Our Culture',
-    'about.culture.content1': 'We believe in fostering a culture of innovation, collaboration, and continuous learning.',
-    'about.culture.content2': 'Our team is our greatest asset, and we invest in their growth and development.',
-    'about.culture.item1': 'Innovation-driven mindset',
-    'about.culture.item2': 'Collaborative teamwork',
-    'about.culture.item3': 'Continuous learning',
-    'about.culture.item4': 'Client-first approach',
-    'about.cta.title': 'Ready to Work Together?',
-    'about.cta.subtitle': 'Let\'s discuss how we can help transform your business.',
-    'about.cta.contact': 'Get in Touch',
+    services: {
+      title: 'Nuestros Servicios',
+      subtitle: 'Soluciones tecnológicas integrales diseñadas para impulsar el crecimiento de tu empresa',
+      keyBenefits: 'Beneficios Clave',
+      whatWeOffer: 'Lo que ofrecemos',
+      openbravo: {
+        title: 'Openbravo ERP',
+        description: 'Implementación y personalización completa de Openbravo ERP para optimizar todos los procesos de tu negocio',
+        benefits: 'Reduce costos operativos hasta un 30% y mejora la eficiencia con un ERP diseñado para el crecimiento',
+        point1: 'Implementación completa de Openbravo ERP',
+        point2: 'Personalización según necesidades específicas',
+        point3: 'Migración de datos y sistemas legacy',
+        point4: 'Capacitación y soporte continuo',
+        cta: 'Solicitar Demo de Openbravo'
+      },
+      odoo: {
+        title: 'Soluciones Odoo',
+        description: 'Implementación integral de Odoo para gestionar ventas, inventario, contabilidad y más en una sola plataforma',
+        benefits: 'Centraliza todas tus operaciones y mejora la productividad con la suite empresarial más completa',
+        point1: 'Implementación de módulos Odoo',
+        point2: 'Personalización de workflows',
+        point3: 'Integración con sistemas existentes',
+        point4: 'Desarrollo de módulos personalizados',
+        point5: 'Soporte técnico especializado',
+        cta: 'Explorar Odoo'
+      },
+      ai: {
+        title: 'Soluciones de Inteligencia Artificial',
+        description: 'Implementamos IA para automatizar procesos, mejorar la toma de decisiones y crear ventajas competitivas',
+        benefits: 'Automatiza hasta el 60% de tareas repetitivas y mejora la precisión en la toma de decisiones',
+        point1: 'Análisis predictivo y machine learning',
+        point2: 'Automatización inteligente de procesos',
+        point3: 'Chatbots y asistentes virtuales',
+        point4: 'Análisis de datos y business intelligence',
+        point5: 'Visión por computadora',
+        point6: 'Procesamiento de lenguaje natural',
+        point7: 'Integración con sistemas existentes',
+        point8: 'Consultoría en estrategia de IA',
+        cta: 'Descubrir IA'
+      },
+      custom: {
+        title: 'Desarrollo Personalizado',
+        description: 'Creamos soluciones de software a medida que se adaptan perfectamente a los procesos únicos de tu negocio',
+        benefits: 'Obtén una ventaja competitiva con software diseñado específicamente para tus necesidades',
+        point1: 'Aplicaciones web y móviles',
+        point2: 'APIs y microservicios',
+        point3: 'Integraciones entre sistemas',
+        point4: 'Modernización de aplicaciones legacy',
+        point5: 'Arquitectura cloud-native',
+        cta: 'Iniciar Proyecto Personalizado'
+      },
+      consulting: {
+        title: 'Consultoría Técnica',
+        description: 'Asesoramiento experto para optimizar tu arquitectura tecnológica y estrategia digital',
+        benefits: 'Toma decisiones tecnológicas informadas con el respaldo de nuestros expertos',
+        point1: 'Auditoría de sistemas actuales',
+        point2: 'Diseño de arquitectura tecnológica',
+        point3: 'Estrategia de transformación digital',
+        point4: 'Optimización de procesos',
+        point5: 'Capacitación técnica',
+        cta: 'Solicitar Consultoría'
+      },
+      finalCta: {
+        title: '¿Necesitas una solución específica?',
+        subtitle: 'Contáctanos para discutir cómo podemos ayudarte a alcanzar tus objetivos tecnológicos',
+        button: 'Hablar con un Experto'
+      }
+    },
 
     // Solutions Page
-    'solutions.title': 'Industry Solutions',
-    'solutions.subtitle': 'Specialized solutions designed for specific industries and business challenges.',
-    'solutions.keyFeatures': 'Key Features',
-    'solutions.expectedBenefits': 'Expected Benefits',
-    'solutions.learnMore': 'Learn More',
-    'solutions.whyChoose.title': 'Why Choose Our Solutions?',
-    'solutions.whyChoose.expertise.title': 'Industry Expertise',
-    'solutions.whyChoose.expertise.desc': 'Deep understanding of industry-specific challenges',
-    'solutions.whyChoose.results.title': 'Proven Results',
-    'solutions.whyChoose.results.desc': 'Track record of successful implementations',
-    'solutions.whyChoose.scalable.title': 'Scalable Solutions',
-    'solutions.whyChoose.scalable.desc': 'Solutions that grow with your business',
-    'solutions.whyChoose.support.title': '24/7 Support',
-    'solutions.whyChoose.support.desc': 'Ongoing support and maintenance',
-    'solutions.cta.title': 'Ready to Transform Your Operations?',
-    'solutions.cta.subtitle': 'Let\'s discuss how our industry solutions can benefit your business.',
-    'solutions.cta.button': 'Contact Our Experts',
-
-    'solutions.warehouse.title': 'Warehouse Management Solutions',
-    'solutions.warehouse.subtitle': 'Optimize your warehouse operations with intelligent automation',
-    'solutions.warehouse.description': 'Comprehensive warehouse management system that streamlines operations, reduces costs, and improves accuracy.',
-    'solutions.warehouse.feature1': 'Real-time inventory tracking',
-    'solutions.warehouse.feature2': 'Automated picking and packing',
-    'solutions.warehouse.feature3': 'Barcode and RFID integration',
-    'solutions.warehouse.feature4': 'Advanced reporting and analytics',
-    'solutions.warehouse.feature5': 'Multi-location management',
-    'solutions.warehouse.feature6': 'Integration with ERP systems',
-    'solutions.warehouse.feature7': 'Mobile device support',
-    'solutions.warehouse.feature8': 'Quality control workflows',
-    'solutions.warehouse.feature9': 'Shipping and receiving automation',
-    'solutions.warehouse.feature10': 'Performance optimization',
-    'solutions.warehouse.benefit1': 'Reduce operational costs by 25%',
-    'solutions.warehouse.benefit2': 'Improve inventory accuracy to 99.5%',
-    'solutions.warehouse.benefit3': 'Increase picking efficiency by 40%',
-    'solutions.warehouse.benefit4': 'Reduce order processing time by 50%',
-    'solutions.warehouse.benefit5': 'Minimize human errors',
-    'solutions.warehouse.benefit6': 'Real-time visibility across operations',
-    'solutions.warehouse.benefit7': 'Scalable to business growth',
-    'solutions.warehouse.benefit8': 'Improved customer satisfaction',
-
-    'solutions.delivery.title': 'Delivery Management Solutions',
-    'solutions.delivery.subtitle': 'Streamline your delivery operations with smart logistics',
-    'solutions.delivery.description': 'End-to-end delivery management system that optimizes routes, tracks shipments, and enhances customer experience.',
-    'solutions.delivery.feature1': 'Route optimization algorithms',
-    'solutions.delivery.feature2': 'Real-time GPS tracking',
-    'solutions.delivery.feature3': 'Automated dispatch system',
-    'solutions.delivery.feature4': 'Customer notification system',
-    'solutions.delivery.feature5': 'Proof of delivery capture',
-    'solutions.delivery.feature6': 'Fleet management integration',
-    'solutions.delivery.feature7': 'Performance analytics dashboard',
-    'solutions.delivery.feature8': 'Mobile driver applications',
-    'solutions.delivery.feature9': 'Integration with e-commerce platforms',
-    'solutions.delivery.feature10': 'Cost calculation and billing',
-    'solutions.delivery.benefit1': 'Reduce delivery costs by 30%',
-    'solutions.delivery.benefit2': 'Improve on-time delivery rates to 95%',
-    'solutions.delivery.benefit3': 'Optimize fuel consumption by 20%',
-    'solutions.delivery.benefit4': 'Enhance customer satisfaction',
-    'solutions.delivery.benefit5': 'Real-time shipment visibility',
-    'solutions.delivery.benefit6': 'Automated customer communications',
-    'solutions.delivery.benefit7': 'Reduced manual paperwork',
-    'solutions.delivery.benefit8': 'Improved driver productivity',
-
-    'solutions.services.title': 'Service Management Solutions',
-    'solutions.services.subtitle': 'Optimize your service operations and customer experience',
-    'solutions.services.description': 'Comprehensive service management platform that streamlines service delivery, improves customer satisfaction, and increases operational efficiency.',
-    'solutions.services.feature1': 'Service request management',
-    'solutions.services.feature2': 'Technician scheduling and dispatch',
-    'solutions.services.feature3': 'Mobile field service apps',
-    'solutions.services.feature4': 'Customer portal and self-service',
-    'solutions.services.feature5': 'Inventory and parts management',
-    'solutions.services.feature6': 'Service level agreement tracking',
-    'solutions.services.benefit1': 'Improve first-time fix rates by 35%',
-    'solutions.services.benefit2': 'Reduce service response time by 50%',
-    'solutions.services.benefit3': 'Increase customer satisfaction scores',
-    'solutions.services.benefit4': 'Optimize technician utilization',
+    solutions: {
+      title: 'Soluciones por Industria',
+      subtitle: 'Soluciones especializadas diseñadas para los desafíos únicos de cada sector',
+      keyFeatures: 'Características Principales',
+      expectedBenefits: 'Beneficios Esperados',
+      learnMore: 'Conocer Más',
+      warehouse: {
+        title: 'Gestión de Almacenes',
+        subtitle: 'Optimización completa de operaciones de almacén',
+        description: 'Solución integral para la gestión eficiente de almacenes con tecnología de vanguardia',
+        feature1: 'Control de inventario en tiempo real',
+        feature2: 'Gestión de ubicaciones y zonas',
+        feature3: 'Optimización de picking y packing',
+        feature4: 'Trazabilidad completa de productos',
+        feature5: 'Integración con códigos de barras/RFID',
+        feature6: 'Gestión de múltiples almacenes',
+        feature7: 'Reportes y analytics avanzados',
+        feature8: 'Gestión de devoluciones',
+        feature9: 'Control de calidad integrado',
+        feature10: 'Automatización de reabastecimiento',
+        benefit1: 'Reducción de errores hasta 95%',
+        benefit2: 'Mejora de productividad 40%',
+        benefit3: 'Optimización de espacio 30%',
+        benefit4: 'Reducción de costos operativos',
+        benefit5: 'Mayor precisión en inventarios',
+        benefit6: 'Tiempos de entrega más rápidos',
+        benefit7: 'Mejor satisfacción del cliente',
+        benefit8: 'Visibilidad completa de operaciones'
+      },
+      delivery: {
+        title: 'Gestión de Entregas',
+        subtitle: 'Optimización de rutas y logística de última milla',
+        description: 'Sistema completo para gestionar entregas eficientemente desde el almacén hasta el cliente final',
+        feature1: 'Planificación automática de rutas',
+        feature2: 'Seguimiento en tiempo real',
+        feature3: 'Gestión de flotas',
+        feature4: 'Notificaciones automáticas',
+        feature5: 'Prueba de entrega digital',
+        feature6: 'Optimización de costos de transporte',
+        feature7: 'Integración con GPS',
+        feature8: 'Gestión de devoluciones',
+        feature9: 'Análisis de rendimiento',
+        feature10: 'App móvil para conductores',
+        benefit1: 'Reducción de costos de transporte 25%',
+        benefit2: 'Mejora en tiempos de entrega',
+        benefit3: 'Mayor satisfacción del cliente',
+        benefit4: 'Reducción de emisiones CO2',
+        benefit5: 'Optimización de recursos',
+        benefit6: 'Mejor control de flotas',
+        benefit7: 'Reducción de errores de entrega',
+        benefit8: 'Visibilidad completa del proceso'
+      },
+      services: {
+        title: 'Gestión de Servicios',
+        subtitle: 'Optimización de operaciones de servicio al cliente',
+        description: 'Plataforma integral para gestionar servicios técnicos, mantenimiento y atención al cliente',
+        feature1: 'Gestión de tickets y casos',
+        feature2: 'Programación de citas',
+        feature3: 'Gestión de técnicos móviles',
+        feature4: 'Base de conocimientos',
+        feature5: 'SLA y métricas de rendimiento',
+        feature6: 'Facturación de servicios',
+        benefit1: 'Mejora en tiempo de resolución',
+        benefit2: 'Mayor satisfacción del cliente',
+        benefit3: 'Optimización de recursos técnicos',
+        benefit4: 'Mejor control de costos'
+      },
+      whyChoose: {
+        title: '¿Por qué elegir nuestras soluciones?',
+        expertise: {
+          title: 'Experiencia Comprobada',
+          desc: 'Años de experiencia implementando soluciones exitosas'
+        },
+        results: {
+          title: 'Resultados Medibles',
+          desc: 'ROI comprobado y mejoras cuantificables en eficiencia'
+        },
+        scalable: {
+          title: 'Escalables',
+          desc: 'Soluciones que crecen con tu negocio'
+        },
+        support: {
+          title: 'Soporte Continuo',
+          desc: 'Acompañamiento permanente para garantizar el éxito'
+        }
+      },
+      cta: {
+        title: '¿Listo para optimizar tus operaciones?',
+        subtitle: 'Contáctanos para una evaluación gratuita de tus procesos actuales',
+        button: 'Solicitar Evaluación'
+      }
+    },
 
     // Projects Page
-    'projects.title': 'Our Success Stories',
-    'projects.subtitle': 'Discover how we\'ve helped businesses transform their operations and achieve remarkable results.',
-    'projects.filters.all': 'All Projects',
-    'projects.filters.openbravo': 'Openbravo',
-    'projects.filters.odoo': 'Odoo',
-    'projects.filters.ai': 'AI Solutions',
-    'projects.filters.custom': 'Custom Development',
-    'projects.keyResults': 'Key Results',
-    'projects.viewCase': 'View Case Study',
-    'projects.featured.title': 'Featured Case Study: Halsted Logistics',
-    'projects.featured.challenge': 'The Challenge',
-    'projects.featured.challengeDesc': 'Halsted needed to optimize their complex logistics operations and reduce operational costs while maintaining service quality.',
-    'projects.featured.solution': 'Our Solution',
-    'projects.featured.solutionDesc': 'We implemented a comprehensive Openbravo ERP solution with custom logistics modules and AI-powered optimization.',
-    'projects.featured.results': 'The Results',
-    'projects.featured.costReduction': 'Cost Reduction',
-    'projects.featured.fasterDelivery': 'Faster Delivery',
-    'projects.cta.title': 'Ready to Start Your Success Story?',
-    'projects.cta.subtitle': 'Let\'s discuss how we can help you achieve similar results.',
-    'projects.cta.button': 'Start Your Project',
+    projects: {
+      title: 'Casos de Éxito',
+      subtitle: 'Descubre cómo hemos transformado negocios con nuestras soluciones tecnológicas',
+      filters: {
+        all: 'Todos',
+        openbravo: 'Openbravo',
+        odoo: 'Odoo',
+        ai: 'IA',
+        custom: 'Personalizado'
+      },
+      keyResults: 'Resultados Clave',
+      viewCase: 'Ver caso completo',
+      halsted: {
+        title: 'Optimización Logística Halsted',
+        desc: 'Implementación de Openbravo ERP que optimizó la gestión de inventario en un 30%',
+        sector: 'Logística',
+        result1: '30% mejora en gestión de inventario',
+        result2: '25% reducción en costos operativos',
+        result3: '40% mejora en tiempos de entrega',
+        testimonial: 'Gracias a Doce Leguas, nuestras operaciones han mejorado drásticamente. Su profesionalismo y conocimiento son excepcionales.',
+        client: 'Brian, Halsted'
+      },
+      ai: {
+        title: 'Análisis Predictivo con IA',
+        desc: 'Integración de IA para análisis predictivo que resultó en 40% de mejora en toma de decisiones',
+        sector: 'Tecnología',
+        result1: '40% mejora en toma de decisiones',
+        result2: '60% reducción en errores de predicción',
+        result3: '35% aumento en eficiencia operativa',
+        testimonial: 'La solución de IA que implementaron superó todas nuestras expectativas. Altamente recomendados.',
+        client: 'Maria Rodriguez, TechCorp Solutions'
+      },
+      custom: {
+        title: 'Solución ERP Personalizada',
+        desc: 'Desarrollo completo de ERP personalizado que aumentó la eficiencia operativa en un 45%',
+        sector: 'Manufactura',
+        result1: '45% aumento en eficiencia operativa',
+        result2: '50% reducción en tiempo de procesos',
+        result3: '30% mejora en satisfacción del cliente',
+        testimonial: 'El ERP personalizado transformó completamente nuestros procesos. Excelente trabajo.',
+        client: 'Carlos Mendez, ManufacturaPro'
+      },
+      odoo: {
+        title: 'Implementación Odoo Completa',
+        desc: 'Implementación integral de Odoo que centralizó todas las operaciones empresariales',
+        sector: 'Comercio',
+        result1: 'Centralización completa de operaciones',
+        result2: '35% mejora en productividad',
+        result3: '25% reducción en costos administrativos',
+        testimonial: 'Odoo implementado por Doce Leguas revolucionó nuestra forma de trabajar.',
+        client: 'Ana García, ComercialPlus'
+      },
+      warehouse: {
+        title: 'Automatización de Almacén con IA',
+        desc: 'Sistema inteligente de gestión de almacén que optimizó operaciones con IA',
+        sector: 'Logística',
+        result1: '50% reducción en errores de inventario',
+        result2: '35% mejora en velocidad de picking',
+        result3: '40% optimización de espacio',
+        testimonial: 'La automatización con IA transformó nuestro almacén completamente.',
+        client: 'Roberto Silva, LogisticaMax'
+      },
+      cloud: {
+        title: 'Migración a la Nube',
+        desc: 'Migración completa a la nube que mejoró la escalabilidad y redujo costos',
+        sector: 'Tecnología',
+        result1: '60% reducción en costos de infraestructura',
+        result2: '99.9% disponibilidad del sistema',
+        result3: '80% mejora en velocidad de acceso',
+        testimonial: 'La migración a la nube fue perfecta. Ahora tenemos mayor flexibilidad.',
+        client: 'Luis Herrera, CloudTech'
+      },
+      featured: {
+        title: 'Caso Destacado: Transformación Digital Completa',
+        challenge: 'El Desafío',
+        challengeDesc: 'Una empresa de logística necesitaba modernizar completamente sus sistemas legacy para competir en el mercado digital.',
+        solution: 'La Solución',
+        solutionDesc: 'Implementamos una solución integral con Openbravo ERP, automatización con IA y migración a la nube.',
+        results: 'Los Resultados',
+        costReduction: 'Reducción de costos',
+        fasterDelivery: 'Entregas más rápidas'
+      },
+      cta: {
+        title: '¿Quieres ser nuestro próximo caso de éxito?',
+        subtitle: 'Contáctanos para discutir cómo podemos transformar tu negocio',
+        button: 'Iniciar mi Proyecto'
+      }
+    },
 
-    'projects.halsted.title': 'Halsted Logistics Optimization',
-    'projects.halsted.desc': 'Complete logistics optimization with Openbravo ERP implementation, resulting in 30% cost reduction and improved efficiency.',
-    'projects.halsted.sector': 'Logistics',
-    'projects.halsted.result1': '30% reduction in operational costs',
-    'projects.halsted.result2': '25% improvement in delivery times',
-    'projects.halsted.result3': '99.5% inventory accuracy achieved',
-    'projects.halsted.testimonial': 'Thanks to Doce Leguas, our operations have drastically improved. Their professionalism and knowledge are exceptional.',
-    'projects.halsted.client': 'Brian, Halsted',
+    // About Page
+    about: {
+      title: 'Sobre Nosotros',
+      subtitle: 'Somos un equipo de expertos apasionados por transformar negocios a través de la tecnología',
+      story: {
+        title: 'Nuestra Historia',
+        content1: 'Doce Leguas nació de la visión de crear soluciones tecnológicas que realmente transformen los negocios. Con años de experiencia en implementaciones empresariales, hemos ayudado a decenas de empresas a optimizar sus procesos y alcanzar sus objetivos.',
+        content2: 'Nuestro enfoque se basa en entender profundamente las necesidades de cada cliente para entregar soluciones que no solo resuelvan problemas actuales, sino que también preparen a las empresas para el futuro.'
+      },
+      vision: {
+        title: 'Nuestra Visión',
+        desc: 'Ser el socio tecnológico de confianza que impulse la transformación digital de las empresas, creando valor sostenible a través de soluciones innovadoras.'
+      },
+      values: {
+        title: 'Nuestros Valores',
+        subtitle: 'Los principios que guían cada proyecto y decisión que tomamos',
+        excellence: 'Excelencia',
+        innovation: 'Innovación',
+        integrity: 'Integridad',
+        customer: 'Enfoque al Cliente',
+        collaboration: 'Colaboración'
+      },
+      team: {
+        title: 'Nuestro Equipo',
+        subtitle: 'Conoce a los expertos que harán realidad tu visión tecnológica',
+        nono: {
+          position: 'CEO & Fundador',
+          description: 'Líder visionario con más de 15 años de experiencia en transformación digital empresarial.'
+        },
+        mark: {
+          position: 'CTO',
+          description: 'Experto técnico especializado en arquitecturas empresariales y soluciones de alta escala.'
+        },
+        rafael: {
+          position: 'Director de Desarrollo',
+          description: 'Especialista en desarrollo de software y gestión de proyectos tecnológicos complejos.'
+        },
+        maarten: {
+          position: 'Consultor Senior',
+          description: 'Consultor experto en implementaciones ERP y optimización de procesos empresariales.'
+        }
+      },
+      culture: {
+        title: 'Nuestra Cultura',
+        content1: 'En Doce Leguas creemos que la tecnología debe servir a las personas y los negocios. Por eso, nuestro enfoque siempre es humano, centrado en entender las necesidades reales de nuestros clientes.',
+        content2: 'Fomentamos un ambiente de aprendizaje continuo, innovación y colaboración, donde cada miembro del equipo puede crecer profesionalmente mientras contribuye al éxito de nuestros clientes.',
+        item1: 'Innovación constante',
+        item2: 'Trabajo en equipo',
+        item3: 'Aprendizaje continuo',
+        item4: 'Compromiso con la calidad'
+      },
+      cta: {
+        title: '¿Quieres conocer más sobre nosotros?',
+        subtitle: 'Estamos aquí para responder todas tus preguntas y conocer tu proyecto',
+        contact: 'Contactar al Equipo'
+      }
+    },
 
-    'projects.ai.title': 'AI Predictive Analytics Platform',
-    'projects.ai.desc': 'Advanced AI solution for predictive analysis and decision-making, resulting in 40% improvement in business intelligence.',
-    'projects.ai.sector': 'Technology',
-    'projects.ai.result1': '40% improvement in decision-making',
-    'projects.ai.result2': '60% reduction in manual analysis',
-    'projects.ai.result3': 'Real-time insights and reporting',
-    'projects.ai.testimonial': 'The AI solution exceeded all our expectations. The insights we now have are invaluable.',
-    'projects.ai.client': 'Maria Rodriguez, TechCorp',
-
-    'projects.custom.title': 'Custom ERP Development',
-    'projects.custom.desc': 'Bespoke ERP solution tailored to specific business needs, increasing operational efficiency by 45%.',
-    'projects.custom.sector': 'Manufacturing',
-    'projects.custom.result1': '45% increase in operational efficiency',
-    'projects.custom.result2': 'Seamless integration with existing systems',
-    'projects.custom.result3': 'Reduced manual processes by 70%',
-    'projects.custom.testimonial': 'The custom solution perfectly fits our unique requirements. Outstanding work!',
-    'projects.custom.client': 'John Smith, ManufactureCorp',
-
-    'projects.odoo.title': 'Odoo Complete Implementation',
-    'projects.odoo.desc': 'Full Odoo implementation with custom modules for retail operations, streamlining all business processes.',
-    'projects.odoo.sector': 'Retail',
-    'projects.odoo.result1': 'Complete business process integration',
-    'projects.odoo.result2': '35% improvement in inventory management',
-    'projects.odoo.result3': 'Enhanced customer experience',
-    'projects.odoo.testimonial': 'Odoo has transformed how we operate. Everything is now connected and efficient.',
-    'projects.odoo.client': 'Sarah Johnson, RetailPlus',
-
-    'projects.warehouse.title': 'Smart Warehouse Management',
-    'projects.warehouse.desc': 'AI-powered warehouse management system with automated processes and real-time tracking.',
-    'projects.warehouse.sector': 'Logistics',
-    'projects.warehouse.result1': '50% reduction in picking errors',
-    'projects.warehouse.result2': '30% increase in throughput',
-    'projects.warehouse.result3': 'Real-time inventory visibility',
-    'projects.warehouse.testimonial': 'The warehouse automation has revolutionized our operations. Incredible results!',
-    'projects.warehouse.client': 'Mike Davis, LogiFlow',
-
-    'projects.cloud.title': 'Cloud Migration & Optimization',
-    'projects.cloud.desc': 'Complete cloud migration with performance optimization and cost reduction strategies.',
-    'projects.cloud.sector': 'Technology',
-    'projects.cloud.result1': '40% reduction in infrastructure costs',
-    'projects.cloud.result2': '99.9% uptime achieved',
-    'projects.cloud.result3': 'Improved scalability and performance',
-    'projects.cloud.testimonial': 'The cloud migration was seamless and the cost savings are significant.',
-    'projects.cloud.client': 'Lisa Chen, CloudTech'
-  },
-  es: {
-    // Navegación
-    'nav.home': 'Inicio',
-    'nav.services': 'Servicios',
-    'nav.solutions': 'Soluciones',
-    'nav.projects': 'Proyectos',
-    'nav.about': 'Nosotros',
-    'nav.contact': 'Contacto',
-    'nav.getStarted': 'Comenzar',
-
-    // Página de Inicio
-    'home.hero.title': 'Transforma Tu Negocio con Soluciones Tecnológicas Innovadoras',
-    'home.hero.subtitle': 'Nos especializamos en Openbravo ERP, Odoo, soluciones de IA y desarrollo personalizado para impulsar tu negocio.',
-    'home.hero.viewServices': 'Ver Nuestros Servicios',
-    'home.hero.startProject': 'Iniciar Tu Proyecto',
-
-    'home.valueProps.title': '¿Por Qué Elegir Doce Leguas?',
-    'home.valueProps.subtitle': 'Combinamos experiencia técnica con comprensión empresarial para entregar soluciones que realmente marcan la diferencia.',
-    'home.valueProps.innovation': 'Innovación',
-    'home.valueProps.innovation.desc': 'Soluciones tecnológicas de vanguardia',
-    'home.valueProps.custom': 'Personalización',
-    'home.valueProps.custom.desc': 'Adaptado a tus necesidades específicas',
-    'home.valueProps.results': 'Resultados',
-    'home.valueProps.results.desc': 'Historial comprobado de éxito',
-    'home.valueProps.team': 'Equipo Experto',
-    'home.valueProps.team.desc': 'Profesionales experimentados',
-
-    'home.services.title': 'Nuestros Servicios Principales',
-    'home.services.subtitle': 'Soluciones tecnológicas integrales para transformar las operaciones de tu negocio.',
-    'home.services.openbravo': 'Openbravo ERP',
-    'home.services.openbravo.desc': 'Implementación y personalización completa de ERP',
-    'home.services.odoo': 'Soluciones Odoo',
-    'home.services.odoo.desc': 'Desarrollo e integración completa de Odoo',
-    'home.services.ai': 'Soluciones de IA',
-    'home.services.ai.desc': 'Inteligencia artificial y aprendizaje automático',
-    'home.services.custom': 'Desarrollo Personalizado',
-    'home.services.custom.desc': 'Soluciones de software a medida',
-    'home.services.n8n': 'Automatización N8N',
-    'home.services.n8n.desc': 'Automatización de flujos de trabajo e integración',
-    'home.services.automation': 'Automatización de Procesos',
-    'home.services.automation.desc': 'Optimiza tus procesos empresariales',
-    'home.services.learnMore': 'Saber Más',
-
-    'home.projects.title': 'Historias de Éxito',
-    'home.projects.subtitle': 'Resultados reales de clientes reales que confiaron en nosotros para su transformación digital.',
-    'home.projects.viewCase': 'Ver Caso de Estudio',
-
-    'home.testimonials.title': 'Lo Que Dicen Nuestros Clientes',
-
-    'home.logistics.title': 'Soluciones Especializadas para Logística y Retail',
-    'home.logistics.subtitle': 'Experiencia específica de la industria que impulsa la excelencia operacional y la ventaja competitiva.',
-    'home.logistics.supply.title': 'Gestión de Cadena de Suministro',
-    'home.logistics.supply.desc': 'Optimiza toda tu cadena de suministro con automatización inteligente y visibilidad en tiempo real.',
-    'home.logistics.supply.feature1': 'Optimización de inventario',
-    'home.logistics.supply.feature2': 'Pronóstico de demanda',
-    'home.logistics.supply.feature3': 'Gestión de proveedores',
-    'home.logistics.retail.title': 'Operaciones de Retail',
-    'home.logistics.retail.desc': 'Optimiza las operaciones de retail desde el punto de venta hasta la gestión de back-office.',
-    'home.logistics.retail.feature1': 'Integración POS',
-    'home.logistics.retail.feature2': 'Gestión multicanal',
-    'home.logistics.retail.feature3': 'Analítica de clientes',
-    'home.logistics.expertise.title': 'Experiencia en la Industria',
-    'home.logistics.expertise.desc': 'Comprensión profunda de los desafíos de logística y retail con soluciones probadas.',
-    'home.logistics.expertise.stat1': 'Proyectos',
-    'home.logistics.expertise.stat2': 'Tasa de Éxito',
-    'home.logistics.cta': 'Explorar Nuestras Soluciones',
-
-    'home.cta.title': '¿Listo para Transformar Tu Negocio?',
-    'home.cta.subtitle': 'Hablemos sobre cómo nuestra experiencia puede ayudarte a alcanzar tus objetivos e impulsar el crecimiento.',
-    'home.cta.schedule': 'Programar Consulta',
-    'home.cta.contact': 'Contáctanos Hoy',
-
-    // Página de Contacto
-    'contact.title': 'Ponte en Contacto',
-    'contact.subtitle': '¿Listo para comenzar tu próximo proyecto? Nos encantaría saber de ti.',
-    'contact.form.title': 'Envíanos un mensaje',
-    'contact.form.fullName': 'Nombre Completo',
-    'contact.form.email': 'Correo Electrónico',
-    'contact.form.phone': 'Número de Teléfono',
-    'contact.form.company': 'Empresa',
-    'contact.form.subject': 'Asunto',
-    'contact.form.message': 'Mensaje',
-    'contact.form.send': 'Enviar Mensaje',
-    'contact.form.success': '¡Mensaje Enviado Exitosamente!',
-    'contact.form.successDesc': 'Gracias por tu mensaje. Te responderemos dentro de 24 horas.',
-    'contact.form.selectSubject': 'Selecciona un asunto',
-    'contact.form.placeholders.fullName': 'Ingresa tu nombre completo',
-    'contact.form.placeholders.email': 'Ingresa tu correo electrónico',
-    'contact.form.placeholders.phone': 'Ingresa tu número de teléfono',
-    'contact.form.placeholders.company': 'Ingresa el nombre de tu empresa',
-    'contact.form.placeholders.message': 'Cuéntanos sobre tu proyecto o consulta...',
-
-    'contact.form.subjects.generalinquiry': 'Consulta General',
-    'contact.form.subjects.openbravoconsultation': 'Consulta Openbravo',
-    'contact.form.subjects.odooimplementation': 'Implementación Odoo',
-    'contact.form.subjects.aisolutions': 'Soluciones de IA',
-    'contact.form.subjects.customdevelopment': 'Desarrollo Personalizado',
-    'contact.form.subjects.technicalsupport': 'Soporte Técnico',
-    'contact.form.subjects.partnershipopportunity': 'Oportunidad de Asociación',
-    'contact.form.subjects.other': 'Otro',
-
-    'contact.info.title': 'Información de Contacto',
-    'contact.info.email': 'Correo',
-    'contact.info.emailDesc': 'Envíanos un correo en cualquier momento',
-    'contact.info.phone': 'Teléfono',
-    'contact.info.phoneDesc': 'Llámanos durante horario comercial',
-    'contact.info.office': 'Oficinas',
-    'contact.info.officeDesc': 'Nuestra presencia global',
-    'contact.info.hours': 'Horario Comercial',
-    'contact.info.hoursDesc': '9:00 AM - 6:00 PM (GMT)',
-
-    'contact.whyContact.title': '¿Por qué contactarnos?',
+    // Contact Page
+    contact: {
+      title: 'Contacto',
+      subtitle: 'Estamos aquí para ayudarte a transformar tu negocio. Contáctanos y comencemos a trabajar juntos.',
+      form: {
+        title: 'Envíanos un Mensaje',
+        fullName: 'Nombre Completo',
+        email: 'Correo Electrónico',
+        phone: 'Teléfono',
+        company: 'Empresa',
+        subject: 'Asunto',
+        message: 'Mensaje',
+        send: 'Enviar Mensaje',
+        success: '¡Mensaje Enviado!',
+        successDesc: 'Gracias por contactarnos. Te responderemos pronto.',
+        selectSubject: 'Selecciona un asunto',
+        placeholders: {
+          fullName: 'Tu nombre completo',
+          email: 'tu@email.com',
+          phone: '+1 234 567 8900',
+          company: 'Nombre de tu empresa',
+          message: 'Cuéntanos sobre tu proyecto...'
+        },
+        subjects: {
+          generalinquiry: 'Consulta General',
+          openbravoconsultation: 'Consulta Openbravo',
+          odooimplementation: 'Implementación Odoo',
+          aisolutions: 'Soluciones de IA',
+          customdevelopment: 'Desarrollo Personalizado',
+          technicalsupport: 'Soporte Técnico',
+          partnershipopportunity: 'Oportunidad de Asociación',
+          other: 'Otro'
+        }
+      },
+      info: {
+        title: 'Información de Contacto',
+        email: 'Correo Electrónico',
+        emailDesc: 'Respuesta en 24 horas',
+        phone: 'Teléfono',
+        phoneDesc: 'Lun - Vie, 9:00 - 18:00',
+        office: 'Oficinas',
+        officeDesc: 'Múltiples ubicaciones',
+        hours: 'Horario',
+        hoursDesc: '9:00 AM - 6:00 PM'
+      },
+      whyContact: {
+        title: '¿Por qué contactarnos?',
+        item1: 'Consulta inicial gratuita y evaluación del proyecto',
+        item2: 'Soluciones personalizadas adaptadas a tus necesidades específicas',
+        item3: 'Equipo experto con historial comprobado en soluciones empresariales',
+        item4: 'Soporte continuo y mantenimiento para todas nuestras implementaciones'
+      }
+    },
 
     // Footer
-    'footer.description': 'Transformando negocios a través de soluciones tecnológicas innovadoras y servicios de consultoría expertos.',
-    'footer.quickLinks': 'Enlaces Rápidos',
-    'footer.services': 'Servicios',
-    'footer.contactInfo': 'Info de Contacto',
-    'footer.rights': 'Todos los derechos reservados.',
-    'footer.privacy': 'Política de Privacidad',
-    'footer.legal': 'Aviso Legal',
-    'footer.sitemap': 'Mapa del Sitio',
+    footer: {
+      description: 'Transformamos negocios con soluciones tecnológicas innovadoras y personalizadas.',
+      quickLinks: 'Enlaces Rápidos',
+      services: 'Servicios',
+      contactInfo: 'Información de Contacto',
+      rights: 'Todos los derechos reservados.',
+      privacy: 'Privacidad',
+      legal: 'Legal',
+      sitemap: 'Mapa del Sitio'
+    },
 
     // ChatBot
-    'chatbot.title': 'Asistente Doce Leguas',
-    'chatbot.subtitle': '¿Cómo podemos ayudarte?',
-    'chatbot.welcome': '¡Hola! Estoy aquí para ayudarte con cualquier pregunta sobre nuestros servicios. ¿Cómo puedo asistirte hoy?',
-    'chatbot.placeholder': 'Escribe tu mensaje...',
-    'chatbot.open': 'Abrir chat',
-    'chatbot.close': 'Cerrar chat',
-    'chatbot.defaultResponse': 'Gracias por tu mensaje. Nuestro equipo te responderá pronto.',
-    'chatbot.errorMessage': 'Lo siento, tengo problemas de conexión ahora. Por favor intenta más tarde o contáctanos directamente.',
+    chatbot: {
+      title: 'Asistente Virtual',
+      subtitle: 'Estoy aquí para ayudarte',
+      welcome: '¡Hola! Soy el asistente virtual de Doce Leguas. ¿En qué puedo ayudarte hoy?',
+      placeholder: 'Escribe tu mensaje...',
+      defaultResponse: 'Gracias por tu mensaje. Un especialista te contactará pronto.',
+      errorMessage: 'Lo siento, hay un problema técnico. Por favor intenta más tarde.',
+      open: 'Abrir chat',
+      close: 'Cerrar chat'
+    }
+  },
 
-    // Página de Servicios
-    'services.title': 'Nuestros Servicios',
-    'services.subtitle': 'Soluciones tecnológicas integrales diseñadas para transformar las operaciones de tu negocio e impulsar el crecimiento.',
-    'services.keyBenefits': 'Beneficios Clave',
-    'services.whatWeOffer': 'Lo Que Ofrecemos',
-    'services.finalCta.title': '¿Listo para Comenzar?',
-    'services.finalCta.subtitle': 'Hablemos sobre cómo nuestros servicios pueden ayudar a transformar tu negocio.',
-    'services.finalCta.button': 'Contáctanos Hoy',
+  en: {
+    // Navigation
+    nav: {
+      home: 'Home',
+      services: 'Services',
+      solutions: 'Solutions',
+      projects: 'Projects',
+      about: 'About',
+      contact: 'Contact',
+      getStarted: 'Get Started'
+    },
+    
+    // Home Page
+    home: {
+      hero: {
+        title: 'Transform your business with innovative technology solutions',
+        subtitle: 'Specialized in Openbravo, Odoo, AI and custom development to drive your company growth',
+        viewServices: 'View Services',
+        startProject: 'Start Project'
+      },
+      valueProps: {
+        title: 'Why choose Doce Leguas?',
+        subtitle: 'We combine technical expertise with strategic vision to deliver solutions that truly transform your business',
+        innovation: 'Innovation',
+        custom: 'Customization',
+        results: 'Results',
+        team: 'Expert Team'
+      },
+      services: {
+        title: 'Our Services',
+        subtitle: 'Comprehensive solutions for every business need',
+        openbravo: 'Openbravo ERP',
+        odoo: 'Odoo Solutions',
+        ai: 'AI Solutions',
+        custom: 'Custom Development',
+        n8n: 'n8n Automation',
+        automation: 'Process Automation',
+        learnMore: 'Learn more'
+      },
+      projects: {
+        title: 'Success Stories',
+        subtitle: 'Discover how we have transformed businesses with our solutions',
+        viewCase: 'View case study'
+      },
+      testimonials: {
+        title: 'What our clients say'
+      },
+      logistics: {
+        title: 'Specialized Solutions for Logistics and Retail',
+        subtitle: 'We optimize your supply chain and commercial operations with cutting-edge technology',
+        supply: {
+          title: 'Supply Chain Management',
+          desc: 'Optimize your inventory and logistics with intelligent solutions',
+          feature1: 'Real-time inventory control',
+          feature2: 'Delivery route optimization',
+          feature3: 'AI-powered demand forecasting'
+        },
+        retail: {
+          title: 'Retail Solutions',
+          desc: 'Improve customer experience and increase sales',
+          feature1: 'Integrated point of sale',
+          feature2: 'Multi-store management',
+          feature3: 'Customer behavior analysis'
+        },
+        expertise: {
+          title: 'Proven Expertise',
+          desc: 'Years of experience in logistics and retail sector',
+          stat1: 'Projects',
+          stat2: 'Satisfaction'
+        },
+        cta: 'Explore Solutions'
+      },
+      cta: {
+        title: 'Ready to transform your business?',
+        subtitle: 'Contact us today and discover how we can help you achieve your business goals',
+        schedule: 'Schedule Consultation',
+        contact: 'Contact Now'
+      }
+    },
 
-    'services.openbravo.title': 'Soluciones Openbravo ERP',
-    'services.openbravo.description': 'Implementación completa, personalización y servicios de soporte de Openbravo ERP para optimizar las operaciones de tu negocio.',
-    'services.openbravo.benefits': 'Reduce los costos operacionales hasta un 30% mientras mejoras la eficiencia y precisión de datos en todos los procesos empresariales.',
-    'services.openbravo.point1': 'Implementación completa de ERP y migración',
-    'services.openbravo.point2': 'Desarrollo de módulos personalizados',
-    'services.openbravo.point3': 'Integración con sistemas de terceros',
-    'services.openbravo.point4': 'Soporte y mantenimiento continuo',
-    'services.openbravo.cta': 'Obtener Consulta Openbravo',
+    // Services Page
+    services: {
+      title: 'Our Services',
+      subtitle: 'Comprehensive technology solutions designed to drive your company growth',
+      keyBenefits: 'Key Benefits',
+      whatWeOffer: 'What we offer',
+      openbravo: {
+        title: 'Openbravo ERP',
+        description: 'Complete implementation and customization of Openbravo ERP to optimize all your business processes',
+        benefits: 'Reduce operational costs up to 30% and improve efficiency with an ERP designed for growth',
+        point1: 'Complete Openbravo ERP implementation',
+        point2: 'Customization according to specific needs',
+        point3: 'Data migration and legacy systems',
+        point4: 'Training and continuous support',
+        cta: 'Request Openbravo Demo'
+      },
+      odoo: {
+        title: 'Odoo Solutions',
+        description: 'Comprehensive Odoo implementation to manage sales, inventory, accounting and more in a single platform',
+        benefits: 'Centralize all your operations and improve productivity with the most complete business suite',
+        point1: 'Odoo modules implementation',
+        point2: 'Workflow customization',
+        point3: 'Integration with existing systems',
+        point4: 'Custom module development',
+        point5: 'Specialized technical support',
+        cta: 'Explore Odoo'
+      },
+      ai: {
+        title: 'Artificial Intelligence Solutions',
+        description: 'We implement AI to automate processes, improve decision making and create competitive advantages',
+        benefits: 'Automate up to 60% of repetitive tasks and improve decision-making accuracy',
+        point1: 'Predictive analytics and machine learning',
+        point2: 'Intelligent process automation',
+        point3: 'Chatbots and virtual assistants',
+        point4: 'Data analysis and business intelligence',
+        point5: 'Computer vision',
+        point6: 'Natural language processing',
+        point7: 'Integration with existing systems',
+        point8: 'AI strategy consulting',
+        cta: 'Discover AI'
+      },
+      custom: {
+        title: 'Custom Development',
+        description: 'We create custom software solutions that perfectly adapt to your business unique processes',
+        benefits: 'Get a competitive advantage with software designed specifically for your needs',
+        point1: 'Web and mobile applications',
+        point2: 'APIs and microservices',
+        point3: 'System integrations',
+        point4: 'Legacy application modernization',
+        point5: 'Cloud-native architecture',
+        cta: 'Start Custom Project'
+      },
+      consulting: {
+        title: 'Technical Consulting',
+        description: 'Expert advice to optimize your technology architecture and digital strategy',
+        benefits: 'Make informed technology decisions with the support of our experts',
+        point1: 'Current systems audit',
+        point2: 'Technology architecture design',
+        point3: 'Digital transformation strategy',
+        point4: 'Process optimization',
+        point5: 'Technical training',
+        cta: 'Request Consulting'
+      },
+      finalCta: {
+        title: 'Need a specific solution?',
+        subtitle: 'Contact us to discuss how we can help you achieve your technology goals',
+        button: 'Talk to an Expert'
+      }
+    },
 
-    'services.odoo.title': 'Desarrollo e Integración Odoo',
-    'services.odoo.description': 'Soluciones Odoo de extremo a extremo incluyendo implementación, personalización e integración perfecta con tus sistemas existentes.',
-    'services.odoo.benefits': 'Optimiza operaciones con una solución de gestión empresarial todo-en-uno que crece con tu empresa.',
-    'services.odoo.point1': 'Implementación completa de Odoo',
-    'services.odoo.point2': 'Desarrollo de aplicaciones personalizadas',
-    'services.odoo.point3': 'Integraciones con terceros',
-    'services.odoo.point4': 'Servicios de migración de datos',
-    'services.odoo.point5': 'Capacitación y soporte',
-    'services.odoo.cta': 'Iniciar Tu Proyecto Odoo',
+    // Solutions Page
+    solutions: {
+      title: 'Industry Solutions',
+      subtitle: 'Specialized solutions designed for the unique challenges of each sector',
+      keyFeatures: 'Key Features',
+      expectedBenefits: 'Expected Benefits',
+      learnMore: 'Learn More',
+      warehouse: {
+        title: 'Warehouse Management',
+        subtitle: 'Complete optimization of warehouse operations',
+        description: 'Comprehensive solution for efficient warehouse management with cutting-edge technology',
+        feature1: 'Real-time inventory control',
+        feature2: 'Location and zone management',
+        feature3: 'Picking and packing optimization',
+        feature4: 'Complete product traceability',
+        feature5: 'Barcode/RFID integration',
+        feature6: 'Multi-warehouse management',
+        feature7: 'Advanced reports and analytics',
+        feature8: 'Returns management',
+        feature9: 'Integrated quality control',
+        feature10: 'Automated replenishment',
+        benefit1: 'Error reduction up to 95%',
+        benefit2: 'Productivity improvement 40%',
+        benefit3: 'Space optimization 30%',
+        benefit4: 'Operational cost reduction',
+        benefit5: 'Greater inventory accuracy',
+        benefit6: 'Faster delivery times',
+        benefit7: 'Better customer satisfaction',
+        benefit8: 'Complete operations visibility'
+      },
+      delivery: {
+        title: 'Delivery Management',
+        subtitle: 'Route optimization and last-mile logistics',
+        description: 'Complete system to efficiently manage deliveries from warehouse to end customer',
+        feature1: 'Automatic route planning',
+        feature2: 'Real-time tracking',
+        feature3: 'Fleet management',
+        feature4: 'Automatic notifications',
+        feature5: 'Digital proof of delivery',
+        feature6: 'Transportation cost optimization',
+        feature7: 'GPS integration',
+        feature8: 'Returns management',
+        feature9: 'Performance analysis',
+        feature10: 'Mobile app for drivers',
+        benefit1: 'Transportation cost reduction 25%',
+        benefit2: 'Delivery time improvement',
+        benefit3: 'Higher customer satisfaction',
+        benefit4: 'CO2 emissions reduction',
+        benefit5: 'Resource optimization',
+        benefit6: 'Better fleet control',
+        benefit7: 'Delivery error reduction',
+        benefit8: 'Complete process visibility'
+      },
+      services: {
+        title: 'Service Management',
+        subtitle: 'Customer service operations optimization',
+        description: 'Comprehensive platform to manage technical services, maintenance and customer support',
+        feature1: 'Ticket and case management',
+        feature2: 'Appointment scheduling',
+        feature3: 'Mobile technician management',
+        feature4: 'Knowledge base',
+        feature5: 'SLA and performance metrics',
+        feature6: 'Service billing',
+        benefit1: 'Resolution time improvement',
+        benefit2: 'Higher customer satisfaction',
+        benefit3: 'Technical resource optimization',
+        benefit4: 'Better cost control'
+      },
+      whyChoose: {
+        title: 'Why choose our solutions?',
+        expertise: {
+          title: 'Proven Experience',
+          desc: 'Years of experience implementing successful solutions'
+        },
+        results: {
+          title: 'Measurable Results',
+          desc: 'Proven ROI and quantifiable efficiency improvements'
+        },
+        scalable: {
+          title: 'Scalable',
+          desc: 'Solutions that grow with your business'
+        },
+        support: {
+          title: 'Continuous Support',
+          desc: 'Permanent support to guarantee success'
+        }
+      },
+      cta: {
+        title: 'Ready to optimize your operations?',
+        subtitle: 'Contact us for a free evaluation of your current processes',
+        button: 'Request Evaluation'
+      }
+    },
 
-    'services.ai.title': 'Soluciones de IA y Aprendizaje Automático',
-    'services.ai.description': 'Aprovecha el poder de la inteligencia artificial para automatizar procesos, obtener insights y tomar decisiones basadas en datos.',
-    'services.ai.benefits': 'Aumenta la productividad en un 40% y reduce errores manuales mientras obtienes valiosos insights empresariales de tus datos.',
-    'services.ai.point1': 'Análisis predictivo y pronósticos',
-    'services.ai.point2': 'Procesamiento de lenguaje natural',
-    'services.ai.point3': 'Soluciones de visión por computadora',
-    'services.ai.point4': 'Chatbots y asistentes virtuales',
-    'services.ai.point5': 'Automatización de procesos con IA',
-    'services.ai.point6': 'Análisis de datos e insights',
-    'services.ai.point7': 'Desarrollo de modelos de aprendizaje automático',
-    'services.ai.point8': 'Consultoría en estrategia de IA',
-    'services.ai.cta': 'Explorar Soluciones de IA',
+    // Projects Page
+    projects: {
+      title: 'Success Stories',
+      subtitle: 'Discover how we have transformed businesses with our technology solutions',
+      filters: {
+        all: 'All',
+        openbravo: 'Openbravo',
+        odoo: 'Odoo',
+        ai: 'AI',
+        custom: 'Custom'
+      },
+      keyResults: 'Key Results',
+      viewCase: 'View full case',
+      halsted: {
+        title: 'Halsted Logistics Optimization',
+        desc: 'Openbravo ERP implementation that optimized inventory management by 30%',
+        sector: 'Logistics',
+        result1: '30% inventory management improvement',
+        result2: '25% operational cost reduction',
+        result3: '40% delivery time improvement',
+        testimonial: 'Thanks to Doce Leguas, our operations have drastically improved. Their professionalism and knowledge are exceptional.',
+        client: 'Brian, Halsted'
+      },
+      ai: {
+        title: 'Predictive Analysis with AI',
+        desc: 'AI integration for predictive analysis that resulted in 40% improvement in decision making',
+        sector: 'Technology',
+        result1: '40% decision making improvement',
+        result2: '60% prediction error reduction',
+        result3: '35% operational efficiency increase',
+        testimonial: 'The AI solution they implemented exceeded all our expectations. Highly recommended.',
+        client: 'Maria Rodriguez, TechCorp Solutions'
+      },
+      custom: {
+        title: 'Custom ERP Solution',
+        desc: 'Complete custom ERP development that increased operational efficiency by 45%',
+        sector: 'Manufacturing',
+        result1: '45% operational efficiency increase',
+        result2: '50% process time reduction',
+        result3: '30% customer satisfaction improvement',
+        testimonial: 'The custom ERP completely transformed our processes. Excellent work.',
+        client: 'Carlos Mendez, ManufacturaPro'
+      },
+      odoo: {
+        title: 'Complete Odoo Implementation',
+        desc: 'Comprehensive Odoo implementation that centralized all business operations',
+        sector: 'Commerce',
+        result1: 'Complete operations centralization',
+        result2: '35% productivity improvement',
+        result3: '25% administrative cost reduction',
+        testimonial: 'Odoo implemented by Doce Leguas revolutionized our way of working.',
+        client: 'Ana García, ComercialPlus'
+      },
+      warehouse: {
+        title: 'AI Warehouse Automation',
+        desc: 'Intelligent warehouse management system that optimized operations with AI',
+        sector: 'Logistics',
+        result1: '50% inventory error reduction',
+        result2: '35% picking speed improvement',
+        result3: '40% space optimization',
+        testimonial: 'AI automation completely transformed our warehouse.',
+        client: 'Roberto Silva, LogisticaMax'
+      },
+      cloud: {
+        title: 'Cloud Migration',
+        desc: 'Complete cloud migration that improved scalability and reduced costs',
+        sector: 'Technology',
+        result1: '60% infrastructure cost reduction',
+        result2: '99.9% system availability',
+        result3: '80% access speed improvement',
+        testimonial: 'The cloud migration was perfect. Now we have greater flexibility.',
+        client: 'Luis Herrera, CloudTech'
+      },
+      featured: {
+        title: 'Featured Case: Complete Digital Transformation',
+        challenge: 'The Challenge',
+        challengeDesc: 'A logistics company needed to completely modernize their legacy systems to compete in the digital market.',
+        solution: 'The Solution',
+        solutionDesc: 'We implemented a comprehensive solution with Openbravo ERP, AI automation and cloud migration.',
+        results: 'The Results',
+        costReduction: 'Cost reduction',
+        fasterDelivery: 'Faster deliveries'
+      },
+      cta: {
+        title: 'Want to be our next success story?',
+        subtitle: 'Contact us to discuss how we can transform your business',
+        button: 'Start my Project'
+      }
+    },
 
-    'services.custom.title': 'Desarrollo de Software Personalizado',
-    'services.custom.description': 'Soluciones de software a medida adaptadas a tus requisitos y desafíos empresariales únicos.',
-    'services.custom.benefits': 'Obtén exactamente lo que necesitas con soluciones construidas a medida que se ajustan perfectamente a tus procesos y objetivos empresariales.',
-    'services.custom.point1': 'Desarrollo de aplicaciones web',
-    'services.custom.point2': 'Desarrollo de aplicaciones móviles',
-    'services.custom.point3': 'Desarrollo e integración de APIs',
-    'services.custom.point4': 'Diseño y optimización de bases de datos',
-    'services.custom.point5': 'Soluciones en la nube y despliegue',
-    'services.custom.cta': 'Discutir Tu Proyecto',
+    // About Page
+    about: {
+      title: 'About Us',
+      subtitle: 'We are a team of experts passionate about transforming businesses through technology',
+      story: {
+        title: 'Our Story',
+        content1: 'Doce Leguas was born from the vision of creating technology solutions that truly transform businesses. With years of experience in enterprise implementations, we have helped dozens of companies optimize their processes and achieve their goals.',
+        content2: 'Our approach is based on deeply understanding each client\'s needs to deliver solutions that not only solve current problems, but also prepare companies for the future.'
+      },
+      vision: {
+        title: 'Our Vision',
+        desc: 'To be the trusted technology partner that drives digital transformation of companies, creating sustainable value through innovative solutions.'
+      },
+      values: {
+        title: 'Our Values',
+        subtitle: 'The principles that guide every project and decision we make',
+        excellence: 'Excellence',
+        innovation: 'Innovation',
+        integrity: 'Integrity',
+        customer: 'Customer Focus',
+        collaboration: 'Collaboration'
+      },
+      team: {
+        title: 'Our Team',
+        subtitle: 'Meet the experts who will make your technology vision a reality',
+        nono: {
+          position: 'CEO & Founder',
+          description: 'Visionary leader with over 15 years of experience in enterprise digital transformation.'
+        },
+        mark: {
+          position: 'CTO',
+          description: 'Technical expert specialized in enterprise architectures and high-scale solutions.'
+        },
+        rafael: {
+          position: 'Development Director',
+          description: 'Software development specialist and complex technology project management.'
+        },
+        maarten: {
+          position: 'Senior Consultant',
+          description: 'Expert consultant in ERP implementations and business process optimization.'
+        }
+      },
+      culture: {
+        title: 'Our Culture',
+        content1: 'At Doce Leguas we believe that technology should serve people and businesses. That\'s why our approach is always human, focused on understanding the real needs of our clients.',
+        content2: 'We foster an environment of continuous learning, innovation and collaboration, where each team member can grow professionally while contributing to our clients\' success.',
+        item1: 'Constant innovation',
+        item2: 'Teamwork',
+        item3: 'Continuous learning',
+        item4: 'Commitment to quality'
+      },
+      cta: {
+        title: 'Want to know more about us?',
+        subtitle: 'We are here to answer all your questions and learn about your project',
+        contact: 'Contact the Team'
+      }
+    },
 
-    'services.consulting.title': 'Consultoría Técnica',
-    'services.consulting.description': 'Orientación experta y asesoramiento estratégico para ayudarte a tomar las decisiones tecnológicas correctas para tu negocio.',
-    'services.consulting.benefits': 'Toma decisiones informadas con orientación experta que ahorra tiempo, reduce riesgos y maximiza tus inversiones tecnológicas.',
-    'services.consulting.point1': 'Estrategia y planificación tecnológica',
-    'services.consulting.point2': 'Diseño de arquitectura de sistemas',
-    'services.consulting.point3': 'Optimización de rendimiento',
-    'services.consulting.point4': 'Evaluaciones de seguridad',
-    'services.consulting.point5': 'Hojas de ruta de transformación digital',
-    'services.consulting.cta': 'Obtener Asesoramiento Experto',
+    // Contact Page
+    contact: {
+      title: 'Contact',
+      subtitle: 'We are here to help you transform your business. Contact us and let\'s start working together.',
+      form: {
+        title: 'Send us a Message',
+        fullName: 'Full Name',
+        email: 'Email',
+        phone: 'Phone',
+        company: 'Company',
+        subject: 'Subject',
+        message: 'Message',
+        send: 'Send Message',
+        success: 'Message Sent!',
+        successDesc: 'Thank you for contacting us. We will respond soon.',
+        selectSubject: 'Select a subject',
+        placeholders: {
+          fullName: 'Your full name',
+          email: 'your@email.com',
+          phone: '+1 234 567 8900',
+          company: 'Your company name',
+          message: 'Tell us about your project...'
+        },
+        subjects: {
+          generalinquiry: 'General Inquiry',
+          openbravoconsultation: 'Openbravo Consultation',
+          odooimplementation: 'Odoo Implementation',
+          aisolutions: 'AI Solutions',
+          customdevelopment: 'Custom Development',
+          technicalsupport: 'Technical Support',
+          partnershipopportunity: 'Partnership Opportunity',
+          other: 'Other'
+        }
+      },
+      info: {
+        title: 'Contact Information',
+        email: 'Email',
+        emailDesc: '24-hour response',
+        phone: 'Phone',
+        phoneDesc: 'Mon - Fri, 9:00 - 18:00',
+        office: 'Offices',
+        officeDesc: 'Multiple locations',
+        hours: 'Hours',
+        hoursDesc: '9:00 AM - 6:00 PM'
+      },
+      whyContact: {
+        title: 'Why contact us?',
+        item1: 'Free initial consultation and project assessment',
+        item2: 'Customized solutions tailored to your specific needs',
+        item3: 'Expert team with proven track record in enterprise solutions',
+        item4: 'Ongoing support and maintenance for all our implementations'
+      }
+    },
 
-    // Página Acerca de
-    'about.title': 'Acerca de Doce Leguas',
-    'about.subtitle': 'Somos un equipo de expertos tecnológicos apasionados dedicados a transformar negocios a través de soluciones innovadoras.',
-    'about.story.title': 'Nuestra Historia',
-    'about.story.content1': 'Fundada con la visión de cerrar la brecha entre la tecnología compleja y el éxito empresarial, Doce Leguas ha estado a la vanguardia de la transformación digital.',
-    'about.story.content2': 'Nuestro viaje comenzó con una creencia simple: que la tecnología correcta, implementada correctamente, puede transformar cualquier negocio.',
-    'about.vision.title': 'Nuestra Visión',
-    'about.vision.desc': 'Ser el socio tecnológico líder para empresas que buscan soluciones innovadoras que impulsen el crecimiento y la excelencia operacional.',
-    'about.values.title': 'Nuestros Valores',
-    'about.values.subtitle': 'Los principios que guían todo lo que hacemos.',
-    'about.values.excellence': 'Excelencia',
-    'about.values.innovation': 'Innovación',
-    'about.values.integrity': 'Integridad',
-    'about.values.customer': 'Enfoque al Cliente',
-    'about.values.collaboration': 'Colaboración',
-    'about.team.title': 'Conoce Nuestro Equipo',
-    'about.team.subtitle': 'Los expertos detrás de tu éxito.',
-    'about.team.nono.position': 'CEO y Fundador',
-    'about.team.nono.description': 'Líder visionario con más de 15 años en soluciones empresariales.',
-    'about.team.mark.position': 'CTO',
-    'about.team.mark.description': 'Arquitecto técnico especializado en soluciones ERP e IA.',
-    'about.team.rafael.position': 'Desarrollador Principal',
-    'about.team.rafael.description': 'Desarrollador full-stack con experiencia en tecnologías modernas.',
-    'about.team.maarten.position': 'Arquitecto de Soluciones',
-    'about.team.maarten.description': 'Experto en integración de sistemas y optimización de procesos empresariales.',
-    'about.culture.title': 'Nuestra Cultura',
-    'about.culture.content1': 'Creemos en fomentar una cultura de innovación, colaboración y aprendizaje continuo.',
-    'about.culture.content2': 'Nuestro equipo es nuestro mayor activo, e invertimos en su crecimiento y desarrollo.',
-    'about.culture.item1': 'Mentalidad impulsada por la innovación',
-    'about.culture.item2': 'Trabajo en equipo colaborativo',
-    'about.culture.item3': 'Aprendizaje continuo',
-    'about.culture.item4': 'Enfoque cliente-primero',
-    'about.cta.title': '¿Listo para Trabajar Juntos?',
-    'about.cta.subtitle': 'Hablemos sobre cómo podemos ayudar a transformar tu negocio.',
-    'about.cta.contact': 'Ponte en Contacto',
+    // Footer
+    footer: {
+      description: 'We transform businesses with innovative and personalized technology solutions.',
+      quickLinks: 'Quick Links',
+      services: 'Services',
+      contactInfo: 'Contact Information',
+      rights: 'All rights reserved.',
+      privacy: 'Privacy',
+      legal: 'Legal',
+      sitemap: 'Sitemap'
+    },
 
-    // Página de Soluciones
-    'solutions.title': 'Soluciones por Industria',
-    'solutions.subtitle': 'Soluciones especializadas diseñadas para industrias específicas y desafíos empresariales.',
-    'solutions.keyFeatures': 'Características Clave',
-    'solutions.expectedBenefits': 'Beneficios Esperados',
-    'solutions.learnMore': 'Saber Más',
-    'solutions.whyChoose.title': '¿Por Qué Elegir Nuestras Soluciones?',
-    'solutions.whyChoose.expertise.title': 'Experiencia en la Industria',
-    'solutions.whyChoose.expertise.desc': 'Comprensión profunda de desafíos específicos de la industria',
-    'solutions.whyChoose.results.title': 'Resultados Probados',
-    'solutions.whyChoose.results.desc': 'Historial de implementaciones exitosas',
-    'solutions.whyChoose.scalable.title': 'Soluciones Escalables',
-    'solutions.whyChoose.scalable.desc': 'Soluciones que crecen con tu negocio',
-    'solutions.whyChoose.support.title': 'Soporte 24/7',
-    'solutions.whyChoose.support.desc': 'Soporte y mantenimiento continuo',
-    'solutions.cta.title': '¿Listo para Transformar Tus Operaciones?',
-    'solutions.cta.subtitle': 'Hablemos sobre cómo nuestras soluciones industriales pueden beneficiar tu negocio.',
-    'solutions.cta.button': 'Contactar Nuestros Expertos',
-
-    'solutions.warehouse.title': 'Soluciones de Gestión de Almacén',
-    'solutions.warehouse.subtitle': 'Optimiza las operaciones de tu almacén con automatización inteligente',
-    'solutions.warehouse.description': 'Sistema integral de gestión de almacén que optimiza operaciones, reduce costos y mejora la precisión.',
-    'solutions.warehouse.feature1': 'Seguimiento de inventario en tiempo real',
-    'solutions.warehouse.feature2': 'Picking y packing automatizado',
-    'solutions.warehouse.feature3': 'Integración de códigos de barras y RFID',
-    'solutions.warehouse.feature4': 'Reportes y análisis avanzados',
-    'solutions.warehouse.feature5': 'Gestión multi-ubicación',
-    'solutions.warehouse.feature6': 'Integración con sistemas ERP',
-    'solutions.warehouse.feature7': 'Soporte para dispositivos móviles',
-    'solutions.warehouse.feature8': 'Flujos de trabajo de control de calidad',
-    'solutions.warehouse.feature9': 'Automatización de envío y recepción',
-    'solutions.warehouse.feature10': 'Optimización de rendimiento',
-    'solutions.warehouse.benefit1': 'Reducir costos operacionales en 25%',
-    'solutions.warehouse.benefit2': 'Mejorar precisión de inventario a 99.5%',
-    'solutions.warehouse.benefit3': 'Aumentar eficiencia de picking en 40%',
-    'solutions.warehouse.benefit4': 'Reducir tiempo de procesamiento de órdenes en 50%',
-    'solutions.warehouse.benefit5': 'Minimizar errores humanos',
-    'solutions.warehouse.benefit6': 'Visibilidad en tiempo real de operaciones',
-    'solutions.warehouse.benefit7': 'Escalable al crecimiento del negocio',
-    'solutions.warehouse.benefit8': 'Mejorar satisfacción del cliente',
-
-    'solutions.delivery.title': 'Soluciones de Gestión de Entregas',
-    'solutions.delivery.subtitle': 'Optimiza tus operaciones de entrega con logística inteligente',
-    'solutions.delivery.description': 'Sistema de gestión de entregas de extremo a extremo que optimiza rutas, rastrea envíos y mejora la experiencia del cliente.',
-    'solutions.delivery.feature1': 'Algoritmos de optimización de rutas',
-    'solutions.delivery.feature2': 'Seguimiento GPS en tiempo real',
-    'solutions.delivery.feature3': 'Sistema de despacho automatizado',
-    'solutions.delivery.feature4': 'Sistema de notificaciones al cliente',
-    'solutions.delivery.feature5': 'Captura de prueba de entrega',
-    'solutions.delivery.feature6': 'Integración de gestión de flota',
-    'solutions.delivery.feature7': 'Panel de análisis de rendimiento',
-    'solutions.delivery.feature8': 'Aplicaciones móviles para conductores',
-    'solutions.delivery.feature9': 'Integración con plataformas de e-commerce',
-    'solutions.delivery.feature10': 'Cálculo de costos y facturación',
-    'solutions.delivery.benefit1': 'Reducir costos de entrega en 30%',
-    'solutions.delivery.benefit2': 'Mejorar tasas de entrega a tiempo a 95%',
-    'solutions.delivery.benefit3': 'Optimizar consumo de combustible en 20%',
-    'solutions.delivery.benefit4': 'Mejorar satisfacción del cliente',
-    'solutions.delivery.benefit5': 'Visibilidad de envíos en tiempo real',
-    'solutions.delivery.benefit6': 'Comunicaciones automatizadas con clientes',
-    'solutions.delivery.benefit7': 'Reducir papeleo manual',
-    'solutions.delivery.benefit8': 'Mejorar productividad del conductor',
-
-    'solutions.services.title': 'Soluciones de Gestión de Servicios',
-    'solutions.services.subtitle': 'Optimiza tus operaciones de servicio y experiencia del cliente',
-    'solutions.services.description': 'Plataforma integral de gestión de servicios que optimiza la entrega de servicios, mejora la satisfacción del cliente y aumenta la eficiencia operacional.',
-    'solutions.services.feature1': 'Gestión de solicitudes de servicio',
-    'solutions.services.feature2': 'Programación y despacho de técnicos',
-    'solutions.services.feature3': 'Aplicaciones móviles de servicio de campo',
-    'solutions.services.feature4': 'Portal del cliente y autoservicio',
-    'solutions.services.feature5': 'Gestión de inventario y repuestos',
-    'solutions.services.feature6': 'Seguimiento de acuerdos de nivel de servicio',
-    'solutions.services.benefit1': 'Mejorar tasas de reparación en primera visita en 35%',
-    'solutions.services.benefit2': 'Reducir tiempo de respuesta de servicio en 50%',
-    'solutions.services.benefit3': 'Aumentar puntuaciones de satisfacción del cliente',
-    'solutions.services.benefit4': 'Optimizar utilización de técnicos',
-
-    // Página de Proyectos
-    'projects.title': 'Nuestras Historias de Éxito',
-    'projects.subtitle': 'Descubre cómo hemos ayudado a las empresas a transformar sus operaciones y lograr resultados extraordinarios.',
-    'projects.filters.all': 'Todos los Proyectos',
-    'projects.filters.openbravo': 'Openbravo',
-    'projects.filters.odoo': 'Odoo',
-    'projects.filters.ai': 'Soluciones de IA',
-    'projects.filters.custom': 'Desarrollo Personalizado',
-    'projects.keyResults': 'Resultados Clave',
-    'projects.viewCase': 'Ver Caso de Estudio',
-    'projects.featured.title': 'Caso de Estudio Destacado: Halsted Logistics',
-    'projects.featured.challenge': 'El Desafío',
-    'projects.featured.challengeDesc': 'Halsted necesitaba optimizar sus complejas operaciones logísticas y reducir costos operacionales mientras mantenía la calidad del servicio.',
-    'projects.featured.solution': 'Nuestra Solución',
-    'projects.featured.solutionDesc': 'Implementamos una solución integral de Openbravo ERP con módulos logísticos personalizados y optimización impulsada por IA.',
-    'projects.featured.results': 'Los Resultados',
-    'projects.featured.costReduction': 'Reducción de Costos',
-    'projects.featured.fasterDelivery': 'Entrega Más Rápida',
-    'projects.cta.title': '¿Listo para Comenzar Tu Historia de Éxito?',
-    'projects.cta.subtitle': 'Hablemos sobre cómo podemos ayudarte a lograr resultados similares.',
-    'projects.cta.button': 'Iniciar Tu Proyecto',
-
-    'projects.halsted.title': 'Optimización Logística Halsted',
-    'projects.halsted.desc': 'Optimización logística completa con implementación de Openbravo ERP, resultando en 30% de reducción de costos y mejora de eficiencia.',
-    'projects.halsted.sector': 'Logística',
-    'projects.halsted.result1': '30% de reducción en costos operacionales',
-    'projects.halsted.result2': '25% de mejora en tiempos de entrega',
-    'projects.halsted.result3': '99.5% de precisión de inventario lograda',
-    'projects.halsted.testimonial': 'Gracias a Doce Leguas, nuestras operaciones han mejorado drásticamente. Su profesionalismo y conocimiento son excepcionales.',
-    'projects.halsted.client': 'Brian, Halsted',
-
-    'projects.ai.title': 'Plataforma de Análisis Predictivo con IA',
-    'projects.ai.desc': 'Solución avanzada de IA para análisis predictivo y toma de decisiones, resultando en 40% de mejora en inteligencia empresarial.',
-    'projects.ai.sector': 'Tecnología',
-    'projects.ai.result1': '40% de mejora en toma de decisiones',
-    'projects.ai.result2': '60% de reducción en análisis manual',
-    'projects.ai.result3': 'Insights y reportes en tiempo real',
-    'projects.ai.testimonial': 'La solución de IA superó todas nuestras expectativas. Los insights que ahora tenemos son invaluables.',
-    'projects.ai.client': 'María Rodríguez, TechCorp',
-
-    'projects.custom.title': 'Desarrollo de ERP Personalizado',
-    'projects.custom.desc': 'Solución ERP a medida adaptada a necesidades empresariales específicas, aumentando la eficiencia operacional en 45%.',
-    'projects.custom.sector': 'Manufactura',
-    'projects.custom.result1': '45% de aumento en eficiencia operacional',
-    'projects.custom.result2': 'Integración perfecta con sistemas existentes',
-    'projects.custom.result3': 'Reducción de procesos manuales en 70%',
-    'projects.custom.testimonial': 'La solución personalizada se ajusta perfectamente a nuestros requisitos únicos. ¡Trabajo excepcional!',
-    'projects.custom.client': 'Juan Smith, ManufactureCorp',
-
-    'projects.odoo.title': 'Implementación Completa de Odoo',
-    'projects.odoo.desc': 'Implementación completa de Odoo con módulos personalizados para operaciones de retail, optimizando todos los procesos empresariales.',
-    'projects.odoo.sector': 'Retail',
-    'projects.odoo.result1': 'Integración completa de procesos empresariales',
-    'projects.odoo.result2': '35% de mejora en gestión de inventario',
-    'projects.odoo.result3': 'Experiencia del cliente mejorada',
-    'projects.odoo.testimonial': 'Odoo ha transformado cómo operamos. Todo está ahora conectado y es eficiente.',
-    'projects.odoo.client': 'Sarah Johnson, RetailPlus',
-
-    'projects.warehouse.title': 'Gestión Inteligente de Almacén',
-    'projects.warehouse.desc': 'Sistema de gestión de almacén impulsado por IA con procesos automatizados y seguimiento en tiempo real.',
-    'projects.warehouse.sector': 'Logística',
-    'projects.warehouse.result1': '50% de reducción en errores de picking',
-    'projects.warehouse.result2': '30% de aumento en throughput',
-    'projects.warehouse.result3': 'Visibilidad de inventario en tiempo real',
-    'projects.warehouse.testimonial': 'La automatización del almacén ha revolucionado nuestras operaciones. ¡Resultados increíbles!',
-    'projects.warehouse.client': 'Mike Davis, LogiFlow',
-
-    'projects.cloud.title': 'Migración y Optimización en la Nube',
-    'projects.cloud.desc': 'Migración completa a la nube con optimización de rendimiento y estrategias de reducción de costos.',
-    'projects.cloud.sector': 'Tecnología',
-    'projects.cloud.result1': '40% de reducción en costos de infraestructura',
-    'projects.cloud.result2': '99.9% de uptime logrado',
-    'projects.cloud.result3': 'Escalabilidad y rendimiento mejorados',
-    'projects.cloud.testimonial': 'La migración a la nube fue perfecta y los ahorros de costos son significativos.',
-    'projects.cloud.client': 'Lisa Chen, CloudTech'
+    // ChatBot
+    chatbot: {
+      title: 'Virtual Assistant',
+      subtitle: 'I\'m here to help you',
+      welcome: 'Hello! I\'m Doce Leguas virtual assistant. How can I help you today?',
+      placeholder: 'Type your message...',
+      defaultResponse: 'Thank you for your message. A specialist will contact you soon.',
+      errorMessage: 'Sorry, there\'s a technical issue. Please try again later.',
+      open: 'Open chat',
+      close: 'Close chat'
+    }
   }
 };
 
-const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
-
 export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-  const [language, setLanguage] = useState('es'); // Default to Spanish
+  const [language, setLanguage] = useState('es');
 
   const t = (key: string): string => {
     const keys = key.split('.');
@@ -788,8 +963,8 @@ export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }
       if (value && typeof value === 'object' && k in value) {
         value = value[k];
       } else {
-        console.warn(`Translation key not found: ${key} for language: ${language}`);
-        return key; // Return the key if translation not found
+        console.warn(`Translation key not found: ${key}`);
+        return key;
       }
     }
     
@@ -803,7 +978,7 @@ export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }
   );
 };
 
-export const useLanguage = (): LanguageContextType => {
+export const useLanguage = () => {
   const context = useContext(LanguageContext);
   if (context === undefined) {
     throw new Error('useLanguage must be used within a LanguageProvider');
