@@ -598,24 +598,6 @@ const translations = {
         },
         odoo: {
           title: 'Odoo Solutions',
-          desc: 'Comprehensive business management with the most complete suite'
-        },
-        ai: {
-          title: 'AI Solutions',
-          desc: 'Intelligent automation and predictive analysis for better decisions'
-        },
-        custom: {
-          title: 'Custom Development',
-          desc: 'Tailor-made software solutions designed for your unique processes'
-        },
-        n8n: {
-          title: 'n8n Automation',
-          desc: 'Workflow automation to optimize your business processes'
-        },
-        automation: {
-          title: 'Process Automation',
-          desc: 'Intelligent automation to reduce manual work and errors'
-        },
         learnMore: 'Learn more'
       },
       projects: {
