@@ -9,56 +9,56 @@ const HomePage = () => {
   const services = [
     {
       icon: <Database className="h-8 w-8" />,
-      title: t('home.services.openbravo.title'),
-      description: t('home.services.openbravo.desc')
+      title: 'Openbravo ERP',
+      description: 'Complete implementation and customization of ERP for business optimization'
     },
     {
       icon: <Settings className="h-8 w-8" />,
-      title: t('home.services.odoo.title'),
-      description: t('home.services.odoo.desc')
+      title: 'Odoo Solutions',
+      description: 'Comprehensive business management with the most complete suite'
     },
     {
       icon: <Brain className="h-8 w-8" />,
-      title: t('home.services.ai.title'),
-      description: t('home.services.ai.desc')
+      title: 'AI Solutions',
+      description: 'Intelligent automation and predictive analysis for better decisions'
     },
     {
       icon: <Code className="h-8 w-8" />,
-      title: t('home.services.custom.title'),
-      description: t('home.services.custom.desc')
+      title: 'Custom Development',
+      description: 'Tailor-made software solutions designed for your unique processes'
     },
     {
       icon: <Zap className="h-8 w-8" />,
-      title: t('home.services.n8n.title'),
-      description: t('home.services.n8n.desc')
+      title: 'n8n Automation',
+      description: 'Workflow automation to optimize your business processes'
     },
     {
       icon: <Wrench className="h-8 w-8" />,
-      title: t('home.services.automation.title'),
-      description: t('home.services.automation.desc')
+      title: 'Process Automation',
+      description: 'Intelligent automation to reduce manual work and errors'
     }
   ];
 
   const valueProps = [
     {
       icon: <Lightbulb className="h-6 w-6" />,
-      title: t('home.valueProps.innovation.title'),
-      description: t('home.valueProps.innovation.desc')
+      title: 'Innovation',
+      description: 'We use cutting-edge technologies to create solutions that give you competitive advantage'
     },
     {
       icon: <Settings className="h-6 w-6" />,
-      title: t('home.valueProps.custom.title'),
-      description: t('home.valueProps.custom.desc')
+      title: 'Customization',
+      description: 'Each solution is specifically adapted to your business needs and processes'
     },
     {
       icon: <TrendingUp className="h-6 w-6" />,
-      title: t('home.valueProps.results.title'),
-      description: t('home.valueProps.results.desc')
+      title: 'Results',
+      description: 'We focus on delivering measurable results that drive your company growth'
     },
     {
       icon: <Users className="h-6 w-6" />,
-      title: t('home.valueProps.team.title'),
-      description: t('home.valueProps.team.desc')
+      title: 'Expert Team',
+      description: 'Our experienced professionals are committed to your project success'
     }
   ];
 
