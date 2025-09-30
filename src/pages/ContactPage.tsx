@@ -282,19 +282,19 @@ const ContactPage = () => {
                 <ul className="space-y-3" style={{ color: '#2d5a57' }}>
                   <li className="flex items-start space-x-3">
                     <div className="w-2 h-2 rounded-full mt-2 animate-pulse" style={{ backgroundColor: '#5c9c98' }}></div>
-                    <span>{t('contact.whyContact.item1')}</span>
+                    <span>Free initial consultation and project assessment</span>
                   </li>
                   <li className="flex items-start space-x-3">
                     <div className="w-2 h-2 rounded-full mt-2 animate-pulse" style={{ backgroundColor: '#5c9c98', animationDelay: '0.5s' }}></div>
-                    <span>{t('contact.whyContact.item2')}</span>
+                    <span>Customized solutions tailored to your specific needs</span>
                   </li>
                   <li className="flex items-start space-x-3">
                     <div className="w-2 h-2 rounded-full mt-2 animate-pulse" style={{ backgroundColor: '#5c9c98', animationDelay: '1s' }}></div>
-                    <span>{t('contact.whyContact.item3')}</span>
+                    <span>Expert team with proven track record in enterprise solutions</span>
                   </li>
                   <li className="flex items-start space-x-3">
                     <div className="w-2 h-2 rounded-full mt-2 animate-pulse" style={{ backgroundColor: '#5c9c98', animationDelay: '1.5s' }}></div>
-                    <span>{t('contact.whyContact.item4')}</span>
+                    <span>Ongoing support and maintenance for all our implementations</span>
                   </li>
                 </ul>
               </div>
