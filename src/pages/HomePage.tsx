@@ -42,22 +42,22 @@ const HomePage = () => {
   const valueProps = [
     {
       icon: <Lightbulb className="h-6 w-6" />,
-      title: t('home.valueProps.innovation'),
+      title: t('home.valueProps.innovation.title'),
       description: t('home.valueProps.innovation.desc')
     },
     {
       icon: <Settings className="h-6 w-6" />,
-      title: t('home.valueProps.custom'),
+      title: t('home.valueProps.custom.title'),
       description: t('home.valueProps.custom.desc')
     },
     {
       icon: <TrendingUp className="h-6 w-6" />,
-      title: t('home.valueProps.results'),
+      title: t('home.valueProps.results.title'),
       description: t('home.valueProps.results.desc')
     },
     {
       icon: <Users className="h-6 w-6" />,
-      title: t('home.valueProps.team'),
+      title: t('home.valueProps.team.title'),
       description: t('home.valueProps.team.desc')
     }
   ];
