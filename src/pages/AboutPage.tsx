@@ -66,10 +66,10 @@ const AboutPage = () => {
   ];
 
   const stats = [
-    { number: '50+', label: 'Successful Projects' },
-    { number: '15+', label: 'Years Combined Experience' },
-    { number: '25+', label: 'Happy Clients' },
-    { number: '99%', label: 'Client Satisfaction' }
+    { number: '50+', labelKey: 'about.stats.successfulProjects' },
+    { number: '15+', labelKey: 'about.stats.yearsExperience' },
+    { number: '25+', labelKey: 'about.stats.happyClients' },
+    { number: '99%', labelKey: 'about.stats.clientSatisfaction' }
   ];
 
   return (

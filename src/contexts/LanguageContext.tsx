@@ -398,6 +398,12 @@ const translations = {
         title: '¿Quieres conocer más sobre nosotros?',
         subtitle: 'Estamos aquí para responder todas tus preguntas y conocer tu proyecto',
         contact: 'Contactar al Equipo'
+      },
+      stats: {
+        successfulProjects: 'Proyectos Exitosos',
+        yearsExperience: 'Años de Experiencia Combinada',
+        happyClients: 'Clientes Satisfechos',
+        clientSatisfaction: 'Satisfacción del Cliente'
       }
     },
 
@@ -869,6 +875,12 @@ const translations = {
         title: 'Want to know more about us?',
         subtitle: 'We are here to answer all your questions and learn about your project',
         contact: 'Contact the Team'
+      },
+      stats: {
+        successfulProjects: 'Successful Projects',
+        yearsExperience: 'Years Combined Experience',
+        happyClients: 'Happy Clients',
+        clientSatisfaction: 'Client Satisfaction'
       }
     },
 
