@@ -48,6 +48,18 @@ const translations = {
           title: 'Equipo Experto',
           desc: 'Nuestros profesionales experimentados están comprometidos con el éxito de tu proyecto'
         }
+        custom: {
+          title: 'Personalización',
+          desc: 'Cada solución se adapta específicamente a las necesidades y procesos de tu negocio'
+        },
+        results: {
+          title: 'Resultados',
+          desc: 'Nos enfocamos en entregar resultados medibles que impulsen el crecimiento de tu empresa'
+        },
+        team: {
+          title: 'Equipo Experto',
+          desc: 'Nuestros profesionales experimentados están comprometidos con el éxito de tu proyecto'
+        }
       },
       services: {
         title: 'Nuestros Servicios',
@@ -58,6 +70,24 @@ const translations = {
         },
         odoo: {
           title: 'Odoo Solutions',
+          desc: 'Gestión empresarial integral con la suite más completa'
+        },
+        ai: {
+          title: 'Soluciones de IA',
+          desc: 'Automatización inteligente y análisis predictivo para mejores decisiones'
+        },
+        custom: {
+          title: 'Desarrollo Personalizado',
+          desc: 'Soluciones de software a medida diseñadas para tus procesos únicos'
+        },
+        n8n: {
+          title: 'Automatización n8n',
+          desc: 'Automatización de flujos de trabajo para optimizar tus procesos empresariales'
+        },
+        automation: {
+          title: 'Automatización de Procesos',
+          desc: 'Automatización inteligente para reducir trabajo manual y errores'
+        },
           desc: 'Gestión empresarial integral con la suite más completa'
         },
         ai: {
@@ -554,20 +584,50 @@ const translations = {
       valueProps: {
         title: 'Why choose Doce Leguas?',
         subtitle: 'We combine technical expertise with strategic vision to deliver solutions that truly transform your business',
-        innovation: 'Innovation',
-        custom: 'Customization',
-        results: 'Results',
-        team: 'Expert Team'
+        innovation: {
+          title: 'Innovation',
+          desc: 'We use cutting-edge technologies to create solutions that give you competitive advantage'
+        },
+        custom: {
+          title: 'Customization',
+          desc: 'Each solution is specifically adapted to your business needs and processes'
+        },
+        results: {
+          title: 'Results',
+          desc: 'We focus on delivering measurable results that drive your company growth'
+        },
+        team: {
+          title: 'Expert Team',
+          desc: 'Our experienced professionals are committed to your project success'
+        }
       },
       services: {
         title: 'Our Services',
         subtitle: 'Comprehensive solutions for every business need',
-        openbravo: 'Openbravo ERP',
-        odoo: 'Odoo Solutions',
-        ai: 'AI Solutions',
-        custom: 'Custom Development',
-        n8n: 'n8n Automation',
-        automation: 'Process Automation',
+        openbravo: {
+          title: 'Openbravo ERP',
+          desc: 'Complete implementation and customization of ERP for business optimization'
+        },
+        odoo: {
+          title: 'Odoo Solutions',
+          desc: 'Comprehensive business management with the most complete suite'
+        },
+        ai: {
+          title: 'AI Solutions',
+          desc: 'Intelligent automation and predictive analysis for better decisions'
+        },
+        custom: {
+          title: 'Custom Development',
+          desc: 'Tailor-made software solutions designed for your unique processes'
+        },
+        n8n: {
+          title: 'n8n Automation',
+          desc: 'Workflow automation to optimize your business processes'
+        },
+        automation: {
+          title: 'Process Automation',
+          desc: 'Intelligent automation to reduce manual work and errors'
+        },
         learnMore: 'Learn more'
       },
       projects: {

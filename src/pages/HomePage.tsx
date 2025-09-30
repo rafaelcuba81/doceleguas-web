@@ -9,56 +9,56 @@ const HomePage = () => {
   const services = [
     {
       icon: <Database className="h-8 w-8" />,
-      title: 'Openbravo ERP',
-      description: 'Complete implementation and customization of ERP for business optimization'
+      titleKey: 'home.services.openbravo.title',
+      descKey: 'home.services.openbravo.desc'
     },
     {
       icon: <Settings className="h-8 w-8" />,
-      title: 'Odoo Solutions',
-      description: 'Comprehensive business management with the most complete suite'
+      titleKey: 'home.services.odoo.title',
+      descKey: 'home.services.odoo.desc'
     },
     {
       icon: <Brain className="h-8 w-8" />,
-      title: 'AI Solutions',
-      description: 'Intelligent automation and predictive analysis for better decisions'
+      titleKey: 'home.services.ai.title',
+      descKey: 'home.services.ai.desc'
     },
     {
       icon: <Code className="h-8 w-8" />,
-      title: 'Custom Development',
-      description: 'Tailor-made software solutions designed for your unique processes'
+      titleKey: 'home.services.custom.title',
+      descKey: 'home.services.custom.desc'
     },
     {
       icon: <Zap className="h-8 w-8" />,
-      title: 'n8n Automation',
-      description: 'Workflow automation to optimize your business processes'
+      titleKey: 'home.services.n8n.title',
+      descKey: 'home.services.n8n.desc'
     },
     {
       icon: <Wrench className="h-8 w-8" />,
-      title: 'Process Automation',
-      description: 'Intelligent automation to reduce manual work and errors'
+      titleKey: 'home.services.automation.title',
+      descKey: 'home.services.automation.desc'
     }
   ];
 
   const valueProps = [
     {
       icon: <Lightbulb className="h-6 w-6" />,
-      title: 'Innovation',
-      description: 'We use cutting-edge technologies to create solutions that give you competitive advantage'
+      titleKey: 'home.valueProps.innovation.title',
+      descKey: 'home.valueProps.innovation.desc'
     },
     {
       icon: <Settings className="h-6 w-6" />,
-      title: 'Customization',
-      description: 'Each solution is specifically adapted to your business needs and processes'
+      titleKey: 'home.valueProps.custom.title',
+      descKey: 'home.valueProps.custom.desc'
     },
     {
       icon: <TrendingUp className="h-6 w-6" />,
-      title: 'Results',
-      description: 'We focus on delivering measurable results that drive your company growth'
+      titleKey: 'home.valueProps.results.title',
+      descKey: 'home.valueProps.results.desc'
     },
     {
       icon: <Users className="h-6 w-6" />,
-      title: 'Expert Team',
-      description: 'Our experienced professionals are committed to your project success'
+      titleKey: 'home.valueProps.team.title',
+      descKey: 'home.valueProps.team.desc'
     }
   ];
 
@@ -187,8 +187,8 @@ const HomePage = () => {
                 <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-blue-200 transition-colors duration-300">
                   <div style={{ color: '#5c9c98' }}>{prop.icon}</div>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">{prop.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{prop.description}</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">{t(prop.titleKey)}</h3>
+                <p className="text-gray-600 leading-relaxed">{t(prop.descKey)}</p>
               </div>
             ))}
           </div>
@@ -218,8 +218,8 @@ const HomePage = () => {
                     <div style={{ color: '#5c9c98' }}>{service.icon}</div>
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
-                    <p className="text-gray-600 mb-4 leading-relaxed">{service.description}</p>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3">{t(service.titleKey)}</h3>
+                    <p className="text-gray-600 mb-4 leading-relaxed">{t(service.descKey)}</p>
                     <Link
                       to="/services"
                       className="font-medium flex items-center transition-all duration-200"
