@@ -76,14 +76,6 @@ const translations = {
           title: 'Automatización de Procesos',
           desc: 'Automatización inteligente para reducir trabajo manual y errores'
         },
-        n8n: {
-          title: 'Automatización n8n',
-          desc: 'Automatización de flujos de trabajo para optimizar tus procesos empresariales'
-        },
-        automation: {
-          title: 'Automatización de Procesos',
-          desc: 'Automatización inteligente para reducir trabajo manual y errores'
-        },
         learnMore: 'Saber más'
       },
       projects: {
