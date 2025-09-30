@@ -76,24 +76,6 @@ const translations = {
           title: 'Automatización de Procesos',
           desc: 'Automatización inteligente para reducir trabajo manual y errores'
         },
-          desc: 'Gestión empresarial integral con la suite más completa'
-        },
-        ai: {
-          title: 'Soluciones de IA',
-          desc: 'Automatización inteligente y análisis predictivo para mejores decisiones'
-        },
-        custom: {
-          title: 'Desarrollo Personalizado',
-          desc: 'Soluciones de software a medida diseñadas para tus procesos únicos'
-        },
-        n8n: {
-          title: 'Automatización n8n',
-          desc: 'Automatización de flujos de trabajo para optimizar tus procesos empresariales'
-        },
-        automation: {
-          title: 'Automatización de Procesos',
-          desc: 'Automatización inteligente para reducir trabajo manual y errores'
-        },
         learnMore: 'Saber más'
       },
       projects: {
@@ -572,32 +554,20 @@ const translations = {
       valueProps: {
         title: 'Why choose Doce Leguas?',
         subtitle: 'We combine technical expertise with strategic vision to deliver solutions that truly transform your business',
-        innovation: {
-          title: 'Innovation',
-          desc: 'We use cutting-edge technologies to create solutions that give you competitive advantage'
-        },
-        custom: {
-          title: 'Customization',
-          desc: 'Each solution is specifically adapted to your business needs and processes'
-        },
-        results: {
-          title: 'Results',
-          desc: 'We focus on delivering measurable results that drive your company growth'
-        },
-        team: {
-          title: 'Expert Team',
-          desc: 'Our experienced professionals are committed to your project success'
-        }
+        innovation: 'Innovation',
+        custom: 'Customization',
+        results: 'Results',
+        team: 'Expert Team'
       },
       services: {
         title: 'Our Services',
         subtitle: 'Comprehensive solutions for every business need',
-        openbravo: {
-          title: 'Openbravo ERP',
-          desc: 'Complete implementation and customization of ERP for business optimization'
-        },
-        odoo: {
-          title: 'Odoo Solutions',
+        openbravo: 'Openbravo ERP',
+        odoo: 'Odoo Solutions',
+        ai: 'AI Solutions',
+        custom: 'Custom Development',
+        n8n: 'n8n Automation',
+        automation: 'Process Automation',
         learnMore: 'Learn more'
       },
       projects: {
