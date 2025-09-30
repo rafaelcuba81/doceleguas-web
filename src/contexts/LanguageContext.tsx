@@ -48,18 +48,6 @@ const translations = {
           title: 'Equipo Experto',
           desc: 'Nuestros profesionales experimentados están comprometidos con el éxito de tu proyecto'
         }
-        custom: {
-          title: 'Personalización',
-          desc: 'Cada solución se adapta específicamente a las necesidades y procesos de tu negocio'
-        },
-        results: {
-          title: 'Resultados',
-          desc: 'Nos enfocamos en entregar resultados medibles que impulsen el crecimiento de tu empresa'
-        },
-        team: {
-          title: 'Equipo Experto',
-          desc: 'Nuestros profesionales experimentados están comprometidos con el éxito de tu proyecto'
-        }
       },
       services: {
         title: 'Nuestros Servicios',
