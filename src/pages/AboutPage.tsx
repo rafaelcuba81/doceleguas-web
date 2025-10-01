@@ -84,7 +84,6 @@ const AboutPage = () => {
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-white bg-opacity-70"></div>
-          <div className="absolute inset-0 bg-white bg-opacity-85"></div>
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 relative z-10">
