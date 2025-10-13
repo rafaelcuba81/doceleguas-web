@@ -414,11 +414,11 @@ const translations = {
         title: 'Nuestro Equipo',
         subtitle: 'Conoce a los expertos que harán realidad tu visión tecnológica',
         nono: {
-          position: 'ERP Architect Co-Founder',
+          position: 'ERP Architect & Co-Founder',
           description: 'Arquitecto ERP especializado en diseño e implementación de soluciones empresariales complejas con más de 15 años transformando procesos de negocio.'
         },
         mark: {
-          position: 'AI Architect Co-Founder',
+          position: 'AI Architect & Co-Founder',
           description: 'Arquitecto de IA experto en machine learning, automatización inteligente y desarrollo de soluciones de inteligencia artificial para optimización empresarial.'
         },
         rafael: {
@@ -426,7 +426,7 @@ const translations = {
           description: 'Arquitecto especializado en soluciones retail, e-commerce y experiencia del cliente, con expertise en sistemas de punto de venta y gestión omnicanal.'
         },
         maarten: {
-          position: 'Supply Chain Co-Founder',
+          position: 'Supply Chain & Co-Founder',
           description: 'Experto en cadena de suministro y logística, especializado en optimización de inventarios, gestión de almacenes y automatización de procesos logísticos.'
         }
       },
@@ -936,11 +936,11 @@ const translations = {
         title: 'Our Team',
         subtitle: 'Meet the experts who will make your technology vision a reality',
         nono: {
-          position: 'ERP Architect Co-Founder',
+          position: 'ERP Architect & Co-Founder',
           description: 'ERP Architect specialized in design and implementation of complex enterprise solutions with over 15 years transforming business processes.'
         },
         mark: {
-          position: 'AI Architect Co-Founder',
+          position: 'AI Architect & Co-Founder',
           description: 'AI Architect expert in machine learning, intelligent automation and development of artificial intelligence solutions for business optimization.'
         },
         rafael: {
@@ -948,7 +948,7 @@ const translations = {
           description: 'Architect specialized in retail solutions, e-commerce and customer experience, with expertise in point-of-sale systems and omnichannel management.'
         },
         maarten: {
-          position: 'Supply Chain Co-Founder',
+          position: 'Supply Chain & Co-Founder',
           description: 'Supply chain and logistics expert, specialized in inventory optimization, warehouse management and logistics process automation.'
         }
       },
