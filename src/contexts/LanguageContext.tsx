@@ -414,7 +414,7 @@ const translations = {
         title: 'Nuestro Equipo',
         subtitle: 'Conoce a los expertos que harán realidad tu visión tecnológica',
         nono: {
-          position: 'CEO & Fundador',
+          position: 'ERP Arquitect',
           description: 'Líder visionario con más de 15 años de experiencia en transformación digital empresarial.'
         },
         mark: {
