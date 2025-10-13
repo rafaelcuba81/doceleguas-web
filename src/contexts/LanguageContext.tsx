@@ -426,7 +426,7 @@ const translations = {
           description: 'Especialista en desarrollo de software y gestión de proyectos tecnológicos complejos.'
         },
         maarten: {
-          position: 'Senior ERP Consultant',
+          position: 'Supply Chain Co-Founder',
           description: 'Consultor experto en implementaciones ERP y optimización de procesos empresariales.'
         }
       },
@@ -948,7 +948,7 @@ const translations = {
           description: 'Software development specialist and complex technology project management.'
         },
         maarten: {
-          position: 'Senior ERP Consultant',
+          position: 'Supply Chain Co-Founder',
           description: 'Expert consultant in ERP implementations and business process optimization.'
         }
       },
