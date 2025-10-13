@@ -936,19 +936,19 @@ const translations = {
         title: 'Our Team',
         subtitle: 'Meet the experts who will make your technology vision a reality',
         nono: {
-          position: 'ERP Architect',
+          position: 'CEO & Founder',
           description: 'Visionary leader with over 15 years of experience in enterprise digital transformation.'
         },
         mark: {
-          position: 'CTO',
+          position: 'CTO & Co-Founder',
           description: 'Technical expert specialized in enterprise architectures and high-scale solutions.'
         },
         rafael: {
-          position: 'Development Director',
+          position: 'Lead Developer',
           description: 'Software development specialist and complex technology project management.'
         },
         maarten: {
-          position: 'Senior Consultant',
+          position: 'Senior ERP Consultant',
           description: 'Expert consultant in ERP implementations and business process optimization.'
         }
       },
