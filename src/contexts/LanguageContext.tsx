@@ -414,15 +414,15 @@ const translations = {
         title: 'Nuestro Equipo',
         subtitle: 'Conoce a los expertos que harán realidad tu visión tecnológica',
         nono: {
-          position: 'CEO & Founder',
+          position: 'ERP Architect Co-Founder',
           description: 'Líder visionario con más de 15 años de experiencia en transformación digital empresarial.'
         },
         mark: {
-          position: 'CTO & Co-Founder',
+          position: 'AI Architect Co-Founder',
           description: 'Experto técnico especializado en arquitecturas empresariales y soluciones de alta escala.'
         },
         rafael: {
-          position: 'Lead Developer',
+          position: 'Retail Architect & Co-Founder',
           description: 'Especialista en desarrollo de software y gestión de proyectos tecnológicos complejos.'
         },
         maarten: {
@@ -936,15 +936,15 @@ const translations = {
         title: 'Our Team',
         subtitle: 'Meet the experts who will make your technology vision a reality',
         nono: {
-          position: 'CEO & Founder',
+          position: 'ERP Architect Co-Founder',
           description: 'Visionary leader with over 15 years of experience in enterprise digital transformation.'
         },
         mark: {
-          position: 'CTO & Co-Founder',
+          position: 'AI Architect Co-Founder',
           description: 'Technical expert specialized in enterprise architectures and high-scale solutions.'
         },
         rafael: {
-          position: 'Lead Developer',
+          position: 'Retail Architect & Co-Founder',
           description: 'Software development specialist and complex technology project management.'
         },
         maarten: {
