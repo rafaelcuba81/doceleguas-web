@@ -936,7 +936,7 @@ const translations = {
         title: 'Our Team',
         subtitle: 'Meet the experts who will make your technology vision a reality',
         nono: {
-          position: 'CEO & Founder',
+          position: 'ERP Architect',
           description: 'Visionary leader with over 15 years of experience in enterprise digital transformation.'
         },
         mark: {
