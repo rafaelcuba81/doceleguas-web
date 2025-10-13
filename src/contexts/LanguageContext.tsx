@@ -415,19 +415,19 @@ const translations = {
         subtitle: 'Conoce a los expertos que harán realidad tu visión tecnológica',
         nono: {
           position: 'ERP Architect Co-Founder',
-          description: 'Líder visionario con más de 15 años de experiencia en transformación digital empresarial.'
+          description: 'Arquitecto ERP especializado en diseño e implementación de soluciones empresariales complejas con más de 15 años transformando procesos de negocio.'
         },
         mark: {
           position: 'AI Architect Co-Founder',
-          description: 'Experto técnico especializado en arquitecturas empresariales y soluciones de alta escala.'
+          description: 'Arquitecto de IA experto en machine learning, automatización inteligente y desarrollo de soluciones de inteligencia artificial para optimización empresarial.'
         },
         rafael: {
           position: 'Retail Architect & Co-Founder',
-          description: 'Especialista en desarrollo de software y gestión de proyectos tecnológicos complejos.'
+          description: 'Arquitecto especializado en soluciones retail, e-commerce y experiencia del cliente, con expertise en sistemas de punto de venta y gestión omnicanal.'
         },
         maarten: {
           position: 'Supply Chain Co-Founder',
-          description: 'Consultor experto en implementaciones ERP y optimización de procesos empresariales.'
+          description: 'Experto en cadena de suministro y logística, especializado en optimización de inventarios, gestión de almacenes y automatización de procesos logísticos.'
         }
       },
       culture: {
@@ -937,19 +937,19 @@ const translations = {
         subtitle: 'Meet the experts who will make your technology vision a reality',
         nono: {
           position: 'ERP Architect Co-Founder',
-          description: 'Visionary leader with over 15 years of experience in enterprise digital transformation.'
+          description: 'ERP Architect specialized in design and implementation of complex enterprise solutions with over 15 years transforming business processes.'
         },
         mark: {
           position: 'AI Architect Co-Founder',
-          description: 'Technical expert specialized in enterprise architectures and high-scale solutions.'
+          description: 'AI Architect expert in machine learning, intelligent automation and development of artificial intelligence solutions for business optimization.'
         },
         rafael: {
           position: 'Retail Architect & Co-Founder',
-          description: 'Software development specialist and complex technology project management.'
+          description: 'Architect specialized in retail solutions, e-commerce and customer experience, with expertise in point-of-sale systems and omnichannel management.'
         },
         maarten: {
           position: 'Supply Chain Co-Founder',
-          description: 'Expert consultant in ERP implementations and business process optimization.'
+          description: 'Supply chain and logistics expert, specialized in inventory optimization, warehouse management and logistics process automation.'
         }
       },
       culture: {
