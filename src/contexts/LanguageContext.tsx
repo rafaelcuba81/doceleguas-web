@@ -414,19 +414,19 @@ const translations = {
         title: 'Nuestro Equipo',
         subtitle: 'Conoce a los expertos que harán realidad tu visión tecnológica',
         nono: {
-          position: 'ERP Arquitect',
+          position: 'CEO & Founder',
           description: 'Líder visionario con más de 15 años de experiencia en transformación digital empresarial.'
         },
         mark: {
-          position: 'CTO',
+          position: 'CTO & Co-Founder',
           description: 'Experto técnico especializado en arquitecturas empresariales y soluciones de alta escala.'
         },
         rafael: {
-          position: 'Director de Desarrollo',
+          position: 'Lead Developer',
           description: 'Especialista en desarrollo de software y gestión de proyectos tecnológicos complejos.'
         },
         maarten: {
-          position: 'Consultor Senior',
+          position: 'Senior ERP Consultant',
           description: 'Consultor experto en implementaciones ERP y optimización de procesos empresariales.'
         }
       },
