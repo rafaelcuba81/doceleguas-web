@@ -191,18 +191,6 @@ const ProjectsPage = () => {
                     </ul>
                   </div>
 
-                  <div className="border-t border-gray-200 pt-4">
-                    <Link
-                      to={`/projects/${project.id}`}
-                      className="font-medium flex items-center transition-colors duration-200"
-                      style={{ color: '#5c9c98' }}
-                      onMouseEnter={(e) => e.currentTarget.style.color = '#4a8480'}
-                      onMouseLeave={(e) => e.currentTarget.style.color = '#5c9c98'}
-                    >
-                      {t('projects.viewCase')}
-                      <ArrowRight className="h-4 w-4 ml-2" />
-                    </Link>
-                  </div>
                 </div>
               </div>
             ))}
