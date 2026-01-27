@@ -31,7 +31,7 @@ Deno.serve(async (req: Request) => {
       throw new Error("RESEND_API_KEY not configured");
     }
 
-    const emailBody = `
+    const notificationEmailBody = `
       <html>
         <head>
           <style>
@@ -84,7 +84,40 @@ Deno.serve(async (req: Request) => {
       </html>
     `;
 
-    const res = await fetch("https://api.resend.com/emails", {
+    const confirmationEmailBody = `
+      <html>
+        <head>
+          <style>
+            body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+            .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+            .header { background-color: #5c9c98; color: white; padding: 20px; text-align: center; border-radius: 5px 5px 0 0; }
+            .content { background-color: #f9f9f9; padding: 30px; border-radius: 0 0 5px 5px; }
+            .footer { text-align: center; margin-top: 20px; color: #666; font-size: 14px; }
+          </style>
+        </head>
+        <body>
+          <div class="container">
+            <div class="header">
+              <h1>¡Gracias por contactarnos!</h1>
+            </div>
+            <div class="content">
+              <p>Hola ${formData.fullName},</p>
+              <p>Hemos recibido tu mensaje correctamente. Nuestro equipo lo revisará y te responderá a la brevedad posible.</p>
+              <p><strong>Resumen de tu mensaje:</strong></p>
+              <p><strong>Asunto:</strong> ${formData.subject}</p>
+              <p><strong>Mensaje:</strong><br>${formData.message}</p>
+              <p>Si tienes alguna pregunta urgente, no dudes en contactarnos directamente.</p>
+              <p>Saludos cordiales,<br><strong>Equipo Doce Leguas</strong></p>
+            </div>
+            <div class="footer">
+              <p>Este es un correo automático, por favor no respondas a este mensaje.</p>
+            </div>
+          </div>
+        </body>
+      </html>
+    `;
+
+    const notificationRes = await fetch("https://api.resend.com/emails", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -94,17 +127,36 @@ Deno.serve(async (req: Request) => {
         from: "Doce Leguas <onboarding@resend.dev>",
         to: ["rafa.queralta@doceleguas.com"],
         subject: `Nuevo contacto: ${formData.subject}`,
-        html: emailBody,
+        html: notificationEmailBody,
         reply_to: formData.email,
       }),
     });
 
-    if (!res.ok) {
-      const error = await res.text();
-      throw new Error(`Resend API error: ${error}`);
+    if (!notificationRes.ok) {
+      const error = await notificationRes.text();
+      throw new Error(`Resend API error (notification): ${error}`);
     }
 
-    const data = await res.json();
+    const confirmationRes = await fetch("https://api.resend.com/emails", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${resendApiKey}`,
+      },
+      body: JSON.stringify({
+        from: "Doce Leguas <onboarding@resend.dev>",
+        to: [formData.email],
+        subject: "Confirmación de recepción - Doce Leguas",
+        html: confirmationEmailBody,
+      }),
+    });
+
+    if (!confirmationRes.ok) {
+      const error = await confirmationRes.text();
+      console.error(`Confirmation email failed: ${error}`);
+    }
+
+    const data = await notificationRes.json();
 
     return new Response(
       JSON.stringify({ success: true, data }),
