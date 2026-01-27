@@ -124,7 +124,7 @@ Deno.serve(async (req: Request) => {
         Authorization: `Bearer ${resendApiKey}`,
       },
       body: JSON.stringify({
-        from: "Doce Leguas <rafa.queralta@doceleguas.com>",
+        from: "Doce Leguas <info@doceleguas.com>",
         to: ["rafa.queralta@doceleguas.com"],
         subject: `Nuevo contacto: ${formData.subject}`,
         html: notificationEmailBody,
@@ -152,7 +152,7 @@ Deno.serve(async (req: Request) => {
           Authorization: `Bearer ${resendApiKey}`,
         },
         body: JSON.stringify({
-          from: "Doce Leguas <rafa.queralta@doceleguas.com>",
+          from: "Doce Leguas <info@doceleguas.com>",
           to: [formData.email],
           subject: "Confirmación de recepción - Doce Leguas",
           html: confirmationEmailBody,
