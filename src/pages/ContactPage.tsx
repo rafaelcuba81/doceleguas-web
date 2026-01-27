@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock, Send, CheckCircle, AlertCircle } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
+import { supabase } from '../lib/supabase';
 
 const ContactPage = () => {
   const { t } = useLanguage();
@@ -13,6 +14,8 @@ const ContactPage = () => {
     message: ''
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
@@ -21,24 +24,58 @@ const ContactPage = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically send the form data to your backend
-    console.log('Form submitted:', formData);
-    setIsSubmitted(true);
-    
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({
-        fullName: '',
-        email: '',
-        phone: '',
-        company: '',
-        subject: '',
-        message: ''
-      });
-    }, 3000);
+    setIsLoading(true);
+    setError(null);
+
+    try {
+      const { data: { session } } = await supabase.auth.getSession();
+      const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+      const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
+
+      const response = await fetch(
+        `${supabaseUrl}/functions/v1/send-contact-email`,
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${supabaseAnonKey}`,
+          },
+          body: JSON.stringify(formData),
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error('Failed to send message');
+      }
+
+      const result = await response.json();
+
+      if (result.success) {
+        setIsSubmitted(true);
+
+        // Reset form after 3 seconds
+        setTimeout(() => {
+          setIsSubmitted(false);
+          setFormData({
+            fullName: '',
+            email: '',
+            phone: '',
+            company: '',
+            subject: '',
+            message: ''
+          });
+        }, 3000);
+      } else {
+        throw new Error(result.error || 'Failed to send message');
+      }
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'An error occurred');
+      console.error('Error submitting form:', err);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const contactInfo = [
@@ -241,15 +278,32 @@ const ContactPage = () => {
                   />
                 </div>
 
+                {error && (
+                  <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg flex items-center space-x-2">
+                    <AlertCircle className="h-5 w-5 flex-shrink-0" />
+                    <span>{error}</span>
+                  </div>
+                )}
+
                 <button
                   type="submit"
-                  className="w-full text-white py-4 px-6 rounded-lg font-semibold hover-lift hover-glow transition-all duration-300 flex items-center justify-center space-x-2 transform"
-                  style={{ backgroundColor: '#5c9c98' }}
-                  onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#4a8480'}
-                  onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#5c9c98'}
+                  disabled={isLoading}
+                  className="w-full text-white py-4 px-6 rounded-lg font-semibold hover-lift hover-glow transition-all duration-300 flex items-center justify-center space-x-2 transform disabled:opacity-50 disabled:cursor-not-allowed"
+                  style={{ backgroundColor: isLoading ? '#4a8480' : '#5c9c98' }}
+                  onMouseEnter={(e) => !isLoading && (e.currentTarget.style.backgroundColor = '#4a8480')}
+                  onMouseLeave={(e) => !isLoading && (e.currentTarget.style.backgroundColor = '#5c9c98')}
                 >
-                  <Send className="h-5 w-5" />
-                  <span>{t('contact.form.send')}</span>
+                  {isLoading ? (
+                    <>
+                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
+                      <span>{t('contact.form.sending') || 'Sending...'}</span>
+                    </>
+                  ) : (
+                    <>
+                      <Send className="h-5 w-5" />
+                      <span>{t('contact.form.send')}</span>
+                    </>
+                  )}
                 </button>
               </form>
             </div>
