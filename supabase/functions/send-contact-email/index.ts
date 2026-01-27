@@ -92,7 +92,7 @@ Deno.serve(async (req: Request) => {
       },
       body: JSON.stringify({
         from: "Doce Leguas <onboarding@resend.dev>",
-        to: ["info@doceleguas.com", "rafa.queralta@doceleguas.com"],
+        to: ["rafa.queralta@doceleguas.com"],
         subject: `Nuevo contacto: ${formData.subject}`,
         html: emailBody,
         reply_to: formData.email,
