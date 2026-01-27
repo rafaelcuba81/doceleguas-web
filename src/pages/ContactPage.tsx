@@ -34,6 +34,9 @@ const ContactPage = () => {
       const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
       const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
 
+      // Get the translated subject text instead of the key
+      const translatedSubject = t(`contact.form.subjects.${formData.subject.toLowerCase().replace(/\s+/g, '')}`);
+
       const response = await fetch(
         `${supabaseUrl}/functions/v1/send-contact-email`,
         {
@@ -42,7 +45,10 @@ const ContactPage = () => {
             'Content-Type': 'application/json',
             'Authorization': `Bearer ${supabaseAnonKey}`,
           },
-          body: JSON.stringify(formData),
+          body: JSON.stringify({
+            ...formData,
+            subject: translatedSubject
+          }),
         }
       );
 
