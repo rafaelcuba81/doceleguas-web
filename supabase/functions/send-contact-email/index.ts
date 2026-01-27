@@ -137,29 +137,52 @@ Deno.serve(async (req: Request) => {
       throw new Error(`Resend API error (notification): ${error}`);
     }
 
-    const confirmationRes = await fetch("https://api.resend.com/emails", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${resendApiKey}`,
-      },
-      body: JSON.stringify({
-        from: "Doce Leguas <onboarding@resend.dev>",
-        to: [formData.email],
-        subject: "Confirmación de recepción - Doce Leguas",
-        html: confirmationEmailBody,
-      }),
-    });
+    const notificationData = await notificationRes.json();
 
-    if (!confirmationRes.ok) {
-      const error = await confirmationRes.text();
-      console.error(`Confirmation email failed: ${error}`);
+    let confirmationSuccess = false;
+    let confirmationError = null;
+
+    try {
+      console.log(`Sending confirmation email to: ${formData.email}`);
+
+      const confirmationRes = await fetch("https://api.resend.com/emails", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${resendApiKey}`,
+        },
+        body: JSON.stringify({
+          from: "Doce Leguas <onboarding@resend.dev>",
+          to: [formData.email],
+          subject: "Confirmación de recepción - Doce Leguas",
+          html: confirmationEmailBody,
+        }),
+      });
+
+      const confirmationResponseText = await confirmationRes.text();
+      console.log(`Confirmation email response status: ${confirmationRes.status}`);
+      console.log(`Confirmation email response: ${confirmationResponseText}`);
+
+      if (!confirmationRes.ok) {
+        confirmationError = confirmationResponseText;
+        console.error(`Confirmation email failed with status ${confirmationRes.status}: ${confirmationResponseText}`);
+      } else {
+        confirmationSuccess = true;
+        console.log('Confirmation email sent successfully');
+      }
+    } catch (error) {
+      confirmationError = error instanceof Error ? error.message : "Unknown error";
+      console.error(`Exception sending confirmation email:`, error);
     }
 
-    const data = await notificationRes.json();
-
     return new Response(
-      JSON.stringify({ success: true, data }),
+      JSON.stringify({
+        success: true,
+        notificationSent: true,
+        confirmationSent: confirmationSuccess,
+        confirmationError: confirmationError,
+        data: notificationData
+      }),
       {
         status: 200,
         headers: {
