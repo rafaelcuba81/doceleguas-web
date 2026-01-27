@@ -1,12 +1,44 @@
 # Doce Leguas Website
 
+Sitio web corporativo de Doce Leguas desarrollado con React, TypeScript, Vite y Tailwind CSS.
 
+## Configuración Inicial
 
-## Getting started
+### 1. Instalar dependencias
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+```bash
+npm install
+```
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+### 2. Configurar variables de entorno
+
+Copia el archivo `.env.example` a `.env`:
+
+```bash
+cp .env.example .env
+```
+
+Luego edita el archivo `.env` y agrega tus credenciales de Supabase:
+
+```
+VITE_SUPABASE_URL=tu_url_de_supabase
+VITE_SUPABASE_ANON_KEY=tu_clave_anon_de_supabase
+```
+
+### 3. Ejecutar el proyecto
+
+```bash
+npm run dev
+```
+
+El proyecto estará disponible en `http://localhost:5173`
+
+## Scripts Disponibles
+
+- `npm run dev` - Inicia el servidor de desarrollo
+- `npm run build` - Construye el proyecto para producción
+- `npm run preview` - Previsualiza la versión de producción
+- `npm run lint` - Ejecuta el linter
 
 ## Add your files
 
