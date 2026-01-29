@@ -174,7 +174,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center animate-fadeInUp" style={{ animationDelay: '0.5s' }}>
           <p className="text-gray-400 text-sm">
-            © {new Date().getFullYear()} Doce Leguas. {t('footer.rights')}
+            © {new Date().getFullYear()} Doce Leguas. {t('footer.rights')} <Link to="/analytics" className="text-gray-700 hover:text-gray-500 transition-colors duration-300 text-xs ml-1">·</Link>
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link to="/privacy" className="text-gray-400 hover:text-white text-sm hover:translate-y-1 transition-all duration-300">
