@@ -11,11 +11,19 @@ import SolutionsPage from './pages/SolutionsPage';
 import ProjectsPage from './pages/ProjectsPage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
+import AnalyticsPage from './pages/AnalyticsPage';
+import { useAnalytics } from './hooks/useAnalytics';
+
+function AnalyticsTracker() {
+  useAnalytics();
+  return null;
+}
 
 function App() {
   return (
     <LanguageProvider>
       <Router>
+        <AnalyticsTracker />
         <ScrollToTop />
         <div className="min-h-screen bg-gray-50">
           <Header />
@@ -27,6 +35,7 @@ function App() {
               <Route path="/projects" element={<ProjectsPage />} />
               <Route path="/about" element={<AboutPage />} />
               <Route path="/contact" element={<ContactPage />} />
+              <Route path="/analytics" element={<AnalyticsPage />} />
             </Routes>
           </main>
           <Footer />
