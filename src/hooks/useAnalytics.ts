@@ -13,6 +13,7 @@ interface PageViewData {
   screen_width: number;
   screen_height: number;
   language: string;
+  country?: string;
   session_id: string;
   visit_duration: number;
 }
@@ -50,6 +51,21 @@ function getBrowserInfo(): { browser: string; os: string; device_type: string } 
   return { browser, os, device_type };
 }
 
+async function getCountry(): Promise<string | undefined> {
+  try {
+    const response = await fetch('https://ipapi.co/json/', {
+      signal: AbortSignal.timeout(3000),
+    });
+    if (response.ok) {
+      const data = await response.json();
+      return data.country_name || data.country_code;
+    }
+  } catch (error) {
+    console.warn('Could not fetch country data:', error);
+  }
+  return undefined;
+}
+
 export function useAnalytics() {
   const location = useLocation();
   const pageViewIdRef = useRef<string | null>(null);
@@ -60,6 +76,8 @@ export function useAnalytics() {
     const { browser, os, device_type } = getBrowserInfo();
 
     const trackPageView = async () => {
+      const country = await getCountry();
+
       const pageViewData: Partial<PageViewData> = {
         page_path: location.pathname,
         page_title: document.title,
@@ -71,6 +89,7 @@ export function useAnalytics() {
         screen_width: window.screen.width,
         screen_height: window.screen.height,
         language: navigator.language,
+        country,
         session_id: sessionId,
         visit_duration: 0,
       };

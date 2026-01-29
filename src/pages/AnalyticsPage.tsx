@@ -20,6 +20,7 @@ interface PageView {
   os: string;
   device_type: string;
   language: string;
+  country?: string;
   session_id: string;
   visit_duration: number;
   created_at: string;
@@ -33,6 +34,7 @@ interface Stats {
   recentViews: PageView[];
   deviceStats: { [key: string]: number };
   browserStats: { [key: string]: number };
+  countryStats: { [key: string]: number };
 }
 
 export default function AnalyticsPage() {
@@ -44,6 +46,7 @@ export default function AnalyticsPage() {
     recentViews: [],
     deviceStats: {},
     browserStats: {},
+    countryStats: {},
   });
   const [loading, setLoading] = useState(true);
   const [dateRange, setDateRange] = useState<'today' | 'week' | 'month' | 'all'>('week');
@@ -93,6 +96,7 @@ export default function AnalyticsPage() {
         const pagePathCounts: { [key: string]: { views: number; sessions: Set<string>; duration: number } } = {};
         const deviceCounts: { [key: string]: number } = {};
         const browserCounts: { [key: string]: number } = {};
+        const countryCounts: { [key: string]: number } = {};
 
         pageViews.forEach((view) => {
           if (!pagePathCounts[view.page_path]) {
@@ -104,6 +108,9 @@ export default function AnalyticsPage() {
 
           deviceCounts[view.device_type || 'Unknown'] = (deviceCounts[view.device_type || 'Unknown'] || 0) + 1;
           browserCounts[view.browser || 'Unknown'] = (browserCounts[view.browser || 'Unknown'] || 0) + 1;
+          if (view.country) {
+            countryCounts[view.country] = (countryCounts[view.country] || 0) + 1;
+          }
         });
 
         const topPages: AnalyticsSummary[] = Object.entries(pagePathCounts)
@@ -124,6 +131,7 @@ export default function AnalyticsPage() {
           recentViews: pageViews.slice(0, 10),
           deviceStats: deviceCounts,
           browserStats: browserCounts,
+          countryStats: countryCounts,
         });
       }
     } catch (error) {
@@ -339,9 +347,46 @@ export default function AnalyticsPage() {
           </div>
         </div>
 
-        <div className="bg-white rounded-lg shadow p-6">
+        <div className="bg-white rounded-lg shadow p-6 mb-8">
           <h2 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
             <Globe className="h-5 w-5 mr-2" />
+            Visitas por País
+          </h2>
+          {Object.keys(stats.countryStats).length > 0 ? (
+            <div className="space-y-3">
+              {Object.entries(stats.countryStats)
+                .sort(([, a], [, b]) => b - a)
+                .map(([country, count]) => (
+                  <div key={country} className="flex items-center justify-between border-b pb-3 last:border-0">
+                    <div className="flex items-center flex-1">
+                      <Globe className="h-4 w-4 text-blue-500 mr-3" />
+                      <span className="font-medium text-gray-900">{country}</span>
+                    </div>
+                    <div className="flex items-center">
+                      <div className="w-48 bg-gray-200 rounded-full h-2 mr-3">
+                        <div
+                          className="bg-blue-600 h-2 rounded-full"
+                          style={{ width: `${(count / stats.totalViews) * 100}%` }}
+                        ></div>
+                      </div>
+                      <span className="font-bold text-gray-900 w-16 text-right">{count}</span>
+                      <span className="text-xs text-gray-500 ml-2 w-12 text-right">
+                        ({Math.round((count / stats.totalViews) * 100)}%)
+                      </span>
+                    </div>
+                  </div>
+                ))}
+            </div>
+          ) : (
+            <p className="text-gray-500 text-center py-4">
+              No hay datos de países disponibles aún. Los datos comenzarán a recopilarse con las nuevas visitas.
+            </p>
+          )}
+        </div>
+
+        <div className="bg-white rounded-lg shadow p-6">
+          <h2 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
+            <Clock className="h-5 w-5 mr-2" />
             Visitas Recientes
           </h2>
           <div className="overflow-x-auto">
@@ -350,6 +395,9 @@ export default function AnalyticsPage() {
                 <tr>
                   <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                     Página
+                  </th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    País
                   </th>
                   <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                     Dispositivo
@@ -370,6 +418,9 @@ export default function AnalyticsPage() {
                   <tr key={view.id}>
                     <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                       {view.page_path}
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
+                      {view.country || '-'}
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">{view.device_type}</td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">{view.browser}</td>
