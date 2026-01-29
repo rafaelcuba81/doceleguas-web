@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
-import { BarChart3, Users, Eye, Monitor, Globe, Clock } from 'lucide-react';
+import { useAuth } from '../contexts/AuthContext';
+import { BarChart3, Users, Eye, Monitor, Globe, Clock, LogOut } from 'lucide-react';
 
 interface AnalyticsSummary {
   page_path: string;
@@ -45,6 +47,13 @@ export default function AnalyticsPage() {
   });
   const [loading, setLoading] = useState(true);
   const [dateRange, setDateRange] = useState<'today' | 'week' | 'month' | 'all'>('week');
+  const { signOut, user } = useAuth();
+  const navigate = useNavigate();
+
+  const handleSignOut = async () => {
+    await signOut();
+    navigate('/');
+  };
 
   useEffect(() => {
     fetchAnalytics();
@@ -156,7 +165,19 @@ export default function AnalyticsPage() {
     <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="mb-8">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Analíticas del Sitio Web</h1>
+          <div className="flex justify-between items-center mb-4">
+            <h1 className="text-4xl font-bold text-gray-900">Analíticas del Sitio Web</h1>
+            <div className="flex items-center gap-4">
+              <span className="text-sm text-gray-600">{user?.email}</span>
+              <button
+                onClick={handleSignOut}
+                className="flex items-center gap-2 px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition"
+              >
+                <LogOut className="h-4 w-4" />
+                Cerrar Sesión
+              </button>
+            </div>
+          </div>
           <div className="flex gap-2">
             <button
               onClick={() => setDateRange('today')}

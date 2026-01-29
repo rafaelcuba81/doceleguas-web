@@ -40,6 +40,36 @@ El proyecto estará disponible en `http://localhost:5173`
 - `npm run preview` - Previsualiza la versión de producción
 - `npm run lint` - Ejecuta el linter
 
+## Funcionalidades
+
+### Sistema de Analítica
+
+El sitio incluye un sistema completo de analítica que registra automáticamente:
+- Visitas a todas las páginas
+- Visitantes únicos
+- Tiempo de permanencia en cada página
+- Información del dispositivo, navegador y sistema operativo
+- Estadísticas detalladas por página
+
+#### Acceso al Dashboard de Analíticas
+
+El dashboard de analíticas está protegido con autenticación. Para acceder:
+
+1. **Crear un usuario administrador**: Ve al panel de Supabase, en la sección de Authentication, y crea un nuevo usuario con correo y contraseña.
+
+2. **Acceder al dashboard**:
+   - Visita `/login` en tu sitio
+   - Ingresa las credenciales del usuario que creaste
+   - Serás redirigido automáticamente a `/analytics`
+
+3. **Ver las analíticas**: El dashboard muestra:
+   - Total de visitas y visitantes únicos
+   - Duración promedio de las visitas
+   - Páginas más visitadas
+   - Distribución por dispositivos y navegadores
+   - Lista de visitas recientes
+   - Filtros por período (hoy, última semana, último mes, todo)
+
 ## Add your files
 
 - [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
